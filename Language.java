@@ -10,13 +10,13 @@ public class Language {
     private String code = "";
     private Locale lang = null;
 
-    public Language(String code) {
-        this.code = code;
-        this.lang = new Locale(code);
-    }
-
     public Language() {
     }
+
+    public Language(String code) {
+        this.setCode(code);
+    }
+
 
     public String getCode() {
         return code;
@@ -24,5 +24,17 @@ public class Language {
 
     public Locale getLang() {
         return lang;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+        if ( !code.trim().isEmpty() ) {
+            String[] codes = code.split("_");
+            if (codes.length>=2) {
+                this.lang = new Locale(codes[0], codes[1]);
+            } else {
+                this.lang = new Locale(code);
+            }
+        }
     }
 }

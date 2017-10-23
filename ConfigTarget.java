@@ -6,4 +6,12 @@ package sk.cw.jamlin;
 public class ConfigTarget {
     private Boolean replaceFile = true;
     private String replacePattern = "*.*";
+
+    public ConfigTarget(Boolean replaceFile, String replacePattern) {
+        this.replaceFile = replaceFile;
+        this.replacePattern = replacePattern;
+    }
+
+    public ConfigTarget() {
+    }
 }
