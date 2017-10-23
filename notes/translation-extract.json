@@ -1,0 +1,395 @@
+{
+  "translationBlocks": [
+    {
+      "name": "text",
+      "cssSelector": "p, a",
+      "translationStrings": [
+        {
+          "stringOrig": "Menu",
+          "selector": "#mobile_menu"
+        },
+        {
+          "stringOrig": "Climber\u0027s Routes",
+          "selector": "#toplink_home"
+        },
+        {
+          "stringOrig": "Language",
+          "selector": "#toplink_languages"
+        },
+        {
+          "stringOrig": "Slovenčina",
+          "selector": "#w_ilang_sk"
+        },
+        {
+          "stringOrig": "English",
+          "selector": "#w_ilang_en"
+        },
+        {
+          "stringOrig": "Search",
+          "selector": "#toplink_climb"
+        },
+        {
+          "stringOrig": "Search version 2 - Test",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "Find Climbers",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Advanced Search",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a"
+        },
+        {
+          "stringOrig": "Search Guides",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "Browse Guides",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Search Maps of Routes",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a"
+        },
+        {
+          "stringOrig": "Browse Maps of Routes",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(5) \u003e a"
+        },
+        {
+          "stringOrig": "Routes Search",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(7) \u003e a"
+        },
+        {
+          "stringOrig": "Browse Routes",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(8) \u003e a"
+        },
+        {
+          "stringOrig": "Recent Routes",
+          "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(9) \u003e a"
+        },
+        {
+          "stringOrig": "Track",
+          "selector": "#toplink_track"
+        },
+        {
+          "stringOrig": "My Routes",
+          "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "My Maps of Routes",
+          "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Publish",
+          "selector": "#toplink_share"
+        },
+        {
+          "stringOrig": "My Guides",
+          "selector": "#mmenu \u003e li.mleft:nth-child(5) \u003e ul \u003e li \u003e a"
+        },
+        {
+          "stringOrig": "",
+          "selector": "#search_clear"
+        },
+        {
+          "stringOrig": "Account",
+          "selector": "#toplink_account"
+        },
+        {
+          "stringOrig": "Marcel Zúbrik",
+          "selector": "#toplink_profile"
+        },
+        {
+          "stringOrig": "Settings",
+          "selector": "#toplink_settings"
+        },
+        {
+          "stringOrig": "Cart",
+          "selector": "#toplink_cart"
+        },
+        {
+          "stringOrig": "What\u0027s in your Cart",
+          "selector": "#cart_info \u003e div:nth-child(1) \u003e strong \u003e a"
+        },
+        {
+          "stringOrig": "Your orders",
+          "selector": "#mmenu \u003e li.mright.inliner \u003e ul.ap_to_right \u003e li.mright.inliner:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Online \u0026 Offline tools for Climbers and Guide Publishers",
+          "selector": "#w_content \u003e div.splash_header_image \u003e div.shi_center \u003e p"
+        },
+        {
+          "stringOrig": "Climb",
+          "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(1)"
+        },
+        {
+          "stringOrig": "Track",
+          "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(2)"
+        },
+        {
+          "stringOrig": "Publish",
+          "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(3)"
+        },
+        {
+          "stringOrig": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities.",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p"
+        },
+        {
+          "stringOrig": "Find",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(1)"
+        },
+        {
+          "stringOrig": "routes",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(3)"
+        },
+        {
+          "stringOrig": "sectors",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(4)"
+        },
+        {
+          "stringOrig": "areas",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(5)"
+        },
+        {
+          "stringOrig": "climbers",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(6)"
+        },
+        {
+          "stringOrig": "Join us",
+          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(8)"
+        },
+        {
+          "stringOrig": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides.",
+          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p"
+        },
+        {
+          "stringOrig": "routes",
+          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(2)"
+        },
+        {
+          "stringOrig": "Maps of routes",
+          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(3)"
+        },
+        {
+          "stringOrig": "Guides",
+          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(4)"
+        },
+        {
+          "stringOrig": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us.",
+          "selector": "#slider \u003e li:nth-child(3) \u003e div.slide_description \u003e div.splash_desc \u003e p"
+        },
+        {
+          "stringOrig": "Join us",
+          "selector": "#slider \u003e li:nth-child(3) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a"
+        },
+        {
+          "stringOrig": "Search",
+          "selector": "#sa_search"
+        },
+        {
+          "stringOrig": "Browse",
+          "selector": "#sa_browse"
+        },
+        {
+          "stringOrig": "Recent",
+          "selector": "#sa_recent"
+        },
+        {
+          "stringOrig": "Climber\u0027s Routes mobile app Digital climbing in your pocket",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.mobile_app \u003e p"
+        },
+        {
+          "stringOrig": "",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.mobile_app \u003e a"
+        },
+        {
+          "stringOrig": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers.",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2)"
+        },
+        {
+          "stringOrig": "Find your route",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(1)"
+        },
+        {
+          "stringOrig": "joining us",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(2)"
+        },
+        {
+          "stringOrig": "climbers",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(3)"
+        },
+        {
+          "stringOrig": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes.",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(3)"
+        },
+        {
+          "stringOrig": "Maps of routes",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(3) \u003e a"
+        },
+        {
+          "stringOrig": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide.",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(4)"
+        },
+        {
+          "stringOrig": "climbing Guide",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(4) \u003e a"
+        },
+        {
+          "stringOrig": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now.",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(6)"
+        },
+        {
+          "stringOrig": "Join us now",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(6) \u003e a"
+        },
+        {
+          "stringOrig": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us.",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8)"
+        },
+        {
+          "stringOrig": "News",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(1)"
+        },
+        {
+          "stringOrig": "Facebook",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(2)"
+        },
+        {
+          "stringOrig": "Google",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(3)"
+        },
+        {
+          "stringOrig": "Twitter",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(4)"
+        },
+        {
+          "stringOrig": "contact us directly",
+          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(5)"
+        },
+        {
+          "stringOrig": "Terms and Conditions",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "Contact",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Partnership",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(3) \u003e a"
+        },
+        {
+          "stringOrig": "Search Widget",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "Wiki",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Report a bug",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(3) \u003e a"
+        },
+        {
+          "stringOrig": "News",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "Facebook",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Google+",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a"
+        },
+        {
+          "stringOrig": "Twitter",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a"
+        },
+        {
+          "stringOrig": "Subscribe",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a"
+        },
+        {
+          "stringOrig": "Unsubscribe",
+          "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a"
+        },
+        {
+          "stringOrig": "Marcel Zúbrik",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)"
+        },
+        {
+          "stringOrig": "Tomáš Zúbrik",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)"
+        },
+        {
+          "stringOrig": "Whian.net",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(4)"
+        },
+        {
+          "stringOrig": "mariachily",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(5)"
+        },
+        {
+          "stringOrig": "CC",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(6)"
+        },
+        {
+          "stringOrig": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it",
+          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p"
+        },
+        {
+          "stringOrig": "Read more",
+          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a:nth-child(1)"
+        },
+        {
+          "stringOrig": "OK, Got it",
+          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a.eu_cookie_confirm.rounded2"
+        }
+      ]
+    },
+    {
+      "name": "params",
+      "cssSelector": "a[title], img[title]",
+      "translationStrings": [
+        {
+          "stringOrig": "Slovenčina",
+          "selector": "#w_ilang_sk"
+        },
+        {
+          "stringOrig": "English",
+          "selector": "#w_ilang_en"
+        },
+        {
+          "stringOrig": "Marcel Zúbrik",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)"
+        },
+        {
+          "stringOrig": "Tomáš Zúbrik",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/target/jamlin-demo.html",
+    "timestamp": "Oct 17, 2017 9:55:30 AM",
+    "destination": "/Users/marthol/IdeaProjects/MavenBased/jamlin/target/jamlin-demo-result.html",
+    "selectors": [
+      {
+        "name": "text",
+        "selector": "p, a"
+      },
+      {
+        "name": "params",
+        "selector": "a[title], img[title]"
+      }
+    ],
+    "language": {
+      "code": "en_US",
+      "lang": "en_US"
+    }
+  }
+}
