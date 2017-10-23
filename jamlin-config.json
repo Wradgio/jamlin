@@ -1,0 +1,33 @@
+{
+	"test": "just the test", 
+	"testArray": [
+		{"mrkva": "šalát"}, 
+		{"hopsa": "šupsa"}
+	], 
+	"sources": {
+		"directories": [
+			{
+				"path": "templates/", 
+				"extensions": [ "html", "xml" ], 
+				"traverse": false, 
+				"selectors": {
+					"text": "p, a",
+					"params": "a[title], img[title]"
+				}
+			}
+		], 
+		"files": [
+			{
+				"path": "test-*.html",
+				"selectors": {
+					"text": "p, a",
+					"params": "a[title], img[title]"
+				}
+			}
+		]
+	},	
+	"target": {
+		"replace_file": true, 
+		"replace_pattern": "*-$lang-$datetime.*"
+	}
+}
