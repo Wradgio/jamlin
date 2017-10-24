@@ -1,7 +1,7 @@
 {
   "translationBlocks": [
     {
-      "name": "text name",
+      "name": "text",
       "cssSelector": "p, a",
       "translationStrings": [
         {
