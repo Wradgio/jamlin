@@ -11,8 +11,15 @@
 				"extensions": [ "html", "xml" ], 
 				"traverse": false, 
 				"selectors": {
-					"text": "p, a",
-					"params": "a[title], img[title]"
+					"texts": { 
+						"type": "text", 
+						"selector": "p, a"
+					}, 
+					"params": { 
+						"type": "attribute", 
+						"selector": "a[title], img[title]", 
+						"attrName": "title"
+					}
 				}
 			}
 		], 
@@ -20,8 +27,15 @@
 			{
 				"path": "test-*.html",
 				"selectors": {
-					"text": "p, a",
-					"params": "a[title], img[title]"
+					"texts": { 
+						"type": "text", 
+						"selector": "p, a"
+					}, 
+					"params": { 
+						"type": "attribute", 
+						"selector": "a[title], img[title]", 
+						"attrName": "title"
+					}
 				}
 			}
 		]
