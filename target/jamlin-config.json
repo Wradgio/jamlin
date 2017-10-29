@@ -1,33 +1,47 @@
 {
-	"test": "just the test", 
+	"test": "just the test",
 	"testArray": [
-		{"mrkva": "šalát"}, 
+		{"mrkva": "šalát"},
 		{"hopsa": "šupsa"}
-	], 
+	],
 	"sources": {
 		"directories": [
 			{
-				"path": "templates/", 
-				"extensions": [ "html", "xml" ], 
-				"traverse": false, 
+				"path": "templates/",
+				"extensions": [ "html", "xml" ],
+				"traverse": false,
 				"selectors": {
-					"text": "p, a",
-					"params": "a[title], img[title]"
+					"texts": {
+						"type": "text",
+						"selector": "p, a"
+					},
+					"params": {
+						"type": "attribute",
+						"selector": "a[title], img[title]",
+						"attrName": "title"
+					}
 				}
 			}
-		], 
+		],
 		"files": [
 			{
 				"path": "test-*.html",
 				"selectors": {
-					"text": "p, a",
-					"params": "a[title], img[title]"
+					"texts": {
+						"type": "text",
+						"selector": "p, a"
+					},
+					"params": {
+						"type": "attribute",
+						"selector": "a[title], img[title]",
+						"attrName": "title"
+					}
 				}
 			}
 		]
-	},	
+	},
 	"target": {
-		"replace_file": true, 
+		"replace_file": true,
 		"replace_pattern": "*-$lang-$datetime.*"
 	}
 }
