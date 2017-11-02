@@ -13,10 +13,12 @@ public class TranslationConfig {
     String destination = "";
     List<ConfigSourceFilterSelector> selectors = new ArrayList<ConfigSourceFilterSelector>();
     Language language = new Language();
+    ConfigTarget target = new ConfigTarget();
 
-    public TranslationConfig(String source, String destination) {
+    public TranslationConfig(String source, String destination, ConfigTarget target) {
         this.source = source;
         this.destination = destination;
+        this.target = target;
     }
 
     public String getSource() {
@@ -41,5 +43,9 @@ public class TranslationConfig {
 
     public void setLanguage(Language language) {
         this.language = language;
+    }
+
+    public ConfigTarget getTarget() {
+        return target;
     }
 }

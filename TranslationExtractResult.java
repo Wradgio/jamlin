@@ -10,8 +10,8 @@ import java.util.List;
  * Created by Marcel Zúbrik on 13.10.17.
  */
 public class TranslationExtractResult {
-    List<TranslationBlock> translationBlocks = new ArrayList<TranslationBlock>();
-    TranslationConfig config;
+    private List<TranslationBlock> translationBlocks = new ArrayList<TranslationBlock>();
+    private TranslationConfig config;
 
     public TranslationExtractResult() {
     }

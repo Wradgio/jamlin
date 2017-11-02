@@ -30,7 +30,9 @@ public class Language {
         this.code = code;
         if ( !code.trim().isEmpty() ) {
             String[] codes = code.split("_");
-            if (codes.length>=2) {
+            if (codes.length>=3) {
+                this.lang = new Locale(codes[0], codes[1], codes[2]);
+            } else if (codes.length>=2) {
                 this.lang = new Locale(codes[0], codes[1]);
             } else {
                 this.lang = new Locale(code);

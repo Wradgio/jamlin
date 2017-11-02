@@ -22,17 +22,38 @@ public abstract class ConfigSourceFilter implements IConfigSourceFilter {
     /**
      * @param name
      * @param selector
+     * @param type
      * @return
      */
-    public Boolean addSelector(String name, String selector) {
+    public Boolean addSelector(String name, String selector, String type) {
         if (selectors.size() > 0) {
             for (int i = 0; i < selectors.size(); i++) {
-                if (selectors.get(i).getName() == name) {
+                if (selectors.get(i).getName().equals(name)) {
                     return false;
                 }
             }
         }
-        selectors.add(new ConfigSourceFilterSelector(name, selector));
+        selectors.add(new ConfigSourceFilterSelector(name, selector, type));
+
+        return true;
+    }
+
+    /**
+     * @param name
+     * @param selector
+     * @param type
+     * @param attrName
+     * @return
+     */
+    public Boolean addSelector(String name, String selector, String type, String attrName) {
+        if (selectors.size() > 0) {
+            for (int i = 0; i < selectors.size(); i++) {
+                if (selectors.get(i).getName().equals(name)) {
+                    return false;
+                }
+            }
+        }
+        selectors.add(new ConfigSourceFilterSelector(name, selector, type, attrName));
 
         return true;
     }

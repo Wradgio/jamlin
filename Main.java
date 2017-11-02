@@ -2,16 +2,11 @@ package sk.cw.jamlin;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
-import com.jayway.jsonpath.JsonPath;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.List;
 
 /**
  * Hello world!
@@ -34,7 +29,7 @@ public class Main
     public static void main(String ... argv)
     {
         workingDirectory = System.getProperty("user.dir");
-        System.out.println("Working Directory = " + workingDirectory);
+//        System.out.println("Working Directory = " + workingDirectory);
 
         Main main = new Main();
         JCommander.Builder builder = new JCommander.Builder();
@@ -46,9 +41,6 @@ public class Main
         if (config!=null) {
             getFileTranslation(config, action, source, target);
         }
-
-//        jsonPathTest();
-//        jsoutTest();
     }
 
     public void run() {
@@ -78,52 +70,10 @@ public class Main
     }
 
 
-    private static void jsonPathTest() {
-        File jsonConfig = new File(workingDirectory+"/jamlin-config.json");
-        try {
-            int sourceDirectories = JsonPath.read(jsonConfig, "$.sources.directories.length()");
-            System.out.println(sourceDirectories);
-            /*for (int i=0; i<sourceDirectories.size(); i++) {
-                System.out.println( sourceDirectories.get(i) );
-                //Object sourceDirRow = sourceDirectories.get(i);
-                //System.out.println(sourceDirRow);
-                //this.sources.addConfigSource("dir", );
-            }*/
-
-            Boolean targetReplaceFile = JsonPath.read(jsonConfig, "$.target.replace_file");
-            System.out.println( targetReplaceFile );
-            List sourceDirs = JsonPath.read(jsonConfig, "$.sources.directories");
-            System.out.println( sourceDirs.getClass().getName() );
-            String targetReplacePattern = JsonPath.read(jsonConfig, "$.target.replace_pattern");
-            System.out.println("target.replace_pattern: "+targetReplacePattern);
-        } catch (IOException $e) {
-            System.out.println($e.getMessage());
-        }
-    }
-
-
-    private static void jsoutTest() {
-        File input = new File(workingDirectory+"/jamlin-demo.html");
-        Document doc = null;
-        try {
-            doc = Jsoup.parse(input, "UTF-8");
-            Elements resultTexts = doc.select("p, a");
-            Elements resultParams = doc.select("a[title], img[title]");
-
-            System.out.println(resultTexts.first().text());
-            System.out.println(resultParams.first().toString());
-        } catch (IOException $e) {
-            System.out.println($e.getMessage());
-            $e.printStackTrace();
-        }
-        //System.out.println("Hello World");
-    }
-
-
     private static void getFileTranslation(Config config, String action, String source, String target) {
         // get action
         if (action==null || action.isEmpty()) {
-            action = "replace";//"extract";
+            action = "replace";// extract | replace;
         } else {
             action = action.trim().toLowerCase();
         }
@@ -143,7 +93,7 @@ public class Main
         }
 
         if ( target==null || target.trim().isEmpty() ) {
-            target = workingDirectory+"/jamlin-demo-result.html";
+            target = workingDirectory+"/jamlin-demo.html";
         } else {
             target = target.trim();
             if ( !target.contains(File.separator) ) {
@@ -163,9 +113,32 @@ public class Main
         Translation translation = new Translation(translationConfig);
         String result = "";
         if ( translation.validAction(action) ) {
+            System.out.println(action);
             if ( action.equals("replace") ) {
-                result = translation.replaceStrings(source, target);
+                String targetString = "";
+                try {
+                    targetString = new String ( Files.readAllBytes( Paths.get(target) ) );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                TranslationReplaceResult replaceResults = translation.replaceStrings(input, targetString);
+                result = "Please, set output language for result translation";
+                if ( !language.trim().equals("") && replaceResults.getLangCodes().size()>0 ) {
+                    // if language is set, return result of that language
+                    result = replaceResults.get(language);
+                } else if ( replaceResults.countResults()>0 && replaceResults.getLangCodes().size()>0 ) {
+                    // else if any results, return first
+                    result = replaceResults.get(replaceResults.getLangCodes().get(0));
+                }
+
+                /*
+            System.out.println("destination: "+this.config.getDestination());
+            System.out.println("language: "+this.language.toString());
+//            result.getOutputFileName(result.language, this.config.getDestination());
+                 */
             } else {
+//                System.out.println(input);
                 result = translation.extractStrings(input);
             }
         }

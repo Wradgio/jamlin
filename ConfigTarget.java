@@ -14,4 +14,12 @@ public class ConfigTarget {
 
     public ConfigTarget() {
     }
+
+    public Boolean getReplaceFile() {
+        return replaceFile;
+    }
+
+    public String getReplacePattern() {
+        return replacePattern;
+    }
 }
