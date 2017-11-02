@@ -6,10 +6,20 @@ package sk.cw.jamlin;
 public class ConfigSourceFilterSelector {
     private String name;
     private String selector;
+    private String type;
+    private String attrName;
 
-    public ConfigSourceFilterSelector(String name, String selector) {
+    public ConfigSourceFilterSelector(String name, String selector, String type) {
         this.name = name;
         this.selector = selector;
+        this.type = type;
+    }
+
+    public ConfigSourceFilterSelector(String name, String selector, String type, String attrName) {
+        this.name = name;
+        this.selector = selector;
+        this.type = type;
+        this.attrName = attrName;
     }
 
     public String getName() {
@@ -18,5 +28,13 @@ public class ConfigSourceFilterSelector {
 
     public String getSelector() {
         return selector;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getAttrName() {
+        return attrName;
     }
 }

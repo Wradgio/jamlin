@@ -9,7 +9,9 @@ public interface IConfigSourceFilter {
     public String path = "";
     public List<ConfigSourceFilterSelector> selectors = null;
 
-    public Boolean addSelector(String name, String selector);
+    public Boolean addSelector(String name, String selector, String type);
+
+    public Boolean addSelector(String name, String selector, String type, String attrName);
 
     public String getPath();
     public List<ConfigSourceFilterSelector> getSelectors();

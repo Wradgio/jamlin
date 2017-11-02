@@ -50,7 +50,6 @@ public class Config {
             String dirPath = JsonPath.read(document, "$.sources.directories["+i+"].path");
             Boolean dirTraverse = JsonPath.read(document, "$.sources.directories["+i+"].traverse");
             int lastIndex = this.sources.addConfigSource("directory", dirPath, dirTraverse);
-
         }
         // source Files
         int sourceFilesCount = JsonPath.read(document, "$.sources.files.length()");
@@ -58,10 +57,29 @@ public class Config {
             String filePath = JsonPath.read(document, "$.sources.files["+i+"].path");
             int lastIndex = this.sources.addConfigSource("file", filePath);
             Map<String, String> selectors = JsonPath.read(document, "$.sources.files["+i+"].selectors");
-            for (Map.Entry<String,String> entry : selectors.entrySet())
-            {
-                this.sources.getFiles().get(lastIndex).addSelector(entry.getKey(), entry.getValue());
-                System.out.println(entry.getKey() + " : " + entry.getValue());
+            for (Map.Entry<String,String> entry : selectors.entrySet()) {
+                Map<String, String> selectorData = JsonPath.read(document, "$.sources.files[" + i + "].selectors." + entry.getKey());
+                String type = "";
+                String selector = "";
+                String attrName = "";
+                for (Map.Entry<String, String> dataEntry : selectorData.entrySet()) {
+                    if (dataEntry.getKey().equals("type")) {
+                        type = dataEntry.getValue();
+                    }
+                    if (dataEntry.getKey().equals("selector")) {
+                        selector = dataEntry.getValue();
+                    }
+                    if (dataEntry.getKey().equals("attrName")) {
+                        attrName = dataEntry.getValue();
+                    }
+                }
+                if ( !selector.trim().equals("") && !type.trim().equals("") ) {
+                    if (type.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase()) && !type.trim().equals("")) {
+                        this.sources.getFiles().get(lastIndex).addSelector(entry.getKey(), selector, type, attrName);
+                    } else {
+                        this.sources.getFiles().get(lastIndex).addSelector(entry.getKey(), selector, type);
+                    }
+                }
             }
 //            System.out.println( this.sources.getFiles().get(lastIndex).getSelectors().get(1).getName() );
 //            System.out.println( this.sources.getFiles().get(lastIndex).getSelectors().get(1).getSelector() );
@@ -70,7 +88,7 @@ public class Config {
 
 
     public TranslationConfig makeTranslationConfig(String source, String target) {
-        TranslationConfig translationConfig = new TranslationConfig(source, target);
+        TranslationConfig translationConfig = new TranslationConfig(source, target, this.target);
         System.out.println("language c.mtc: "+this.language);
         translationConfig.setLanguage(this.language);
         for (int i = 0; i<this.sources.getFiles().size(); i++ ) {
