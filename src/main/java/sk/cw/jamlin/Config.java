@@ -21,7 +21,6 @@ public class Config {
         this.type = type;
         this.input = input;
         this.sources = new ConfigSource();
-        System.out.println("construct lang NULL");
         parseConfigInput();
     }
 
@@ -29,7 +28,6 @@ public class Config {
         this.type = type;
         this.input = input;
         this.sources = new ConfigSource();
-        System.out.println("construct lang: "+langCode);
         this.language = new Language(langCode);
         parseConfigInput();
     }
@@ -81,15 +79,12 @@ public class Config {
                     }
                 }
             }
-//            System.out.println( this.sources.getFiles().get(lastIndex).getSelectors().get(1).getName() );
-//            System.out.println( this.sources.getFiles().get(lastIndex).getSelectors().get(1).getSelector() );
         }
     }
 
 
     public TranslationConfig makeTranslationConfig(String source, String target) {
         TranslationConfig translationConfig = new TranslationConfig(source, target, this.target);
-        System.out.println("language c.mtc: "+this.language);
         translationConfig.setLanguage(this.language);
         for (int i = 0; i<this.sources.getFiles().size(); i++ ) {
             translationConfig.selectors.addAll(this.sources.getFiles().get(i).getSelectors());
