@@ -1,7 +1,9 @@
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/TranslationConfig.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/TranslationString.java
+/Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/TranslationReplaceResult.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/Args.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/IConfigSourceFilter.java
+/Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/TranslationValue.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/Language.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/ConfigSourceFilter.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/ConfigSourceFilterSelector.java
@@ -14,3 +16,4 @@
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/Translation.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/Main.java
 /Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/ConfigSourceFilterFile.java
+/Users/marthol/IdeaProjects/MavenBased/jamlin/src/main/java/sk/cw/jamlin/Files.java

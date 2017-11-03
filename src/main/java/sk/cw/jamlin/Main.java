@@ -29,23 +29,23 @@ public class Main
     public static void main(String ... argv)
     {
         workingDirectory = System.getProperty("user.dir");
-//        System.out.println("Working Directory = " + workingDirectory);
 
         Main main = new Main();
         JCommander.Builder builder = new JCommander.Builder();
         builder.addObject(main).build().parse(argv);
         main.run();
 
-        config = getConfig(workingDirectory+"/jamlin-config.json");
+        config = getConfig(workingDirectory+File.separator+"jamlin-config.json");
 
         if (config!=null) {
             getFileTranslation(config, action, source, target);
         }
     }
 
+
     public void run() {
-        System.out.printf("%s %s %s %s", action, source, target, language);
-        System.out.println("");
+//        System.out.printf("%s %s %s %s", action, source, target, language);
+//        System.out.println("");
     }
 
 
@@ -53,8 +53,6 @@ public class Main
 
         try {
             String jsonConfig = new String ( Files.readAllBytes( Paths.get(configFilePath) ) );
-//            String jsonConfig = new Scanner(new File(configFilePath)).useDelimiter("\\Z").next();
-            System.out.println("lang _"+language+"_");
             if (language.trim().equals("")) {
                 return new Config("file", jsonConfig);
             } else {
@@ -81,9 +79,9 @@ public class Main
         // use relative path if no separator
         if ( source==null || source.trim().isEmpty() ) {
             if (action == "extract") {
-                source = workingDirectory + "/jamlin-demo.html";
+                source = workingDirectory + File.separator+"jamlin-demo.html";
             } else {
-                source = workingDirectory + "/jamlin-extract.json";
+                source = workingDirectory + File.separator+"jamlin-extract.json";
             }
         } else {
             source = source.trim();
@@ -93,7 +91,7 @@ public class Main
         }
 
         if ( target==null || target.trim().isEmpty() ) {
-            target = workingDirectory+"/jamlin-demo.html";
+            target = workingDirectory+File.separator+"jamlin_demo.html";
         } else {
             target = target.trim();
             if ( !target.contains(File.separator) ) {
@@ -113,7 +111,6 @@ public class Main
         Translation translation = new Translation(translationConfig);
         String result = "";
         if ( translation.validAction(action) ) {
-            System.out.println(action);
             if ( action.equals("replace") ) {
                 String targetString = "";
                 try {
@@ -124,25 +121,19 @@ public class Main
 
                 TranslationReplaceResult replaceResults = translation.replaceStrings(input, targetString);
                 result = "Please, set output language for result translation";
-                if ( !language.trim().equals("") && replaceResults.getLangCodes().size()>0 ) {
+                if ( !language.isEmpty() && replaceResults.getLangCodes().size()>0 ) {
                     // if language is set, return result of that language
                     result = replaceResults.get(language);
-                } else if ( replaceResults.countResults()>0 && replaceResults.getLangCodes().size()>0 ) {
-                    // else if any results, return first
+                } else {
+                    // else if any results, output files and return first
                     result = replaceResults.get(replaceResults.getLangCodes().get(0));
                 }
-
-                /*
-            System.out.println("destination: "+this.config.getDestination());
-            System.out.println("language: "+this.language.toString());
-//            result.getOutputFileName(result.language, this.config.getDestination());
-                 */
+                sk.cw.jamlin.Files.outputReplaceResultFiles(replaceResults, target);
             } else {
-//                System.out.println(input);
                 result = translation.extractStrings(input);
             }
         }
-        System.out.println(result);
+//        System.out.println(result);
 
     }
 }
