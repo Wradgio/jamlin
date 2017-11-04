@@ -35,7 +35,7 @@ public class Main
         builder.addObject(main).build().parse(argv);
         main.run();
 
-        config = getConfig(workingDirectory+File.separator+"jamlin-config.json");
+        config = getConfig(workingDirectory+File.separator+"jamlin_config.json");
 
         if (config!=null) {
             getFileTranslation(config, action, source, target);
@@ -79,9 +79,9 @@ public class Main
         // use relative path if no separator
         if ( source==null || source.trim().isEmpty() ) {
             if (action == "extract") {
-                source = workingDirectory + File.separator+"jamlin-demo.html";
+                source = workingDirectory + File.separator+"jamlin_demo.html";
             } else {
-                source = workingDirectory + File.separator+"jamlin-extract.json";
+                source = workingDirectory + File.separator+"jamlin_demo-extract.json";
             }
         } else {
             source = source.trim();
@@ -131,6 +131,9 @@ public class Main
                 sk.cw.jamlin.Files.outputReplaceResultFiles(replaceResults, target);
             } else {
                 result = translation.extractStrings(input);
+                File sourceFile = new File(source);
+                // write result
+                sk.cw.jamlin.Files.outputExtractResultFile(result, sourceFile);
             }
         }
 //        System.out.println(result);

@@ -52,7 +52,42 @@ public class Files {
     }
 
 
-    public static boolean outputReplaceResultFiles(TranslationReplaceResult results, String destination) {
+    /**
+     *
+     * @param input
+     * @param source
+     */
+    static void outputExtractResultFile(String input, File source) {
+        String fileName = "";
+        String fileExtension = "";
+
+        try {
+            fileName = source.getName();
+            // get file extension
+//            fileExtension = getFileExtension(fileName);
+            // get name before extension
+            if (fileName.contains(".")) {
+                fileName = fileName.substring(0, fileName.lastIndexOf('.'));
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+        fileName = fileName+"-extract";
+        if ( !fileName.contains(".json") ) {
+            fileName = fileName+".json";
+        }
+
+        writeResultFile(source.getParentFile(), fileName, input);
+    }
+
+
+    /**
+     *
+     * @param results
+     * @param destination
+     */
+    static void outputReplaceResultFiles(TranslationReplaceResult results, String destination) {
         Map<String, String> resultFileNames = new HashMap<>();
 
         resultFileNames = getReplaceOutputFileName(results, destination);
@@ -64,17 +99,20 @@ public class Files {
 
         if (results.getLangCodes().size()>0) {
             for (int j=0; j<results.getLangCodes().size(); j++) {
-                System.out.println(j);
                 String langCode = results.getLangCodes().get(j);
                 writeResultFile(destinationDirectory, resultFileNames.get(langCode), results.get(langCode));
             }
         }
-
-        return true;
     }
 
 
-    public static Map<String, String> getReplaceOutputFileName(TranslationReplaceResult results, String destination) {
+    /**
+     *
+     * @param results
+     * @param destination
+     * @return Map
+     */
+    private static Map<String, String> getReplaceOutputFileName(TranslationReplaceResult results, String destination) {
         String fileName = "";
         String fileExtension = "";
         Map<String, String> resultFileNames = new HashMap<>();
@@ -84,17 +122,15 @@ public class Files {
             try {
                 File f = new File(destination);
                 fileName = f.getName();
+                // get file extension
+                fileExtension = getFileExtension(fileName);
+                // get name before extension
+                if (fileName.contains(".")) {
+                    fileName = fileName.substring(0, fileName.lastIndexOf('.'));
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
-        }
-        // get file extension
-        int i = fileName.lastIndexOf(".");
-        if (i>0) {
-            fileExtension = fileName.substring(i+1);
-            String[] name = fileName.split("\\.", i+1);
-            String[] pureName = Arrays.copyOf(name, name.length-1);
-            fileName = String.join(".", pureName);
         }
 
         if (results.getLangCodes().size()>0) {
@@ -108,6 +144,14 @@ public class Files {
     }
 
 
+    /**
+     *
+     * @param pattern
+     * @param fileName
+     * @param fileExtension
+     * @param langCode
+     * @return String
+     */
     private static String fileNameFromPattern(String pattern, String fileName, String fileExtension, String langCode) {
         String resultName = "";
 
@@ -156,5 +200,20 @@ public class Files {
                 e.printStackTrace();
             }
         }
+    }
+
+
+    private static String getFileExtension(String fileName) {
+        String fileExtension = "";
+        // get file extension
+        int i = fileName.lastIndexOf(".");
+        if (i>0) {
+            fileExtension = fileName.substring(i+1);
+            String[] name = fileName.split("\\.", i+1);
+            String[] pureName = Arrays.copyOf(name, name.length-1);
+            fileName = String.join(".", pureName);
+        }
+
+        return fileExtension;
     }
 }
