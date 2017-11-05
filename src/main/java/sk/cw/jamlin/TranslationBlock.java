@@ -43,7 +43,7 @@ public class TranslationBlock {
 
 
 
-    public boolean validType(String type) {
+    private boolean validType(String type) {
         for (types c : types.values()) {
             if (c.name().toLowerCase().equals(type)) {
                 return true;

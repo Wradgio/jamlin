@@ -1,4 +1,9 @@
 {
+	"test": "just the test", 
+	"testArray": [
+		{"mrkva": "šalát"}, 
+		{"hopsa": "šupsa"}
+	], 
 	"sources": {
 		"directories": [
 			{

@@ -63,8 +63,6 @@ public class Files {
 
         try {
             fileName = source.getName();
-            // get file extension
-//            fileExtension = getFileExtension(fileName);
             // get name before extension
             if (fileName.contains(".")) {
                 fileName = fileName.substring(0, fileName.lastIndexOf('.'));
