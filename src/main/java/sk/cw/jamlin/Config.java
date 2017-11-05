@@ -16,6 +16,7 @@ public class Config {
     private ConfigSource sources;
     private Language language = null;
 
+
     /* CONSTRUCTORS */
     public Config(String type, String input) {
         this.type = type;

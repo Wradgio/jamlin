@@ -8,12 +8,12 @@ import java.util.List;
  * Created by Marcel Zúbrik on 12.10.17.
  */
 public class TranslationConfig {
-    String source = "";
-    Date timestamp = new Date();
-    String destination = "";
+    private String source = "";
+    private Date timestamp = new Date();
+    private String destination = "";
     List<ConfigSourceFilterSelector> selectors = new ArrayList<ConfigSourceFilterSelector>();
-    Language language = new Language();
-    ConfigTarget target = new ConfigTarget();
+    private Language language = new Language();
+    private ConfigTarget target = new ConfigTarget();
 
     public TranslationConfig(String source, String destination, ConfigTarget target) {
         this.source = source;

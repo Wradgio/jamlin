@@ -25,6 +25,9 @@ public class Main
 
     private static String workingDirectory = "";
     private static Config config;
+    enum actions {
+        EXTRACT, REPLACE
+    }
 
     public static void main(String ... argv)
     {
@@ -43,14 +46,13 @@ public class Main
     }
 
 
-    public void run() {
+    private void run() {
 //        System.out.printf("%s %s %s %s", action, source, target, language);
 //        System.out.println("");
     }
 
 
     private static Config getConfig(String configFilePath) {
-
         try {
             String jsonConfig = new String ( Files.readAllBytes( Paths.get(configFilePath) ) );
             if (language.trim().equals("")) {
@@ -70,14 +72,14 @@ public class Main
 
     private static void getFileTranslation(Config config, String action, String source, String target) {
         // get action
-        if (action==null || action.isEmpty()) {
-            action = "replace";// extract | replace;
-        } else {
+        if ( action!=null && !action.isEmpty() && validAction(action) ) {
             action = action.trim().toLowerCase();
+        } else {
+            action = "extract";// extract | replace;
         }
 
-        // use relative path if no separator
-        if ( source==null || source.trim().isEmpty() ) {
+        // get source - use relative path if no separator
+        if ( source==null || source.trim().isEmpty() ) { // no source
             if (action == "extract") {
                 source = workingDirectory + File.separator+"jamlin_demo.html";
             } else {
@@ -90,6 +92,7 @@ public class Main
             }
         }
 
+        // get target - REPLACE only
         if ( target==null || target.trim().isEmpty() ) {
             target = workingDirectory+File.separator+"jamlin_demo.html";
         } else {
@@ -138,5 +141,15 @@ public class Main
         }
 //        System.out.println(result);
 
+    }
+
+
+    private static boolean validAction(String type) {
+        for (actions c : actions.values()) {
+            if (c.name().toLowerCase().equals(type)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
