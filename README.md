@@ -61,7 +61,8 @@ Every time you run JaMLin, it's looking for config file, named **jamlin_config.j
 		"replace_file": true,
 		"replace_pattern": "*-$lang.*"
 	}
-}```
+}
+```
 
 ### Parameters
 JaMLin receives 4 parameters. Examples of using Jamlin looks like this:
