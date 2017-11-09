@@ -49,7 +49,14 @@ public class Translation {
         Map<String, String> results = new HashMap<>();
         Document doc = null;
         try {
-            doc = Jsoup.parse(source, "UTF-8");
+            doc = Jsoup.parse(source);
+
+            // no user setting, and lang is set by document => overwrite lang action
+            String extractedLangCode = doc.select("html").first().attr("lang");
+            if ( !extractedLangCode.isEmpty() && getLanguage().toString().isEmpty() ) {
+                setLanguage( (new Language(extractedLangCode)) );
+            }
+
             TranslationExtractResult translationExtractResult = new TranslationExtractResult(config);
 
             for (int i=0; i<config.getSelectors().size(); i++) {
@@ -179,5 +186,9 @@ public class Translation {
 
     public Language getLanguage() {
         return language;
+    }
+
+    public void setLanguage(Language language) {
+        this.language = language;
     }
 }

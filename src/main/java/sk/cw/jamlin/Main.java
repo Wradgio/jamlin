@@ -7,6 +7,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Hello world!
@@ -42,6 +44,7 @@ public class Main
 
         if (config!=null) {
             getFileTranslation(config, action, source, target);
+            handleFileTranslations();
         }
     }
 
@@ -70,7 +73,34 @@ public class Main
     }
 
 
+
+    private static void handleFileTranslations() {
+        // get all files (their paths) that match config options
+        List<String> extensions = new ArrayList<String>();
+        for (int i=0; i<config.getSources().getDirectories().size(); i++) {
+            ConfigSourceFilterDirectory dir = (ConfigSourceFilterDirectory) config.getSources().getDirectories().get(i);
+            for (int j=0; j<((ConfigSourceFilterDirectory) config.getSources().getDirectories().get(i)).getExtensions().size(); j++) {
+                String extension = ((ConfigSourceFilterDirectory) config.getSources().getDirectories().get(i)).getExtensions().get(j);
+                extensions.add( extension );
+            }
+        }
+        List<String> resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
+        for (int i=0; i<resultFiles.size(); i++) {
+            System.out.println( resultFiles.get(i) );
+        }
+    }
+
+
+    /**
+     *
+     * @param config
+     * @param action
+     * @param source
+     * @param target
+     */
     private static void getFileTranslation(Config config, String action, String source, String target) {
+        boolean variablesPassed = true;
+
         // get action
         if ( action!=null && !action.isEmpty() && validAction(action) ) {
             action = action.trim().toLowerCase();
@@ -79,71 +109,87 @@ public class Main
         }
 
         // get source - use relative path if no separator
-        if ( source==null || source.trim().isEmpty() ) { // no source
-            if (action == "extract") {
-                source = workingDirectory + File.separator+"jamlin_demo.html";
-            } else {
-                source = workingDirectory + File.separator+"jamlin_demo-extract.json";
-            }
-        } else {
+        if ( source!=null && !source.trim().isEmpty() ) { // no source
             source = source.trim();
             if (!source.contains(File.separator)) {
                 source = workingDirectory + File.separator + source;
             }
+        } else {
+            variablesPassed = false;
+            System.out.println("ERROR: No 'source' set.");
         }
 
         // get target - REPLACE only
-        if ( target==null || target.trim().isEmpty() ) {
-            target = workingDirectory+File.separator+"jamlin_demo.html";
-        } else {
+        if ( target!=null && !target.trim().isEmpty() ) {
             target = target.trim();
             if ( !target.contains(File.separator) ) {
                 target = workingDirectory+File.separator+target;
             }
+        } else {
+            variablesPassed = false;
+            System.out.println("ERROR: No 'target' set.");
         }
 
-        String input = "";
-        try {
-            input = new String ( Files.readAllBytes( Paths.get(source) ) );
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        TranslationConfig translationConfig = config.makeTranslationConfig(source, target);
-
-        Translation translation = new Translation(translationConfig);
-        String result = "";
-        if ( translation.validAction(action) ) {
-            if ( action.equals("replace") ) {
-                String targetString = "";
-                try {
-                    targetString = new String ( Files.readAllBytes( Paths.get(target) ) );
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                TranslationReplaceResult replaceResults = translation.replaceStrings(input, targetString);
-                result = "Please, set output language for result translation";
-                if ( !language.isEmpty() && replaceResults.getLangCodes().size()>0 ) {
-                    // if language is set, return result of that language
-                    result = replaceResults.get(language);
-                } else {
-                    // else if any results, output files and return first
-                    result = replaceResults.get(replaceResults.getLangCodes().get(0));
-                }
-                sk.cw.jamlin.Files.outputReplaceResultFiles(replaceResults, target);
-            } else {
-                result = translation.extractStrings(input);
-                File sourceFile = new File(source);
-                // write result
-                sk.cw.jamlin.Files.outputExtractResultFile(result, sourceFile);
+        if ( variablesPassed ) {
+            String fileLangCode = Language.getLangCodeFromFilePath(source);
+            if (!fileLangCode.isEmpty()) {
+                config.setLanguage(new Language(fileLangCode));
             }
-        }
-//        System.out.println(result);
 
+            String input = "";
+            try {
+                input = new String(Files.readAllBytes(Paths.get(source)));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            TranslationConfig translationConfig = config.makeTranslationConfig(source, target);
+
+            Translation translation = new Translation(translationConfig);
+            String result = "";
+
+            if (translation.validAction(action)) {
+                if (action.equals("replace")) {
+                    String targetString = "";
+                    try {
+                        targetString = new String(Files.readAllBytes(Paths.get(target)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    TranslationReplaceResult replaceResults = translation.replaceStrings(input, targetString);
+                    result = "Please, set output language for result translation";
+                    if (!language.isEmpty() && replaceResults.getLangCodes().size() > 0) {
+                        // if language is set, return result of that language
+                        result = replaceResults.get(language);
+                    } else {
+                        // else if any results, output files and return first
+                        result = replaceResults.get(replaceResults.getLangCodes().get(0));
+                    }
+                    sk.cw.jamlin.Files.outputReplaceResultFiles(replaceResults, target);
+
+                } else { // extract
+                    result = translation.extractStrings(input);
+                    File sourceFile = new File(source);
+                    // write result
+                    sk.cw.jamlin.Files.outputExtractResultFile(result, sourceFile, translation);
+                }
+            }
+        } else {
+            System.out.println("No output - please check your inputs:");
+            System.out.println("action: "+action);
+            System.out.println("source: "+source);
+            System.out.println("target: "+target);
+        }
     }
 
 
+    /**
+     *
+     * @param type
+     * @return
+     */
     private static boolean validAction(String type) {
         for (actions c : actions.values()) {
             if (c.name().toLowerCase().equals(type)) {

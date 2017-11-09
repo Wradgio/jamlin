@@ -26,6 +26,11 @@ public class ConfigSourceFilterDirectory extends ConfigSourceFilter {
     }
 
 
+    public boolean addExtension(String extension) {
+        return extensions.add(extension);
+    }
+
+
     /* THE GETTERS & THE SETTERS */
     public ArrayList<String> getExtensions() {
         return extensions;
