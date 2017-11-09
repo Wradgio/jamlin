@@ -49,6 +49,14 @@ public class Config {
             String dirPath = JsonPath.read(document, "$.sources.directories["+i+"].path");
             Boolean dirTraverse = JsonPath.read(document, "$.sources.directories["+i+"].traverse");
             int lastIndex = this.sources.addConfigSource("directory", dirPath, dirTraverse);
+            ConfigSourceFilterDirectory dir = (ConfigSourceFilterDirectory)this.sources.getDirectories().get(lastIndex);
+            int sourceDirExtensionsCount = JsonPath.read(document, "$.sources.directories["+i+"].extensions.length()");
+            if ( sourceDirExtensionsCount>0 ) {
+                for (int j = 0; j < sourceDirExtensionsCount; j++) {
+                    String extension = JsonPath.read(document, "$.sources.directories["+i+"].extensions["+j+"]");
+                    dir.addExtension(extension);
+                }
+            }
         }
         // source Files
         int sourceFilesCount = JsonPath.read(document, "$.sources.files.length()");
@@ -107,5 +115,21 @@ public class Config {
 
     public String getInput() {
         return input;
+    }
+
+    public ConfigTarget getTarget() {
+        return target;
+    }
+
+    public ConfigSource getSources() {
+        return sources;
+    }
+
+    public Language getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(Language language) {
+        this.language = language;
     }
 }

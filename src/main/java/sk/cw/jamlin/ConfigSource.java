@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class ConfigSource {
     private List<IConfigSourceFilter> directories = new ArrayList<IConfigSourceFilter>();
-    private List<IConfigSourceFilter> files = new ArrayList<IConfigSourceFilter>();;
+    private List<IConfigSourceFilter> files = new ArrayList<IConfigSourceFilter>();
 
     public ConfigSource(ArrayList<IConfigSourceFilter> directories, ArrayList<IConfigSourceFilter> files) {
         this.directories = directories;

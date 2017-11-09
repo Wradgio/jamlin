@@ -8,16 +8,7 @@
         {
           "stringOrig": "Menu",
           "selector": "#mobile_menu",
-          "translations": [
-          	{
-							"langCode": "en", 
-							"translation": "Menu EN version"
-          	}, 
-          	{
-							"langCode": "sk", 
-							"translation": "Menu SK version"
-          	}
-          ]
+          "translations": []
         },
         {
           "stringOrig": "Climber\u0027s Routes",
@@ -477,7 +468,7 @@
   ],
   "config": {
     "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/jamlin_demo.html",
-    "timestamp": "Nov 4, 2017 2:55:21 PM",
+    "timestamp": "Nov 5, 2017 10:42:50 PM",
     "destination": "/Users/marthol/IdeaProjects/MavenBased/jamlin/jamlin_demo.html",
     "selectors": [
       {

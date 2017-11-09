@@ -6,48 +6,33 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Marcel Zúbrik on 29.10.2017.
  */
 public class Files {
-
-    // files and dirs
-    public static void visitAllDirsAndFiles(File dir) {
-        // spracovat(dir);
-
-        if (dir.isDirectory()) {
-            String[] children = dir.list();
-            for (int i=0; i<children.length; i++) {
-                visitAllDirsAndFiles(new File(dir, children[i]));
-            }
-        }
+    // browse files
+    public static List<String> listValidFiles(File dir, List<String> extensions) {
+        List<String> resultFiles = new ArrayList<String>();
+        return listValidFiles(dir, 0, extensions, resultFiles);
     }
-
-    // only dirs
-    public static void visitAllDirs(File dir) {
-        if (dir.isDirectory()) {
-            // spracovat(dir);
-            String[] children = dir.list();
-            for (int i=0; i<children.length; i++) {
-                visitAllDirs(new File(dir, children[i]));
-            }
-        }
-    }
-
-    // only files
-    public static void visitAllFiles(File dir) {
+    private static List<String> listValidFiles(File dir, int level, List<String> extensions, List<String> resultFiles) { //
         if (dir.isDirectory()) {
             String[] children = dir.list();
             for (int i=0; i<children.length; i++) {
-                visitAllFiles(new File(dir, children[i]));
+                String fileExtension = getFileExtension(children[i]);
+                File item = new File(dir, children[i]);
+                if ( item.isDirectory() ) {
+                    listValidFiles(item, level, extensions, resultFiles);
+                } else if ( extensions.contains(fileExtension) ) {
+                    resultFiles.add(item.toString());
+                }
             }
+            return resultFiles;
         } else {
-            // spracovat(dir);
+            resultFiles.add(dir.toString());
+            return resultFiles;
         }
     }
 
@@ -57,7 +42,14 @@ public class Files {
      * @param input
      * @param source
      */
-    static void outputExtractResultFile(String input, File source) {
+    static void outputExtractResultFile(String input, File source, Translation translation) {
+        if ( !translation.getLanguage().toString().isEmpty() ) {
+            //translation.getLanguage().toString();
+        }
+        // check if lang set
+        // check if related json file does exist
+        // is does - parse json and add this language - if unknown, use xx(1, 2, 3, ...) - and output it
+        // TODO - compare with existing result file !!!
         String fileName = "";
         String fileExtension = "";
 

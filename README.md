@@ -94,7 +94,35 @@ Parameters legend:
 
 
 ## Translation
-JaMLin does not translate data by itself :). To translate it, you need to fill translations into JSON file. For that, you can use any editor, that can read JSON files or wait for **JaMLin Translation Editor** (in development).
+JaMLin does not translate data by itself. To translate it, you need to fill translations into JSON file using this format:
+```json
+{
+  "translationBlocks": [
+    {
+      "name": "texts",
+      "cssSelector": "p, a",
+      "type": "text",
+      "translationStrings": [
+        {
+          "stringOrig": "Menu",
+          "selector": "#mobile_menu",
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Menu EN version"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Menu SK version"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+For that, you can use any editor, that can read JSON files or wait for **JaMLin Translation Editor** (in development).
 
 ## Why is it such a mess
 It's my first tool in Java and Maven, a one man project. It will take a time to clean it up, any help is appreciated.
