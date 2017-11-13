@@ -28,4 +28,12 @@ public class TranslationString {
     public List<TranslationValue> getTranslations() {
         return translations;
     }
+
+
+    public boolean equals(TranslationString other) {
+        if ( this.selector.equals(other.getSelector()) ) {
+            return true;
+        }
+        return false;
+    }
 }
