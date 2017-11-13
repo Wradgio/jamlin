@@ -19,4 +19,12 @@ public class TranslationValue {
     public String getTranslation() {
         return translation;
     }
+
+
+    public boolean equals(TranslationValue other) {
+        if ( this.langCode.equals(other.getLangCode()) && this.translation.equals(other.getTranslation()) ) {
+            return true;
+        }
+        return false;
+    }
 }

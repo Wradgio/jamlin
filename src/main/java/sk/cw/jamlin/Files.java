@@ -1,8 +1,11 @@
 package sk.cw.jamlin;
 
+import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -43,13 +46,6 @@ public class Files {
      * @param source
      */
     static void outputExtractResultFile(String input, File source, Translation translation) {
-        if ( !translation.getLanguage().toString().isEmpty() ) {
-            //translation.getLanguage().toString();
-        }
-        // check if lang set
-        // check if related json file does exist
-        // is does - parse json and add this language - if unknown, use xx(1, 2, 3, ...) - and output it
-        // TODO - compare with existing result file !!!
         String fileName = "";
         String fileExtension = "";
 
@@ -67,6 +63,50 @@ public class Files {
         if ( !fileName.contains(".json") ) {
             fileName = fileName+".json";
         }
+
+
+        // TODO - clean up this
+        if ( !translation.getLanguage().toString().isEmpty() ) {
+            translation.getLanguage().toString();
+        }
+        String oldResultFilePath = source.getParentFile().toString()+ File.separator +fileName;
+        if ( (new File(oldResultFilePath)).exists() ) {
+            // merge two results and create new result
+
+            // get old result from file
+            String oldResultInput = "";
+            try {
+                oldResultInput = new String(java.nio.file.Files.readAllBytes(Paths.get(oldResultFilePath)));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            TranslationExtractResult oldResult = null;
+            if (!oldResultInput.isEmpty()) {
+                Gson gsonOld = new Gson();
+                try {
+                    oldResult = gsonOld.fromJson(oldResultInput, TranslationExtractResult.class);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+
+            // get new result from input
+            Gson gsonNew = new Gson();
+            TranslationExtractResult newResult = null;
+            try {
+                newResult = gsonNew.fromJson(input, TranslationExtractResult.class);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+
+            if (oldResult!=null && newResult!=null) {
+                input = TranslationExtractResult.mergeTwoResults(oldResult, newResult);
+            }
+        }
+        // check if lang set
+        // check if related json file does exist
+        // is does - parse json and add this language - if unknown, use xx(1, 2, 3, ...) - and output it
+        // TODO - compare with existing result file !!!
 
         writeResultFile(source.getParentFile(), fileName, input);
     }

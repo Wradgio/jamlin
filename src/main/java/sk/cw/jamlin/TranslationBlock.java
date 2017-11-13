@@ -8,24 +8,20 @@ import java.util.List;
  */
 public class TranslationBlock {
 
-    private String name;
-    private String cssSelector;
+    private String name = "";
+    private String cssSelector = "";
     enum types {
         ATTRIBUTE, TEXT, VALUE
     }
-    private String type;
-    private String attrName;
+    private String type = "text";
+    private String attrName = "";
     private List<TranslationString> translationStrings = new ArrayList<TranslationString>();
 
-    public TranslationBlock(String name, String cssSelector, String type) {
-        this.name = name;
-        this.cssSelector = cssSelector;
-        if ( validType(type) ) {
-            this.type = type.toLowerCase();
-        }
+    TranslationBlock(String name, String cssSelector, String type) {
+        this(name, cssSelector, type, "");
     }
 
-    public TranslationBlock(String name, String cssSelector, String type, String attrName) {
+    TranslationBlock(String name, String cssSelector, String type, String attrName) {
         this.name = name;
         this.cssSelector = cssSelector;
         if ( validType(type) ) {
@@ -35,12 +31,11 @@ public class TranslationBlock {
     }
 
 
-    public int addTranslationString(String name, String selector) {
+    int addTranslationString(String name, String selector) {
         TranslationString translationString = new TranslationString(name, selector);
         translationStrings.add(translationString);
         return (translationStrings.size()-1);
     }
-
 
 
     private boolean validType(String type) {
@@ -50,6 +45,33 @@ public class TranslationBlock {
             }
         }
         return false;
+    }
+
+
+    public boolean equals(TranslationBlock other) {
+        if ( this.name.equals(other.getName()) && this.cssSelector.equals(other.getCssSelector()) &&
+                this.attrName.equals(other.getAttrName()) && this.type.equals(other.getType()) ) {
+            return true;
+        }
+        return false;
+    }
+
+
+    /**
+     *
+     * @param translationString TranslationString
+     * @return boolean
+     */
+    public TranslationString getTranslationStringBySameData(TranslationString translationString) {
+        boolean blockExists = false;
+        if ( getTranslationStrings().size()>0 ) {
+            for (int i=0; i<getTranslationStrings().size(); i++) {
+                if ( getTranslationStrings().get(i).equals(translationString) ) {
+                    return getTranslationStrings().get(i);
+                }
+            }
+        }
+        return null;
     }
 
 
