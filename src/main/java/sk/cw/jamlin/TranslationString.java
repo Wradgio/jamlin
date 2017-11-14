@@ -12,10 +12,46 @@ public class TranslationString {
     private String selector;
     private List<TranslationValue> translations = new ArrayList<TranslationValue>();
 
-    public TranslationString(String stringOrig, String selector) {
+    TranslationString(String stringOrig, String selector) {
         this.stringOrig = stringOrig;
         this.selector = selector;
     }
+
+    /**
+     *
+     * @param other TranslationString
+     * @return boolean
+     */
+    boolean equals(TranslationString other) {
+        if ( this.selector.equals(other.getSelector()) ) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     *
+     * @param langCode String
+     * @return int
+     */
+    public int getTranslationValueByLang(String langCode) {
+        if ( getTranslations().size()>0 ) {
+            for (int i=0; i<getTranslations().size(); i++) {
+                if (getTranslations().get(i).getLangCode().equals(langCode)) {
+                    return i;
+                }
+            }
+        }
+        return -1;
+    }
+
+
+    int addTranslationValue(String langCode, String translation) {
+        TranslationValue translationValue = new TranslationValue(langCode, translation);
+        translations.add(translationValue);
+        return (translations.size()-1);
+    }
+
 
     public String getStringOrig() {
         return stringOrig;
@@ -29,11 +65,7 @@ public class TranslationString {
         return translations;
     }
 
-
-    public boolean equals(TranslationString other) {
-        if ( this.selector.equals(other.getSelector()) ) {
-            return true;
-        }
-        return false;
+    public void setStringOrig(String stringOrig) {
+        this.stringOrig = stringOrig;
     }
 }

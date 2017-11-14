@@ -12,6 +12,15 @@ public class TranslationValue {
         this.translation = translation;
     }
 
+
+    public boolean equals(TranslationValue other) {
+        if ( this.langCode.equals(other.getLangCode()) && this.translation.equals(other.getTranslation()) ) {
+            return true;
+        }
+        return false;
+    }
+
+
     public String getLangCode() {
         return langCode;
     }
@@ -20,11 +29,7 @@ public class TranslationValue {
         return translation;
     }
 
-
-    public boolean equals(TranslationValue other) {
-        if ( this.langCode.equals(other.getLangCode()) && this.translation.equals(other.getTranslation()) ) {
-            return true;
-        }
-        return false;
+    public void setTranslation(String translation) {
+        this.translation = translation;
     }
 }
