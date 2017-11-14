@@ -91,17 +91,43 @@ public class TranslationExtractResult {
             for (int i=0; i<newResult.getTranslationBlocks().size(); i++) {
                 // get oldResult block selector and check if exists in newResult
                 TranslationBlock newBlock = newResult.getTranslationBlocks().get(i);
-                TranslationBlock sameOldBlock = oldResult.getTranslationBlockBySameData(newBlock);
-                if (sameOldBlock != null) {
+                int sameOldBlockId = oldResult.getTranslationBlockBySameData(newBlock);
+                if ( sameOldBlockId > -1 ) {
+
                     // old block - update translate strings
                     if ( newResult.getTranslationBlocks().get(i).getTranslationStrings().size()>0 ) {
                         for (int j=0; j<newResult.getTranslationBlocks().get(i).getTranslationStrings().size(); j++) {
                             TranslationString newString = newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j);
-                            TranslationString oldHasSameString = sameOldBlock.getTranslationStringBySameData(newString);
+                            int sameOldStringId = oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStringBySameData(newString);
+                            if ( sameOldStringId > -1 ) { // translationString exists - UPDATE
+                                // update stringOrig in oldResult using same translationString of newResult
+                                oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).setStringOrig(newString.getStringOrig());
+
+                                // old translationString - update values
+                                if ( newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size()>0 ) {
+                                    for (int k=0; k<newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size(); k++) {
+                                        TranslationValue newValue = newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().get(k);
+                                        // translationValue with same langCode
+                                        int sameOldValueId = oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).getTranslationValueByLang(newValue.getLangCode());
+                                        if ( sameOldValueId > -1 ) { // translation exists - UPDATE
+                                            // update translation of that lang in oldResult using same translation of newResult
+                                            oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).getTranslations().get(sameOldValueId).setTranslation(newValue.getTranslation());
+                                        } else {
+                                            // NO translation - INSERT
+                                            oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).addTranslationValue(newValue.getLangCode(), newValue.getTranslation());
+                                        }
+                                    }
+                                }
+
+                            } else {
+                                // NO translationString - INSERT
+                                oldResult.getTranslationBlocks().get(sameOldBlockId).addTranslationString(newString.getStringOrig(), newString.getSelector());
+                            }
                         }
                     }
+                    
                 } else {
-                    // new block - insert it
+                    // NO translationBlock - INSERT
                     oldResult.addTranslationBlock(newBlock);
                 }
             }
@@ -134,15 +160,14 @@ public class TranslationExtractResult {
      * @param block TranslationBlock
      * @return boolean
      */
-    public TranslationBlock getTranslationBlockBySameData(TranslationBlock block) {
-        boolean blockExists = false;
+    public int getTranslationBlockBySameData(TranslationBlock block) {
         if ( getTranslationBlocks().size()>0 ) {
             for (int i=0; i<getTranslationBlocks().size(); i++) {
                 if ( getTranslationBlocks().get(i).equals(block) ) {
-                    return getTranslationBlocks().get(i);
+                    return i;
                 }
             }
         }
-        return null;
+        return -1;
     }
 }

@@ -8,7 +8,16 @@
         {
           "stringOrig": "Menu",
           "selector": "#mobile_menu",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Menu EN version"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Menu SK version"
+            }
+          ]
         },
         {
           "stringOrig": "Climber\u0027s Routes",

@@ -31,8 +31,8 @@ public class TranslationBlock {
     }
 
 
-    int addTranslationString(String name, String selector) {
-        TranslationString translationString = new TranslationString(name, selector);
+    int addTranslationString(String stringOrig, String selector) {
+        TranslationString translationString = new TranslationString(stringOrig, selector);
         translationStrings.add(translationString);
         return (translationStrings.size()-1);
     }
@@ -60,18 +60,17 @@ public class TranslationBlock {
     /**
      *
      * @param translationString TranslationString
-     * @return boolean
+     * @return int
      */
-    public TranslationString getTranslationStringBySameData(TranslationString translationString) {
-        boolean blockExists = false;
+    int getTranslationStringBySameData(TranslationString translationString) {
         if ( getTranslationStrings().size()>0 ) {
             for (int i=0; i<getTranslationStrings().size(); i++) {
                 if ( getTranslationStrings().get(i).equals(translationString) ) {
-                    return getTranslationStrings().get(i);
+                    return i;
                 }
             }
         }
-        return null;
+        return -1;
     }
 
 
