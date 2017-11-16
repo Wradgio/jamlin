@@ -23,8 +23,17 @@ public class Language {
      *
      * @param code
      */
-    public void setCode(String code) {
+    private void setCode(String code) {
         this.code = code;
+        this.lang = processCode(code);
+    }
+
+    /**
+     *
+     * @param code String
+     * @return Locale
+     */
+    private Locale processCode(String code) {
         if ( !code.trim().isEmpty() ) {
             String[] codes = code.split("_");
             Locale lang = null;
@@ -43,10 +52,11 @@ public class Language {
             }
             if (!lang.toString().isEmpty()) {
                 if (isValid(lang)) {
-                    this.lang = lang;
+                    return lang;
                 }
             }
         }
+        return null;
     }
 
     private boolean isValid(Locale locale) {
@@ -55,6 +65,13 @@ public class Language {
         } catch (MissingResourceException e) {
             return false;
         }
+    }
+    public static boolean checkLangCodeValid(String langCode) {
+        Language lang = new Language(langCode);
+        if (lang.getLang()!=null) {
+            return true;
+        }
+        return false;
     }
 
 

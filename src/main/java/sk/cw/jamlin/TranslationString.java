@@ -16,6 +16,11 @@ public class TranslationString {
         this.stringOrig = stringOrig;
         this.selector = selector;
     }
+    TranslationString(String stringOrig, String selector, String langCode, String value) {
+        this.stringOrig = stringOrig;
+        this.selector = selector;
+        translations.add(new TranslationValue(langCode, value));
+    }
 
     /**
      *
