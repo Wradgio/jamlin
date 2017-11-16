@@ -4,6 +4,7 @@
       "name": "texts",
       "cssSelector": "p, a",
       "type": "text",
+      "attrName": "",
       "translationStrings": [
         {
           "stringOrig": "Menu",
@@ -11,438 +12,1213 @@
           "translations": [
             {
               "langCode": "en",
-              "translation": "Menu EN version"
+              "translation": "Menu"
             },
             {
               "langCode": "sk",
-              "translation": "Menu SK version"
+              "translation": "Menu"
             }
           ]
         },
         {
-          "stringOrig": "Climber\u0027s Routes",
+          "stringOrig": "Lezecký denník",
           "selector": "#toplink_home",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Climber\u0027s Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Lezecký denník"
+            }
+          ]
         },
         {
-          "stringOrig": "Language",
+          "stringOrig": "Jazyk",
           "selector": "#toplink_languages",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Language"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Jazyk"
+            }
+          ]
         },
         {
           "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Slovenčina"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Slovenčina"
+            }
+          ]
         },
         {
           "stringOrig": "English",
           "selector": "#w_ilang_en",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "English"
+            },
+            {
+              "langCode": "sk",
+              "translation": "English"
+            }
+          ]
         },
         {
-          "stringOrig": "Search",
+          "stringOrig": "Hľadať",
           "selector": "#toplink_climb",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Search"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Hľadať"
+            }
+          ]
         },
         {
-          "stringOrig": "Search version 2 - Test",
+          "stringOrig": "Hľadať verzia 2 - test",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Search version 2 - Test"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Hľadať verzia 2 - test"
+            }
+          ]
         },
         {
-          "stringOrig": "Find Climbers",
+          "stringOrig": "Hľadať Lezcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Find Climbers"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Hľadať Lezcov"
+            }
+          ]
         },
         {
-          "stringOrig": "Advanced Search",
+          "stringOrig": "Rozšírené Vyhľadávanie",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Advanced Search"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Rozšírené Vyhľadávanie"
+            }
+          ]
         },
         {
-          "stringOrig": "Search Guides",
+          "stringOrig": "Vyhľadávať Sprievodcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Search Guides"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Vyhľadávať Sprievodcov"
+            }
+          ]
         },
         {
-          "stringOrig": "Browse Guides",
+          "stringOrig": "Prezerať Sprievodcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Browse Guides"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Prezerať Sprievodcov"
+            }
+          ]
         },
         {
-          "stringOrig": "Search Maps of Routes",
+          "stringOrig": "Vyhľadávať Mapy Ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Search Maps of Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Vyhľadávať Mapy Ciest"
+            }
+          ]
         },
         {
-          "stringOrig": "Browse Maps of Routes",
+          "stringOrig": "Prezerať Mapy Ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(5) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Browse Maps of Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Prezerať Mapy Ciest"
+            }
+          ]
         },
         {
-          "stringOrig": "Routes Search",
+          "stringOrig": "Vyhľadávať Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(7) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Routes Search"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Vyhľadávať Cesty"
+            }
+          ]
         },
         {
-          "stringOrig": "Browse Routes",
+          "stringOrig": "Prezerať Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(8) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Browse Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Prezerať Cesty"
+            }
+          ]
         },
         {
-          "stringOrig": "Recent Routes",
+          "stringOrig": "Najnovšie Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(9) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Recent Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Najnovšie Cesty"
+            }
+          ]
         },
         {
-          "stringOrig": "Track",
+          "stringOrig": "Eviduj",
           "selector": "#toplink_track",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Track"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Eviduj"
+            }
+          ]
         },
         {
-          "stringOrig": "My Routes",
+          "stringOrig": "Moje cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "My Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Moje cesty"
+            }
+          ]
         },
         {
-          "stringOrig": "My Maps of Routes",
+          "stringOrig": "Moje Mapy ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "My Maps of Routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Moje Mapy ciest"
+            }
+          ]
         },
         {
-          "stringOrig": "Publish",
+          "stringOrig": "Publikuj",
           "selector": "#toplink_share",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Publish"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Publikuj"
+            }
+          ]
         },
         {
-          "stringOrig": "My Guides",
+          "stringOrig": "Moji Sprievodcovia",
           "selector": "#mmenu \u003e li.mleft:nth-child(5) \u003e ul \u003e li \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "My Guides"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Moji Sprievodcovia"
+            }
+          ]
         },
         {
           "stringOrig": "",
           "selector": "#search_clear",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": ""
+            },
+            {
+              "langCode": "sk",
+              "translation": ""
+            }
+          ]
         },
         {
-          "stringOrig": "Account",
+          "stringOrig": "Konto",
           "selector": "#toplink_account",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Account"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Konto"
+            }
+          ]
         },
         {
           "stringOrig": "Marcel Zúbrik",
           "selector": "#toplink_profile",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Marcel Zúbrik"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Marcel Zúbrik"
+            }
+          ]
         },
         {
-          "stringOrig": "Settings",
+          "stringOrig": "Nastavenia",
           "selector": "#toplink_settings",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Settings"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Nastavenia"
+            }
+          ]
         },
         {
-          "stringOrig": "Cart",
+          "stringOrig": "Košík",
           "selector": "#toplink_cart",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Cart"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Košík"
+            }
+          ]
         },
         {
-          "stringOrig": "What\u0027s in your Cart",
+          "stringOrig": "Obsah Vášho košíka",
           "selector": "#cart_info \u003e div:nth-child(1) \u003e strong \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "What\u0027s in your Cart"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Obsah Vášho košíka"
+            }
+          ]
         },
         {
-          "stringOrig": "Your orders",
+          "stringOrig": "Zrealizované objednávky",
           "selector": "#mmenu \u003e li.mright.inliner \u003e ul.ap_to_right \u003e li.mright.inliner:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Your orders"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Zrealizované objednávky"
+            }
+          ]
         },
         {
-          "stringOrig": "Online \u0026 Offline tools for Climbers and Guide Publishers",
+          "stringOrig": "Online \u0026 Offline nástroje pre Lezcov a Tvorcov Sprievodcov",
           "selector": "#w_content \u003e div.splash_header_image \u003e div.shi_center \u003e p",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Online \u0026 Offline tools for Climbers and Guide Publishers"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Online \u0026 Offline nástroje pre Lezcov a Tvorcov Sprievodcov"
+            }
+          ]
         },
         {
-          "stringOrig": "Climb",
+          "stringOrig": "Lez",
           "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Climb"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Lez"
+            }
+          ]
         },
         {
-          "stringOrig": "Track",
+          "stringOrig": "Eviduj",
           "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Track"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Eviduj"
+            }
+          ]
         },
         {
-          "stringOrig": "Publish",
+          "stringOrig": "Zdieľaj",
           "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(3)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Publish"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Zdieľaj"
+            }
+          ]
         },
         {
-          "stringOrig": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities.",
+          "stringOrig": "Nájdi cesty, ktoré poznáš. Objav nové cesty, sektory, oblasti, lezcov, inšpiruj sa a získaj nové lezecké skúsenosti. Pridaj sa k nám a objav nové možnosti.",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Nájdi cesty, ktoré poznáš. Objav nové cesty, sektory, oblasti, lezcov, inšpiruj sa a získaj nové lezecké skúsenosti. Pridaj sa k nám a objav nové možnosti."
+            }
+          ]
         },
         {
-          "stringOrig": "Find",
+          "stringOrig": "Nájdi",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Find"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Nájdi"
+            }
+          ]
         },
         {
-          "stringOrig": "routes",
+          "stringOrig": "cesty",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(3)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "cesty"
+            }
+          ]
         },
         {
-          "stringOrig": "sectors",
+          "stringOrig": "sektory",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(4)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "sectors"
+            },
+            {
+              "langCode": "sk",
+              "translation": "sektory"
+            }
+          ]
         },
         {
-          "stringOrig": "areas",
+          "stringOrig": "oblasti",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(5)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "areas"
+            },
+            {
+              "langCode": "sk",
+              "translation": "oblasti"
+            }
+          ]
         },
         {
-          "stringOrig": "climbers",
+          "stringOrig": "lezcov",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(6)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "climbers"
+            },
+            {
+              "langCode": "sk",
+              "translation": "lezcov"
+            }
+          ]
         },
         {
-          "stringOrig": "Join us",
+          "stringOrig": "Pridaj sa k nám",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(8)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Join us"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Pridaj sa k nám"
+            }
+          ]
         },
         {
-          "stringOrig": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides.",
+          "stringOrig": "Zjednodušujeme evidovanie ciest a s vašou pomocou vytvárame verejnú databázu lezeckých ciest. Od ciest, cez Mapy ciest až po Sprievodcov.",
           "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Zjednodušujeme evidovanie ciest a s vašou pomocou vytvárame verejnú databázu lezeckých ciest. Od ciest, cez Mapy ciest až po Sprievodcov."
+            }
+          ]
         },
         {
-          "stringOrig": "routes",
+          "stringOrig": "ciest",
           "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "ciest"
+            }
+          ]
         },
         {
-          "stringOrig": "Maps of routes",
+          "stringOrig": "Mapy ciest",
           "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(3)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Maps of routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Mapy ciest"
+            }
+          ]
         },
         {
-          "stringOrig": "Guides",
+          "stringOrig": "Sprievodcov",
           "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(4)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Guides"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Sprievodcov"
+            }
+          ]
         },
         {
-          "stringOrig": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us.",
+          "stringOrig": "S našimi nástrojmi, je ľahké vytvárať a zdieľať svoje prelezy, cesty, Mapy ciest a Sprievodcov. Všetko má svoju adresu, ktorú je možné zdielať. Pridaj sa k nám.",
           "selector": "#slider \u003e li:nth-child(3) \u003e div.slide_description \u003e div.splash_desc \u003e p",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us."
+            },
+            {
+              "langCode": "sk",
+              "translation": "S našimi nástrojmi, je ľahké vytvárať a zdieľať svoje prelezy, cesty, Mapy ciest a Sprievodcov. Všetko má svoju adresu, ktorú je možné zdielať. Pridaj sa k nám."
+            }
+          ]
         },
         {
-          "stringOrig": "Join us",
+          "stringOrig": "Pridaj sa k nám",
           "selector": "#slider \u003e li:nth-child(3) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Join us"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Pridaj sa k nám"
+            }
+          ]
         },
         {
-          "stringOrig": "Search",
+          "stringOrig": "Vyhľadať",
           "selector": "#sa_search",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Search"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Vyhľadať"
+            }
+          ]
         },
         {
-          "stringOrig": "Browse",
+          "stringOrig": "Prezerať",
           "selector": "#sa_browse",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Browse"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Prezerať"
+            }
+          ]
         },
         {
-          "stringOrig": "Recent",
+          "stringOrig": "Najnovšie",
           "selector": "#sa_recent",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Recent"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Najnovšie"
+            }
+          ]
         },
         {
-          "stringOrig": "Climber\u0027s Routes mobile app Digital climbing in your pocket",
+          "stringOrig": "Mobilná aplikácia Climber\u0027s Routes Digitálny lezecký výstroj do vrecka",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.mobile_app \u003e p",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Climber\u0027s Routes mobile app Digital climbing in your pocket"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Mobilná aplikácia Climber\u0027s Routes Digitálny lezecký výstroj do vrecka"
+            }
+          ]
         },
         {
           "stringOrig": "",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.mobile_app \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": ""
+            },
+            {
+              "langCode": "sk",
+              "translation": ""
+            }
+          ]
         },
         {
-          "stringOrig": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers.",
+          "stringOrig": "Nájdeš svoju cestu a prelezieš ju. Zaregistruješ sa u nás a zaznačíš si svoj prelez, zdieľaš ho. Spoznáš ďalších lezcov.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Nájdeš svoju cestu a prelezieš ju. Zaregistruješ sa u nás a zaznačíš si svoj prelez, zdieľaš ho. Spoznáš ďalších lezcov."
+            }
+          ]
         },
         {
-          "stringOrig": "Find your route",
+          "stringOrig": "Nájdeš svoju cestu",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Find your route"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Nájdeš svoju cestu"
+            }
+          ]
         },
         {
-          "stringOrig": "joining us",
+          "stringOrig": "Zaregistruješ sa",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "joining us"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Zaregistruješ sa"
+            }
+          ]
         },
         {
-          "stringOrig": "climbers",
+          "stringOrig": "lezcov",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(3)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "climbers"
+            },
+            {
+              "langCode": "sk",
+              "translation": "lezcov"
+            }
+          ]
         },
         {
-          "stringOrig": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes.",
+          "stringOrig": "Nájdeš a naštuduješ si novú líniu v Mapách ciest. A prelezieš ju. Odfotíš čo si preliezol a na fotke označís svoju líniu. A budeš to ty, kto ju predstaví ostatným ako novú Mapu ciest.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(3)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Nájdeš a naštuduješ si novú líniu v Mapách ciest. A prelezieš ju. Odfotíš čo si preliezol a na fotke označís svoju líniu. A budeš to ty, kto ju predstaví ostatným ako novú Mapu ciest."
+            }
+          ]
         },
         {
-          "stringOrig": "Maps of routes",
+          "stringOrig": "Mapách ciest",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(3) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Maps of routes"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Mapách ciest"
+            }
+          ]
         },
         {
-          "stringOrig": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide.",
+          "stringOrig": "Dáš si svoje prelezy na svoj blog či stránky. Sleduješ svoje štatistiky. Zlepšuješ sa. Máš už toľko Máp ciest, že sa rozhodneš vytvoriť a predávať svojho lezeckého Sprievodcu.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(4)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Dáš si svoje prelezy na svoj blog či stránky. Sleduješ svoje štatistiky. Zlepšuješ sa. Máš už toľko Máp ciest, že sa rozhodneš vytvoriť a predávať svojho lezeckého Sprievodcu."
+            }
+          ]
         },
         {
-          "stringOrig": "climbing Guide",
+          "stringOrig": "lezeckého Sprievodcu",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(4) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "climbing Guide"
+            },
+            {
+              "langCode": "sk",
+              "translation": "lezeckého Sprievodcu"
+            }
+          ]
         },
         {
-          "stringOrig": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now.",
+          "stringOrig": "Chceme byť webstránkou, kde lezci vytvárajú prvú databázu lezeckých ciest tým, že zdieľajú svoje cesty. Pridaj sa k nám teraz.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(6)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Chceme byť webstránkou, kde lezci vytvárajú prvú databázu lezeckých ciest tým, že zdieľajú svoje cesty. Pridaj sa k nám teraz."
+            }
+          ]
         },
         {
-          "stringOrig": "Join us now",
+          "stringOrig": "Pridaj sa k nám teraz",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(6) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Join us now"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Pridaj sa k nám teraz"
+            }
+          ]
         },
         {
-          "stringOrig": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us.",
+          "stringOrig": "Pozri si Novinky pre viac info o tom, čo sa deje. Sleduj nás na Facebooku, Google a Twitteri. Získaj podporu na sociálnych sieťach alebo nás kontaktuj priamo. Pomôž nám tým, že zazdieľaš linku na tento projekt.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us."
+            },
+            {
+              "langCode": "sk",
+              "translation": "Pozri si Novinky pre viac info o tom, čo sa deje. Sleduj nás na Facebooku, Google a Twitteri. Získaj podporu na sociálnych sieťach alebo nás kontaktuj priamo. Pomôž nám tým, že zazdieľaš linku na tento projekt."
+            }
+          ]
         },
         {
-          "stringOrig": "News",
+          "stringOrig": "Novinky",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "News"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Novinky"
+            }
+          ]
         },
         {
-          "stringOrig": "Facebook",
+          "stringOrig": "Facebooku",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Facebook"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Facebooku"
+            }
+          ]
         },
         {
           "stringOrig": "Google",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(3)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Google"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Google"
+            }
+          ]
         },
         {
-          "stringOrig": "Twitter",
+          "stringOrig": "Twitteri",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(4)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Twitter"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Twitteri"
+            }
+          ]
         },
         {
-          "stringOrig": "contact us directly",
+          "stringOrig": "nás kontaktuj priamo",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(5)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "contact us directly"
+            },
+            {
+              "langCode": "sk",
+              "translation": "nás kontaktuj priamo"
+            }
+          ]
         },
         {
-          "stringOrig": "Terms and Conditions",
+          "stringOrig": "Podmienky používania",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Terms and Conditions"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Podmienky používania"
+            }
+          ]
         },
         {
-          "stringOrig": "Contact",
+          "stringOrig": "Kontakt",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Contact"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Kontakt"
+            }
+          ]
         },
         {
-          "stringOrig": "Partnership",
+          "stringOrig": "Partnerstvo",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(3) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Partnership"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Partnerstvo"
+            }
+          ]
         },
         {
-          "stringOrig": "Search Widget",
+          "stringOrig": "Vyhľadávací Widget",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Search Widget"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Vyhľadávací Widget"
+            }
+          ]
         },
         {
-          "stringOrig": "Wiki",
+          "stringOrig": "Wiki Nápoveda",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Wiki"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Wiki Nápoveda"
+            }
+          ]
         },
         {
-          "stringOrig": "Report a bug",
+          "stringOrig": "Oznám chybu",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(3) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Report a bug"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Oznám chybu"
+            }
+          ]
         },
         {
-          "stringOrig": "News",
+          "stringOrig": "Novinky",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "News"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Novinky"
+            }
+          ]
         },
         {
           "stringOrig": "Facebook",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Facebook"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Facebook"
+            }
+          ]
         },
         {
           "stringOrig": "Google+",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Google+"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Google+"
+            }
+          ]
         },
         {
           "stringOrig": "Twitter",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Twitter"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Twitter"
+            }
+          ]
         },
         {
-          "stringOrig": "Subscribe",
+          "stringOrig": "Prihlásiť sa na odber",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Subscribe"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Prihlásiť sa na odber"
+            }
+          ]
         },
         {
-          "stringOrig": "Unsubscribe",
+          "stringOrig": "Odhlásiť sa z odberu",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Unsubscribe"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Odhlásiť sa z odberu"
+            }
+          ]
         },
         {
           "stringOrig": "Marcel Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Marcel Zúbrik"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Marcel Zúbrik"
+            }
+          ]
         },
         {
           "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Tomáš Zúbrik"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Tomáš Zúbrik"
+            }
+          ]
         },
         {
-          "stringOrig": "Whian.net",
+          "stringOrig": "Publikátor",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(4)",
-          "translations": []
-        },
-        {
-          "stringOrig": "mariachily",
-          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(5)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Whian.net"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Publikátor"
+            }
+          ]
         },
         {
           "stringOrig": "CC",
+          "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(5)",
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "mariachily"
+            },
+            {
+              "langCode": "sk",
+              "translation": "CC"
+            }
+          ]
+        },
+        {
+          "stringOrig": "mariachily",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(6)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "CC"
+            },
+            {
+              "langCode": "sk",
+              "translation": "mariachily"
+            }
+          ]
         },
         {
-          "stringOrig": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it",
+          "stringOrig": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka"
+            }
+          ]
         },
         {
-          "stringOrig": "Read more",
+          "stringOrig": "Čítajte viac",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Read more"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Čítajte viac"
+            }
+          ]
         },
         {
-          "stringOrig": "OK, Got it",
+          "stringOrig": "Jasnačka",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a.eu_cookie_confirm.rounded2",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "OK, Got it"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Jasnačka"
+            }
+          ]
+        },
+        {
+          "stringOrig": "Pridaj sa k nám",
+          "selector": "#w_content \u003e div.splash_header_image \u003e div.shi_center \u003e div.mt30 \u003e a.red_any_button.rounded2.joinus",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": "Pridaj sa k nám"
+            }
+          ]
         }
       ]
     },
@@ -453,32 +1229,67 @@
       "attrName": "title",
       "translationStrings": [
         {
-          "stringOrig": "Slovenčina Title",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Slovenčina"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Slovenčina"
+            }
+          ]
         },
         {
-          "stringOrig": "English Title",
+          "stringOrig": "English",
           "selector": "#w_ilang_en",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "English"
+            },
+            {
+              "langCode": "sk",
+              "translation": "English"
+            }
+          ]
         },
         {
           "stringOrig": "MacO\u0027s creative workshop",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "MacO\u0027s creative workshop"
+            },
+            {
+              "langCode": "sk",
+              "translation": "MacO\u0027s creative workshop"
+            }
+          ]
         },
         {
           "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
-          "translations": []
+          "translations": [
+            {
+              "langCode": "en",
+              "translation": "Tomáš Zúbrik"
+            },
+            {
+              "langCode": "sk",
+              "translation": "Tomáš Zúbrik"
+            }
+          ]
         }
       ]
     }
   ],
   "config": {
-    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/jamlin_demo.html",
-    "timestamp": "Nov 5, 2017 10:42:50 PM",
-    "destination": "/Users/marthol/IdeaProjects/MavenBased/jamlin/jamlin_demo.html",
+    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/jamlin_demo-en.html",
+    "timestamp": "Nov 16, 2017 12:50:37 PM",
     "selectors": [
       {
         "name": "texts",
@@ -492,6 +1303,10 @@
         "attrName": "title"
       }
     ],
+    "language": {
+      "code": "en",
+      "lang": "en"
+    },
     "target": {
       "replaceFile": true,
       "replacePattern": "*-$lang.*"

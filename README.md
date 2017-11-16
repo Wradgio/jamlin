@@ -13,7 +13,7 @@ For projects that use static HTML. Sometimes you need to keep HTML in project wi
 
 ## How to use it
 
-To define variables for both actions, there are two sources of data
+To define variables for both actions, there are two possible sources of data:
 1. Config file
 2. Parameters
 
@@ -63,6 +63,8 @@ Every time you run JaMLin, it's looking for config file, named **jamlin_config.j
 	}
 }
 ```
+
+Depending on settings of config, JaMLin by default uses "extract" action to traverse defined items and trying to extract their translations. When run with "replace" action, it tries to get new translations back to its original files.
 
 ### Parameters
 JaMLin receives 4 parameters. Examples of using Jamlin looks like this:

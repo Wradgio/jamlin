@@ -59,16 +59,24 @@ public class Files {
             System.out.println(e.getMessage());
         }
 
+        String langCode = null;
+        if ( translation.getLanguage()!=null && !translation.getLanguage().toString().isEmpty() ) {
+            langCode = translation.getLanguage().getCode();
+        } else {
+            // get lang code from filename
+            langCode = Language.getLangCodeFromFilePath(fileName);
+        }
+        if (langCode!=null && Language.checkLangCodeValid(langCode) ) {
+            // if valid, remove lang from filename
+            fileName = fileName.replace("-"+langCode, "");
+        }
+
         fileName = fileName+"-extract";
         if ( !fileName.contains(".json") ) {
             fileName = fileName+".json";
         }
 
 
-        // TODO - clean up this
-        if ( !translation.getLanguage().toString().isEmpty() ) {
-            translation.getLanguage().toString();
-        }
         String oldResultFilePath = source.getParentFile().toString()+ File.separator +fileName;
         if ( (new File(oldResultFilePath)).exists() ) {
             // merge two results and create new result
@@ -103,10 +111,6 @@ public class Files {
                 input = TranslationExtractResult.mergeTwoResults(oldResult, newResult);
             }
         }
-        // check if lang set
-        // check if related json file does exist
-        // is does - parse json and add this language - if unknown, use xx(1, 2, 3, ...) - and output it
-        // TODO - compare with existing result file !!!
 
         writeResultFile(source.getParentFile(), fileName, input);
     }
@@ -114,8 +118,8 @@ public class Files {
 
     /**
      *
-     * @param results
-     * @param destination
+     * @param results TranslationReplaceResult
+     * @param destination String
      */
     static void outputReplaceResultFiles(TranslationReplaceResult results, String destination) {
         Map<String, String> resultFileNames = new HashMap<>();

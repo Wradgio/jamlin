@@ -43,7 +43,7 @@ public class Main
         config = getConfig(workingDirectory+File.separator+"jamlin_config.json");
 
         if (config!=null) {
-            getFileTranslation(config, action, source, target);
+            //getFileTranslation(config, action, source, target);
             handleFileTranslations();
         }
     }
@@ -86,7 +86,10 @@ public class Main
         }
         List<String> resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
         for (int i=0; i<resultFiles.size(); i++) {
+            System.out.println( " -------------------------------------------- " );
             System.out.println( resultFiles.get(i) );
+            System.out.println( " -------------------------------------------- " );
+            getFileTranslation(config, action, resultFiles.get(i), null);
         }
     }
 
@@ -120,16 +123,21 @@ public class Main
         }
 
         // get target - REPLACE only
-        if ( target!=null && !target.trim().isEmpty() ) {
-            target = target.trim();
-            if ( !target.contains(File.separator) ) {
-                target = workingDirectory+File.separator+target;
+        if ( action.equals("replace") ) {
+            if (target != null && !target.trim().isEmpty()) {
+                target = target.trim();
+                if (!target.contains(File.separator)) {
+                    target = workingDirectory + File.separator + target;
+                }
+            } else {
+                variablesPassed = false;
+                System.out.println("ERROR: No 'target' set.");
             }
-        } else {
-            variablesPassed = false;
-            System.out.println("ERROR: No 'target' set.");
         }
 
+        System.out.println("ACTION: "+action);
+        System.out.println("SOURCE: "+source);
+        System.out.println("TARGET: "+target);
 
         if ( variablesPassed ) {
             String fileLangCode = Language.getLangCodeFromFilePath(source);
@@ -147,6 +155,7 @@ public class Main
             TranslationConfig translationConfig = config.makeTranslationConfig(source, target);
 
             Translation translation = new Translation(translationConfig);
+            System.out.println("LANG CODE: "+translation.getLanguage().getCode());
             String result = "";
 
             if (translation.validAction(action)) {

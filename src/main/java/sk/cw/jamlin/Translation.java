@@ -31,6 +31,9 @@ public class Translation {
 
     public Translation(TranslationConfig config) {
         this.config = config;
+        if (config.getLanguage()!=null) {
+            this.language = config.getLanguage();
+        }
     }
 
     public boolean validAction(String action) {
@@ -80,13 +83,18 @@ public class Translation {
 
                 // adding translation strings according to type
                 for (int j=0; j<selectorResult.size(); j++) {
-                    if (selectorType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase()) && !selectorAttrName.trim().equals("")) {
-                        translationBlock.addTranslationString(selectorResult.get(j).attr(selectorAttrName), selectorResult.get(j).cssSelector());
-                    } else if (selectorType.equals("value")) {
-                        translationBlock.addTranslationString(selectorResult.get(j).val(), selectorResult.get(j).cssSelector());
-                    } else {
-                        translationBlock.addTranslationString(selectorResult.get(j).text(), selectorResult.get(j).cssSelector());
+                    int translationStringId = -1;
+                    if (language==null || language.getCode().trim().isEmpty()) {
+                        language = new Language("xx");
                     }
+                    if (selectorType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase()) && !selectorAttrName.trim().equals("")) {
+                        translationStringId = translationBlock.addTranslationString(selectorResult.get(j).attr(selectorAttrName), selectorResult.get(j).cssSelector(), language.getCode(), selectorResult.get(j).attr(selectorAttrName));
+                    } else if (selectorType.equals("value")) {
+                        translationStringId = translationBlock.addTranslationString(selectorResult.get(j).val(), selectorResult.get(j).cssSelector(), language.getCode(), selectorResult.get(j).val());
+                    } else {
+                        translationStringId = translationBlock.addTranslationString(selectorResult.get(j).text(), selectorResult.get(j).cssSelector(), language.getCode(), selectorResult.get(j).text());
+                    }
+
                 }
                 translationExtractResult.addTranslationBlock(translationBlock);
             }

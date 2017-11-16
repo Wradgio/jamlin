@@ -36,6 +36,11 @@ public class TranslationBlock {
         translationStrings.add(translationString);
         return (translationStrings.size()-1);
     }
+    int addTranslationString(String stringOrig, String selector, String langCode, String value) {
+        TranslationString translationString = new TranslationString(stringOrig, selector, langCode, value);
+        translationStrings.add(translationString);
+        return (translationStrings.size()-1);
+    }
 
 
     private boolean validType(String type) {
@@ -49,8 +54,8 @@ public class TranslationBlock {
 
 
     public boolean equals(TranslationBlock other) {
-        if ( this.name.equals(other.getName()) && this.cssSelector.equals(other.getCssSelector()) &&
-                this.attrName.equals(other.getAttrName()) && this.type.equals(other.getType()) ) {
+        if ( name!=null && name.equals(other.getName()) && cssSelector!=null && cssSelector.equals(other.getCssSelector()) &&
+                attrName!=null && attrName.equals(other.getAttrName()) && type!=null && type.equals(other.getType()) ) {
             return true;
         }
         return false;

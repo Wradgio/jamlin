@@ -20,6 +20,12 @@ public class TranslationExtractResult {
         this.config = config;
     }
 
+
+    /**
+     *
+     * @param translationBlock TranslationBlock
+     * @return int
+     */
     int addTranslationBlock(TranslationBlock translationBlock) {
         if ( !checkIfBlockExists(translationBlock) ) {
             translationBlocks.add(translationBlock);
@@ -74,11 +80,6 @@ public class TranslationExtractResult {
     }
 
 
-    List<TranslationBlock> getTranslationBlocks() {
-        return translationBlocks;
-    }
-
-
     /**
      * Loop translations of new file and add, update blocks and translations with languages to old result
      * @param oldResult TranslationExtractResult
@@ -92,6 +93,7 @@ public class TranslationExtractResult {
                 // get oldResult block selector and check if exists in newResult
                 TranslationBlock newBlock = newResult.getTranslationBlocks().get(i);
                 int sameOldBlockId = oldResult.getTranslationBlockBySameData(newBlock);
+//                System.out.println(" -- sameOldBlockId: "+sameOldBlockId);
                 if ( sameOldBlockId > -1 ) {
 
                     // old block - update translate strings
@@ -99,6 +101,7 @@ public class TranslationExtractResult {
                         for (int j=0; j<newResult.getTranslationBlocks().get(i).getTranslationStrings().size(); j++) {
                             TranslationString newString = newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j);
                             int sameOldStringId = oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStringBySameData(newString);
+//                            System.out.println(" -- sameOldStringId: "+sameOldStringId);
                             if ( sameOldStringId > -1 ) { // translationString exists - UPDATE
                                 // update stringOrig in oldResult using same translationString of newResult
                                 oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).setStringOrig(newString.getStringOrig());
@@ -109,6 +112,7 @@ public class TranslationExtractResult {
                                         TranslationValue newValue = newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().get(k);
                                         // translationValue with same langCode
                                         int sameOldValueId = oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).getTranslationValueByLang(newValue.getLangCode());
+//                                        System.out.println(" -- sameOldValueId: "+sameOldValueId);
                                         if ( sameOldValueId > -1 ) { // translation exists - UPDATE
                                             // update translation of that lang in oldResult using same translation of newResult
                                             oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).getTranslations().get(sameOldValueId).setTranslation(newValue.getTranslation());
@@ -116,6 +120,14 @@ public class TranslationExtractResult {
                                             // NO translation - INSERT
                                             oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).addTranslationValue(newValue.getLangCode(), newValue.getTranslation());
                                         }
+                                    }
+                                } else { // no old translations, add new ones
+                                    System.out.println(" ______________ no old translations, add new ones ___ "+newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size());
+                                    // NO translation - INSERT
+                                    for (int k=0; k<newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size(); k++) {
+                                        TranslationValue newValue = newResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().get(k);
+                                        int newTranslationValueId = oldResult.getTranslationBlocks().get(sameOldBlockId).getTranslationStrings().get(sameOldStringId).addTranslationValue(newValue.getLangCode(), newValue.getTranslation());
+                                        System.out.println("newTranslationValueId: "+newTranslationValueId);
                                     }
                                 }
 
@@ -125,7 +137,7 @@ public class TranslationExtractResult {
                             }
                         }
                     }
-                    
+
                 } else {
                     // NO translationBlock - INSERT
                     oldResult.addTranslationBlock(newBlock);
@@ -169,5 +181,10 @@ public class TranslationExtractResult {
             }
         }
         return -1;
+    }
+
+
+    List<TranslationBlock> getTranslationBlocks() {
+        return translationBlocks;
     }
 }
