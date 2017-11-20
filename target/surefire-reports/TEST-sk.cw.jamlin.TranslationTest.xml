@@ -64,8 +64,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
+  <testcase classname="sk.cw.jamlin.TranslationTest" name="testValidAction" time="0"/>
   <testcase classname="sk.cw.jamlin.TranslationTest" name="testExtractStrings" time="0"/>
   <testcase classname="sk.cw.jamlin.TranslationTest" name="testReplaceStrings" time="0"/>
   <testcase classname="sk.cw.jamlin.TranslationTest" name="testGetConfig" time="0"/>
-  <testcase classname="sk.cw.jamlin.TranslationTest" name="testValidAction" time="0"/>
 </testsuite>

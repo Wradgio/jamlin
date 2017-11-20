@@ -85,11 +85,45 @@ public class Main
             }
         }
         List<String> resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
-        for (int i=0; i<resultFiles.size(); i++) {
-            System.out.println( " -------------------------------------------- " );
-            System.out.println( resultFiles.get(i) );
-            System.out.println( " -------------------------------------------- " );
-            getFileTranslation(config, action, resultFiles.get(i), null);
+        if (action!=null && action.equals("replace")) {
+            for (int i = 0; i < resultFiles.size(); i++) {
+                try {
+                    File parentDirectory = new File(resultFiles.get(i));
+                    if (parentDirectory!=null) {
+                        String fileNameOrig = parentDirectory.getName();
+                        String fileName = null;
+                        String langCode = Language.getLangCodeFromFilePath(parentDirectory.getPath());
+                        if (langCode!=null && Language.checkLangCodeValid(langCode) ) {
+                            // if valid, remove lang from filename
+                            fileName = fileNameOrig.replace("-"+langCode, "-extract");
+                            String extension[] = fileName.split("\\.");
+                            if ( extension.length>0 ) {
+                                fileName = fileName.replace("."+extension[extension.length-1], ".json");
+                            } else {
+                                fileName = null;
+                            }
+                        }
+                        parentDirectory = parentDirectory.getParentFile();
+                        String jsonFilePath = parentDirectory.getPath() +File.separator+ fileName;
+                        // check if json exists
+                        if ( fileName!=null && (new File(jsonFilePath)).exists() && Language.checkLangCodeValid(langCode) ) {
+                            config.setLanguage(new Language(langCode));
+                            getFileTranslation(config, action, jsonFilePath, resultFiles.get(i));
+                        }
+                    }
+                } catch (Exception e) {
+                    System.out.println("Replace action file error: "+e.getMessage());
+                    System.out.print(e.getCause());
+                }
+            }
+        } else {
+            // extract action
+            for (int i = 0; i < resultFiles.size(); i++) {
+                System.out.println(" -------------------------------------------- ");
+                System.out.println(resultFiles.get(i));
+                System.out.println(" -------------------------------------------- ");
+                getFileTranslation(config, action, resultFiles.get(i), null);
+            }
         }
     }
 
@@ -140,9 +174,16 @@ public class Main
         System.out.println("TARGET: "+target);
 
         if ( variablesPassed ) {
-            String fileLangCode = Language.getLangCodeFromFilePath(source);
-            if (!fileLangCode.isEmpty()) {
-                config.setLanguage(new Language(fileLangCode));
+            if (action.equals("extract")) {
+                String fileLangCode = Language.getLangCodeFromFilePath(source);
+                if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
+                    config.setLanguage(new Language(fileLangCode));
+                }
+            } else if (action.equals("replace")) {
+                String fileLangCode = Language.getLangCodeFromFilePath(target);
+                if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
+                    config.setLanguage(new Language(fileLangCode));
+                }
             }
 
             String input = "";
@@ -169,7 +210,7 @@ public class Main
 
                     TranslationReplaceResult replaceResults = translation.replaceStrings(input, targetString);
                     result = "Please, set output language for result translation";
-                    if (!language.isEmpty() && replaceResults.getLangCodes().size() > 0) {
+                    if (!language.isEmpty() && replaceResults.getLangCodes().size()>0) {
                         // if language is set, return result of that language
                         result = replaceResults.get(language);
                     } else {
