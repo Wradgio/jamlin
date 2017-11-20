@@ -4,15 +4,16 @@
 1. **EXTRACT strings from original HTML or XML.** (eg. index.html)
 	* using CSS selectors.
 	* creating JSON that can be used to add translations.
-2. **REPLACE strings with localized ones.**
+2. **REPLACE strings with localised ones.**
 	* created from JSON with translations.
 	* creating new HTML or XML files (eg. index-en.html).
 
+It's like _gettext_ but for markup language files, without need of special functions and with JSON files to store your translation strings.
+
 ## What is it good for
-For projects that use static HTML. Sometimes you need to keep HTML in project without additional formating, but with some internalization tool.
+For projects that use static HTML or XML that need to be translated. Sometimes you need to keep HTML in project without additional attributes or special tags, but with some internalisation tool.
 
 ## How to use it
-
 To define variables for both actions, there are two possible sources of data:
 1. Config file
 2. Parameters
@@ -64,7 +65,7 @@ Every time you run JaMLin, it's looking for config file, named **jamlin_config.j
 }
 ```
 
-Depending on settings of config, JaMLin by default uses "extract" action to traverse defined items and trying to extract their translations. When run with "replace" action, it tries to get new translations back to its original files.
+JaMLin by default uses "extract" action to traverse defined items and trying to extract their translations. When run with "replace" action, it tries to get new translations back to its original files.
 
 ### Parameters
 JaMLin receives 4 parameters. Examples of using Jamlin looks like this:
@@ -96,7 +97,7 @@ Parameters legend:
 
 
 ## Translation
-JaMLin does not translate data by itself. To translate it, you need to fill translations into JSON file using this format:
+JaMLin does not translate data by itself. It only extracts strings according to your  To translate it, you need to fill translations into JSON file using this format:
 ```json
 {
   "translationBlocks": [

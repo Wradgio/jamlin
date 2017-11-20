@@ -124,13 +124,17 @@ public class Translation {
 
         List<String> langCodes = new ArrayList<>();
 
-        if ( extractResult.getTranslationBlocks().size()>0 ) {
-            for (int i = 0; i < extractResult.getTranslationBlocks().size(); i++) {
-                for (int j = 0; j < extractResult.getTranslationBlocks().get(i).getTranslationStrings().size(); j++) {
-                    for (int k = 0; k < extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size(); k++) {
-                        String langCode = extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().get(k).getLangCode();
-                        if ( !langCodes.contains( langCode ) ) {
-                            langCodes.add(langCode);
+        if ( language!=null && !language.getCode().trim().isEmpty() ) {
+            langCodes.add(language.getCode());
+        } else {
+            if (extractResult.getTranslationBlocks().size() > 0) {
+                for (int i = 0; i < extractResult.getTranslationBlocks().size(); i++) {
+                    for (int j = 0; j < extractResult.getTranslationBlocks().get(i).getTranslationStrings().size(); j++) {
+                        for (int k = 0; k < extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size(); k++) {
+                            String langCode = extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().get(k).getLangCode();
+                            if (!langCodes.contains(langCode)) {
+                                langCodes.add(langCode);
+                            }
                         }
                     }
                 }
@@ -160,17 +164,20 @@ public class Translation {
                         String langCode = extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().get(k).getLangCode();
                         String selector = extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getSelector();
                         String stringOrig = extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getStringOrig();
-                        Elements selectorResults = docs.get(langCode).select( selector );
-                        if (selectorResults.size()>0) {
-                            if (activeBlockType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase())) {
-                                // replace attribute
-                                selectorResults.first().attr(activeBlockAttr, translation);
-                            } else if (activeBlockType.equals(TranslationBlock.types.VALUE.toString().toLowerCase())) {
-                                // replace value
-                                selectorResults.first().val(translation);
-                            } else if (activeBlockType.equals(TranslationBlock.types.TEXT.toString().toLowerCase())) {
-                                // replace text
-                                selectorResults.first().text(translation);
+                        Document document = docs.get(langCode);
+                        if (document!=null) {
+                            Elements selectorResults = document.select(selector);
+                            if (selectorResults.size() > 0) {
+                                if (activeBlockType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase())) {
+                                    // replace attribute
+                                    selectorResults.first().attr(activeBlockAttr, translation);
+                                } else if (activeBlockType.equals(TranslationBlock.types.VALUE.toString().toLowerCase())) {
+                                    // replace value
+                                    selectorResults.first().val(translation);
+                                } else if (activeBlockType.equals(TranslationBlock.types.TEXT.toString().toLowerCase())) {
+                                    // replace text
+                                    selectorResults.first().text(translation);
+                                }
                             }
                         }
                     }

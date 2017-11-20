@@ -169,6 +169,12 @@ public class Files {
 
         if (results.getLangCodes().size()>0) {
             for (int j=0; j<results.getLangCodes().size(); j++) {
+                // remove language from fileName it is already included
+                String foundLangExt = fileName.substring(fileName.length() -1 -results.getLangCodes().get(j).length(), fileName.length());
+                if ( foundLangExt.equals("-"+results.getLangCodes().get(j)) ) {
+                    fileName = fileName.substring(0, fileName.length() -1 -results.getLangCodes().get(j).length());
+                }
+                // set filename from config pattern
                 String newName = fileNameFromPattern(results.getTargetPattern(), fileName, fileExtension, results.getLangCodes().get(j));
                 resultFileNames.put(results.getLangCodes().get(j), newName);
             }
