@@ -111,7 +111,13 @@ public class Translation {
     }
 
 
-    public TranslationReplaceResult replaceStrings(String extractedJson, String target) {
+    /**
+     *
+     * @param extractedJson String
+     * @param target String
+     * @return TranslationReplaceResult
+     */
+    TranslationReplaceResult replaceStrings(String extractedJson, String target) {
         this.translateAction = translateActions.REPLACE.toString().toLowerCase();
         extractedJson = extractedJson.trim();
         Gson gson = new Gson();
@@ -127,7 +133,7 @@ public class Translation {
         if ( language!=null && !language.getCode().trim().isEmpty() ) {
             langCodes.add(language.getCode());
         } else {
-            if (extractResult.getTranslationBlocks().size() > 0) {
+            if ( extractResult.getTranslationBlocks()!=null && extractResult.getTranslationBlocks().size()>0) {
                 for (int i = 0; i < extractResult.getTranslationBlocks().size(); i++) {
                     for (int j = 0; j < extractResult.getTranslationBlocks().get(i).getTranslationStrings().size(); j++) {
                         for (int k = 0; k < extractResult.getTranslationBlocks().get(i).getTranslationStrings().get(j).getTranslations().size(); k++) {
@@ -152,7 +158,7 @@ public class Translation {
         }
 
 
-        if ( extractResult.getTranslationBlocks().size()>0 ) {
+        if ( extractResult.getTranslationBlocks()!=null && extractResult.getTranslationBlocks().size()>0 ) {
 
             for ( int i=0; i<extractResult.getTranslationBlocks().size(); i++ ) {
                 String activeBlockType = extractResult.getTranslationBlocks().get(i).getType();

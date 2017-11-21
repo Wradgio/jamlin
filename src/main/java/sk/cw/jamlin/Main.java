@@ -84,8 +84,10 @@ public class Main
                 extensions.add( extension );
             }
         }
+
         List<String> resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
-        if (action!=null && action.equals("replace")) {
+
+        if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) {
             for (int i = 0; i < resultFiles.size(); i++) {
                 try {
                     File parentDirectory = new File(resultFiles.get(i));
@@ -157,7 +159,7 @@ public class Main
         }
 
         // get target - REPLACE only
-        if ( action.equals("replace") ) {
+        if ( action.equals(actions.REPLACE.toString().toLowerCase()) ) {
             if (target != null && !target.trim().isEmpty()) {
                 target = target.trim();
                 if (!target.contains(File.separator)) {
@@ -179,7 +181,7 @@ public class Main
                 if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
                     config.setLanguage(new Language(fileLangCode));
                 }
-            } else if (action.equals("replace")) {
+            } else if (action.equals(actions.REPLACE.toString().toLowerCase())) {
                 String fileLangCode = Language.getLangCodeFromFilePath(target);
                 if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
                     config.setLanguage(new Language(fileLangCode));
@@ -200,7 +202,7 @@ public class Main
             String result = "";
 
             if (translation.validAction(action)) {
-                if (action.equals("replace")) {
+                if (action.equals(actions.REPLACE.toString().toLowerCase())) {
                     String targetString = "";
                     try {
                         targetString = new String(Files.readAllBytes(Paths.get(target)));
