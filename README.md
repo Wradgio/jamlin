@@ -14,9 +14,9 @@ It's like _gettext_ but for markup language files, without need of special funct
 For projects that use static HTML or XML that need to be translated. Sometimes you need to keep HTML in project without additional attributes or special tags, but with some internalisation tool.
 
 ## How to use it
-To define variables for both actions, there are two possible sources of data:
-1. Config file
-2. Parameters
+To run it, you need too things defined:
+1. Config file (required)
+2. Parameters (optional)
 
 ### Config file
 Every time you run JaMLin, it's looking for config file, named **jamlin_config.json** which defines all data needed for extraction in this structure:
@@ -64,6 +64,13 @@ Every time you run JaMLin, it's looking for config file, named **jamlin_config.j
 	}
 }
 ```
+It defines sources and targets:
+1. In sources, you define what texts you want to use for translation. You can traverse whole directories for file with defined extensions or use only selected files. Within these two tools you define tags, you want to use using [CSS selectors](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors). You can define your own names for unlimited number of selectors using 3 types - text, attribute and value.
+2. In target you define replace pattern of file and if existing file can be replaced (TODO).
+
+You will probably need separate config for every project.
+
+Afte you set it up, you can define parameters - action, source, target and language.
 
 JaMLin by default uses "extract" action to traverse defined items and trying to extract their translations. When run with "replace" action, it tries to get new translations back to its original files.
 
