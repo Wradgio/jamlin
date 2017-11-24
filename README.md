@@ -102,6 +102,23 @@ Parameters legend:
 	* for "extract" action it sets, what language version was used for extract strings,
 	* for "replace" action sets what language you want to output.
 
+According to parameters, every action can have 3 modes:
+
+* **extract**
+	1. **lang specific mode** - extract one language only. <br/>
+	`java -jar jamlin-jar-with-dependencies.jar --action "extract" --source "jamlin_demo.html" --language "sk"`
+	2. **semiautomatic mode** - extract and try to get language from source, if not use "xx". <br/>
+	`java -jar jamlin-jar-with-dependencies.jar --action "extract" --source "jamlin_demo.html"`
+	3. **full automatic mode** - extract all using config (default). Extract action is default. <br/>
+	`java -jar jamlin-jar-with-dependencies.jar`
+* **replace**
+	1. **lang specific mode** - replace one language only. <br/>
+	`java -jar jamlin-jar-with-dependencies.jar --action "replace" --source "jamlin_demo-extract.json" --target "jamlin_demo.html" --language "en"`
+	2. **semiautomatic mode** - using selected target replace all languages from translation source and create related output files. <br/>
+	`java -jar jamlin-jar-with-dependencies.jar --action "replace" --source "jamlin_demo-extract.json" --target "jamlin_demo.html"`
+	3. **full automatic mode** - replace all using config (default). <br/>
+	`java -jar jamlin-jar-with-dependencies.jar --action "replace"`
+
 
 ## Translation
 JaMLin does not translate data by itself. It only extracts strings according to your  To translate it, you need to fill translations into JSON file using this format:

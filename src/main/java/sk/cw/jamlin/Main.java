@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -17,16 +18,16 @@ import java.util.List;
 public class Main
 {
     @Parameter(names={"--action", "-a"})
-    private static String action;
+    public static String action;
     @Parameter(names={"--source", "-s"})
-    private static String source;
+    public static String source;
     @Parameter(names={"--target", "-t"})
-    private static String target;
+    public static String target;
     @Parameter(names={"--language", "-l"})
-    private static String language = "";
+    public static String language = "";
 
-    private static String workingDirectory = "";
-    private static Config config;
+    static String workingDirectory = "";
+    public static Config config;
     enum actions {
         EXTRACT, REPLACE
     }
@@ -39,12 +40,17 @@ public class Main
         JCommander.Builder builder = new JCommander.Builder();
         builder.addObject(main).build().parse(argv);
         main.run();
+        System.out.println("inside main before config");
 
         config = getConfig(workingDirectory+File.separator+"jamlin_config.json");
+        System.out.println("inside main after config");
 
         if (config!=null) {
+            System.out.println("calling files");
             //getFileTranslation(config, action, source, target);
             handleFileTranslations();
+        } else {
+            System.out.println("Error - main() - no config");
         }
     }
 
@@ -55,10 +61,10 @@ public class Main
     }
 
 
-    private static Config getConfig(String configFilePath) {
+    public static Config getConfig(String configFilePath) {
         try {
             String jsonConfig = new String ( Files.readAllBytes( Paths.get(configFilePath) ) );
-            if (language.trim().equals("")) {
+            if (language.trim().isEmpty()) {
                 return new Config("file", jsonConfig);
             } else {
                 return new Config("file", jsonConfig, language);
@@ -74,7 +80,9 @@ public class Main
 
 
 
-    private static void handleFileTranslations() {
+    public static void handleFileTranslations() {
+        System.out.println("inside handleFileTranslations");
+
         // get all files (their paths) that match config options
         List<String> extensions = new ArrayList<String>();
         for (int i=0; i<config.getSources().getDirectories().size(); i++) {
@@ -85,46 +93,93 @@ public class Main
             }
         }
 
-        List<String> resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
+        List<String> resultFiles = new ArrayList<String>();
+        if ( action!=null && action.equals(actions.REPLACE.toString().toLowerCase()) && target!=null && !target.isEmpty() ) {
+            // use exact result in replace
+            resultFiles.add(target);
+        } else if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && source!=null && !source.isEmpty() && (target==null || !target.isEmpty()) ) {
+            // no target in extract
+        } else {
+            resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
+        }
 
         if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) {
-            for (int i = 0; i < resultFiles.size(); i++) {
-                try {
-                    File parentDirectory = new File(resultFiles.get(i));
-                    if (parentDirectory!=null) {
-                        String fileNameOrig = parentDirectory.getName();
-                        String fileName = null;
-                        String langCode = Language.getLangCodeFromFilePath(parentDirectory.getPath());
-                        if (langCode!=null && Language.checkLangCodeValid(langCode) ) {
-                            // if valid, remove lang from filename
-                            fileName = fileNameOrig.replace("-"+langCode, "-extract");
-                            String extension[] = fileName.split("\\.");
-                            if ( extension.length>0 ) {
-                                fileName = fileName.replace("."+extension[extension.length-1], ".json");
+            if (resultFiles.size()>0) {
+                for (int i = 0; i < resultFiles.size(); i++) {
+                    try {
+                        File parentDirectory = new File(resultFiles.get(i));
+                        if (parentDirectory != null) {
+                            String fileNameOrig = parentDirectory.getName();
+                            String fileName = "";
+                            String langCode = Language.getLangCodeFromFilePath(parentDirectory.getPath());
+                            String jsonFilePath = "";
+                            if (langCode != null && Language.checkLangCodeValid(langCode)) {
+                                // if valid, remove lang from filename
+                                fileName = fileNameOrig.replace("-" + langCode, "-extract");
+                                String extension[] = fileName.split("\\.");
+                                if (extension.length > 0) {
+                                    fileName = fileName.replace("." + extension[extension.length - 1], ".json");
+                                } else {
+                                    fileName = null;
+                                }
+                                parentDirectory = parentDirectory.getParentFile();
+                                jsonFilePath = parentDirectory.getPath() + File.separator + fileName;
                             } else {
-                                fileName = null;
+                                if ( source!=null && !source.isEmpty() ) {
+                                    jsonFilePath = source;
+                                } else {
+                                    System.out.println("fileNameOrig: " + fileNameOrig);
+                                    String extension[] = fileNameOrig.split("\\.");
+                                    if (extension.length > 0) {
+                                        fileName = fileNameOrig.replace("." + extension[extension.length - 1], "");
+                                    } else {
+                                        fileName = null;
+                                    }
+                                    System.out.println("fileName: " + fileName);
+                                    if (fileName.contains("-")) {
+                                        String fileNameBlocks[] = fileName.split("\\-");
+                                        System.out.println("fileNameBlocks: " + Arrays.toString(fileNameBlocks));
+                                        fileNameBlocks = Arrays.copyOf(fileNameBlocks, fileNameBlocks.length - 1);
+                                        System.out.println("fileNameBlocks: " + Arrays.toString(fileNameBlocks));
+                                        fileName = String.join("-", fileNameBlocks);
+                                    }
+                                    fileName = fileName + "-extract.json";
+                                }
+
                             }
+                            // check if json exists
+                            System.out.println("fileName: "+fileName);
+                            System.out.println("(new File(jsonFilePath)).exists(): "+(new File(jsonFilePath)).exists());
+                            System.out.println("langCode: "+langCode);
+                            if ( (new File(jsonFilePath)).exists() ) {
+                                if ( Language.checkLangCodeValid(langCode) ) {
+                                    config.setLanguage(new Language(langCode));
+                                }
+                                getFileTranslation(config, action, jsonFilePath, resultFiles.get(i));
+                            }
+                        } else {
+                            System.out.println("parentDirectory is null");
                         }
-                        parentDirectory = parentDirectory.getParentFile();
-                        String jsonFilePath = parentDirectory.getPath() +File.separator+ fileName;
-                        // check if json exists
-                        if ( fileName!=null && (new File(jsonFilePath)).exists() && Language.checkLangCodeValid(langCode) ) {
-                            config.setLanguage(new Language(langCode));
-                            getFileTranslation(config, action, jsonFilePath, resultFiles.get(i));
-                        }
+                    } catch (Exception e) {
+                        System.out.println("Replace action file error: " + e.getMessage());
+                        System.out.print(e.getCause());
                     }
-                } catch (Exception e) {
-                    System.out.println("Replace action file error: "+e.getMessage());
-                    System.out.print(e.getCause());
                 }
+            } else {
+                System.out.println("No result files for replace");
             }
         } else {
             // extract action
-            for (int i = 0; i < resultFiles.size(); i++) {
-                System.out.println(" -------------------------------------------- ");
-                System.out.println(resultFiles.get(i));
-                System.out.println(" -------------------------------------------- ");
-                getFileTranslation(config, action, resultFiles.get(i), null);
+            if (resultFiles.size()>0) {
+                for (int i = 0; i < resultFiles.size(); i++) {
+                    System.out.println(" -------------------------------------------- ");
+                    System.out.println(resultFiles.get(i));
+                    System.out.println(" -------------------------------------------- ");
+                    getFileTranslation(config, action, resultFiles.get(i), null);
+                }
+            } else {
+                // extract specific
+                getFileTranslation(config, action, source, null);
             }
         }
     }
@@ -132,12 +187,12 @@ public class Main
 
     /**
      *
-     * @param config
-     * @param action
-     * @param source
-     * @param target
+     * @param config Config
+     * @param action String
+     * @param source String
+     * @param target String
      */
-    private static void getFileTranslation(Config config, String action, String source, String target) {
+    public static void getFileTranslation(Config config, String action, String source, String target) {
         boolean variablesPassed = true;
 
         // get action
@@ -176,15 +231,19 @@ public class Main
         System.out.println("TARGET: "+target);
 
         if ( variablesPassed ) {
-            if (action.equals("extract")) {
+            if (action.equals(actions.EXTRACT.toString().toLowerCase())) {
                 String fileLangCode = Language.getLangCodeFromFilePath(source);
                 if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
                     config.setLanguage(new Language(fileLangCode));
                 }
             } else if (action.equals(actions.REPLACE.toString().toLowerCase())) {
-                String fileLangCode = Language.getLangCodeFromFilePath(target);
-                if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
-                    config.setLanguage(new Language(fileLangCode));
+                if ( source!=null && !source.trim().isEmpty() && target!=null && !target.trim().isEmpty() ) {
+                    // nothing
+                } else {
+                    String fileLangCode = Language.getLangCodeFromFilePath(target);
+                    if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
+                        config.setLanguage(new Language(fileLangCode));
+                    }
                 }
             }
 
@@ -198,7 +257,7 @@ public class Main
             TranslationConfig translationConfig = config.makeTranslationConfig(source, target);
 
             Translation translation = new Translation(translationConfig);
-            System.out.println("LANG CODE: "+translation.getLanguage().getCode());
+            //System.out.println("LANG CODE: "+translation.getLanguage().getCode());
             String result = "";
 
             if (translation.validAction(action)) {
