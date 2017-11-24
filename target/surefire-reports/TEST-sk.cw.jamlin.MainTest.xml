@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="sk.cw.jamlin.MainTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="sk.cw.jamlin.MainTest" time="0.075" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2017.2.5"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -64,5 +64,11 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="sk.cw.jamlin.MainTest" name="testApp" time="0.002"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="getFileTranslation_extract_semiautomatic" time="0.002"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="main" time="0"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="getFileTranslation_replace_automatic" time="0"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="getFileTranslation_extract_automatic" time="0"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="getFileTranslation_extract_specific" time="0"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="getFileTranslation_replace_semiautomatic" time="0.073"/>
+  <testcase classname="sk.cw.jamlin.MainTest" name="getFileTranslation_replace_specific" time="0"/>
 </testsuite>
