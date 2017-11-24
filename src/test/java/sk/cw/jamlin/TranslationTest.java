@@ -1,22 +1,16 @@
 package sk.cw.jamlin;
 
-import junit.framework.TestCase;
+import org.junit.Test;
 
 /**
- * Created by Marcel Zúbrik on 9.11.2017.
+ * Created by Marcel Zúbrik on 22.11.2017.
  */
-public class TranslationTest extends TestCase {
-
-    public void testValidAction() throws Exception {
+public class TranslationTest {
+    @Test
+    public void extractStrings() throws Exception {
     }
 
-    public void testExtractStrings() throws Exception {
+    @Test
+    public void replaceStrings() throws Exception {
     }
-
-    public void testReplaceStrings() throws Exception {
-    }
-
-    public void testGetConfig() throws Exception {
-    }
-
 }

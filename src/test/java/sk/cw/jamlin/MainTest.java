@@ -1,38 +1,82 @@
 package sk.cw.jamlin;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import org.junit.Test;
+
+import java.io.File;
 
 /**
- * Unit test for simple Main.
+ * Created by Marcel Zúbrik on 22.11.2017.
  */
-public class MainTest
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public MainTest(String testName )
-    {
-        super( testName );
+public class MainTest {
+    
+    @Test
+    public void main() throws Exception {
     }
 
-    /**
-     * @return the suite of tests being tested
+
+    /*
+     * Extract specific - equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar --action "extract" --source "jamlin_demo.html" --language "sk"
      */
-    public static Test suite()
-    {
-        return new TestSuite( MainTest.class );
+    @Test
+    public void getFileTranslation_extract_specific() throws Exception {
+
     }
 
-    /**
-     * Rigourous Test :-)
+
+    /*
+     * equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar --action "extract" --source "jamlin_demo.html"
      */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void getFileTranslation_extract_semiautomatic() throws Exception {
+
     }
+
+
+    /*
+     * equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar
+     */
+    @Test
+    public void getFileTranslation_extract_automatic() throws Exception {
+        Main.workingDirectory = System.getProperty("user.dir");
+        System.out.println(Main.workingDirectory+ File.separator+"jamlin_config.json");
+        Main.config = Main.getConfig(Main.workingDirectory+ File.separator+"jamlin_config.json");
+        System.out.println(Main.config.getSources().getDirectories().size());
+        if (Main.config!=null) {
+            Main.handleFileTranslations();
+        }
+    }
+
+
+
+    /*
+     * equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar --action "replace" --source "jamlin_demo-extract.json" --target "jamlin_demo.html" --language "en"
+     */
+    @Test
+    public void getFileTranslation_replace_specific() throws Exception {
+
+    }
+
+
+    /*
+     * equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar --action "replace" --source "jamlin_demo-extract.json" --target "jamlin_demo.html"
+     */
+    @Test
+    public void getFileTranslation_replace_semiautomatic() throws Exception {
+    }
+
+
+    /*
+     * equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar --action "replace"
+     */
+    @Test
+    public void getFileTranslation_replace_automatic() throws Exception {
+
+    }
+
 }
