@@ -48,8 +48,8 @@ public class Translation {
 
     /**
      * Extract strings from
-     * @param source
-     * @return
+     * @param source String
+     * @return String
      */
     public String extractStrings(String source) {
         this.translateAction = translateActions.EXTRACT.toString().toLowerCase();
