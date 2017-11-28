@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class Files {
     // browse files
-    public static List<String> listValidFiles(File dir, List<String> extensions) {
+    static List<String> listValidFiles(File dir, List<String> extensions) {
         List<String> resultFiles = new ArrayList<String>();
         return listValidFiles(dir, 0, extensions, resultFiles);
     }
@@ -42,8 +42,9 @@ public class Files {
 
     /**
      *
-     * @param input
-     * @param source
+     * @param input String
+     * @param source File
+     * @param translation Translation
      */
     static void outputExtractResultFile(String input, File source, Translation translation) {
         String fileName = "";
@@ -127,7 +128,7 @@ public class Files {
         resultFileNames = getReplaceOutputFileName(results, destination);
 
         File destinationDirectory = new File(destination);
-        if (!destinationDirectory.isDirectory()) {
+        if (destinationDirectory!=null && !destinationDirectory.isDirectory()) {
             destinationDirectory = destinationDirectory.getParentFile();
         }
 
@@ -142,8 +143,8 @@ public class Files {
 
     /**
      *
-     * @param results
-     * @param destination
+     * @param results TranslationReplaceResult
+     * @param destination String
      * @return Map
      */
     private static Map<String, String> getReplaceOutputFileName(TranslationReplaceResult results, String destination) {
@@ -186,10 +187,10 @@ public class Files {
 
     /**
      *
-     * @param pattern
-     * @param fileName
-     * @param fileExtension
-     * @param langCode
+     * @param pattern String
+     * @param fileName String
+     * @param fileExtension String
+     * @param langCode String
      * @return String
      */
     private static String fileNameFromPattern(String pattern, String fileName, String fileExtension, String langCode) {
@@ -221,6 +222,12 @@ public class Files {
     }
 
 
+    /**
+     *
+     * @param destination File
+     * @param fileName String
+     * @param resultContent String
+     */
     private static void writeResultFile(File destination, String fileName, String resultContent) {
         FileWriter locFile = null;
         try {
@@ -234,7 +241,8 @@ public class Files {
                 if(locFile != null) {
                     locFile.close();
                 }
-                System.out.println("Exported: "+destination.toString()+ File.separator+ fileName);
+                Main.exportedFilesCount ++;
+                System.out.println("Exported #"+ Main.exportedFilesCount+ ": "+ destination.toString()+ File.separator+ fileName);
             } catch(IOException e) {
                 System.out.println("Close error for: "+fileName);
                 e.printStackTrace();
@@ -243,6 +251,11 @@ public class Files {
     }
 
 
+    /**
+     *
+     * @param fileName String
+     * @return String
+     */
     private static String getFileExtension(String fileName) {
         String fileExtension = "";
         // get file extension
@@ -255,5 +268,26 @@ public class Files {
         }
 
         return fileExtension;
+    }
+
+
+    public static int getExpectedFilesCount(String action, String mode, List<String> resultFiles) {
+        List<String> usedNames = new ArrayList<String>();
+
+        if (resultFiles!=null && resultFiles.size()>0) {
+            for (int i = 0; i < resultFiles.size(); i++) {
+                //mode replace automatic
+                if ( action!=null && action.equals(Main.actions.REPLACE.toString().toLowerCase()) ) {
+                    if ( mode!=null && mode.equals("automatic") ) {
+                        /*if ( resultFiles.get(i).indexOf('-extract.json') ) {
+
+                        }*/
+                    }
+                } else {
+
+                }
+            }
+        }
+        return 0;
     }
 }

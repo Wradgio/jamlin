@@ -49,16 +49,16 @@
           ]
         },
         {
-          "stringOrig": "Slovenčina",
+          "stringOrig": "Sloven??ina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Slovenčina"
+              "translation": "Sloven??ina"
             },
             {
               "langCode": "sk",
-              "translation": "Slovenčina"
+              "translation": "Sloven??ina"
             }
           ]
         },
@@ -329,16 +329,16 @@
           ]
         },
         {
-          "stringOrig": "Marcel Zúbrik",
+          "stringOrig": "Marcel Z??brik",
           "selector": "#toplink_profile",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Zúbrik"
+              "translation": "Marcel Z??brik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Zúbrik"
+              "translation": "Marcel Z??brik"
             }
           ]
         },
@@ -805,30 +805,30 @@
           ]
         },
         {
-          "stringOrig": "Marcel Zúbrik",
+          "stringOrig": "Marcel Z??brik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Zúbrik"
+              "translation": "Marcel Z??brik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Zúbrik"
+              "translation": "Marcel Z??brik"
             }
           ]
         },
         {
-          "stringOrig": "Tomáš Zúbrik",
+          "stringOrig": "Tom???? Z??brik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tomáš Zúbrik"
+              "translation": "Tom???? Z??brik"
             },
             {
               "langCode": "sk",
-              "translation": "Tomáš Zúbrik"
+              "translation": "Tom???? Z??brik"
             }
           ]
         },
@@ -897,16 +897,16 @@
       "attrName": "title",
       "translationStrings": [
         {
-          "stringOrig": "Slovenčina",
+          "stringOrig": "Sloven??ina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Slovenčina"
+              "translation": "Sloven??ina"
             },
             {
               "langCode": "sk",
-              "translation": "Slovenčina"
+              "translation": "Sloven??ina"
             }
           ]
         },
@@ -939,16 +939,16 @@
           ]
         },
         {
-          "stringOrig": "Tomáš Zúbrik",
+          "stringOrig": "Tom???? Z??brik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tomáš Zúbrik"
+              "translation": "Tom???? Z??brik"
             },
             {
               "langCode": "sk",
-              "translation": "Tomáš Zúbrik"
+              "translation": "Tom???? Z??brik"
             }
           ]
         }

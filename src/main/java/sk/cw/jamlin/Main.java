@@ -26,6 +26,10 @@ public class Main
     @Parameter(names={"--language", "-l"})
     public static String language = "";
 
+    public static int expectedFilesCount = 0;
+    public static int exportedFilesCount = 0;
+    public static String mode = "";
+
     static String workingDirectory = "";
     public static Config config;
     enum actions {
@@ -40,17 +44,14 @@ public class Main
         JCommander.Builder builder = new JCommander.Builder();
         builder.addObject(main).build().parse(argv);
         main.run();
-        System.out.println("inside main before config");
 
         config = getConfig(workingDirectory+File.separator+"jamlin_config.json");
-        System.out.println("inside main after config");
 
         if (config!=null) {
-            System.out.println("calling files");
             //getFileTranslation(config, action, source, target);
             handleFileTranslations();
         } else {
-            System.out.println("Error - main() - no config");
+            System.out.println("Main Error: no config");
         }
     }
 
@@ -70,9 +71,9 @@ public class Main
                 return new Config("file", jsonConfig, language);
             }
         } catch (IOException e) {
-            System.out.println("main IOException: "+e.getMessage());
+            System.out.println("Main IOException: "+e.getMessage());
         } catch (Exception e) {
-            System.out.println("main Exception: "+e.getMessage());
+            System.out.println("Main Exception: "+e.getMessage());
         }
 
         return null;
@@ -81,8 +82,6 @@ public class Main
 
 
     public static void handleFileTranslations() {
-        System.out.println("inside handleFileTranslations");
-
         // get all files (their paths) that match config options
         List<String> extensions = new ArrayList<String>();
         for (int i=0; i<config.getSources().getDirectories().size(); i++) {
@@ -93,15 +92,30 @@ public class Main
             }
         }
 
+        // get mode accoding to settings
+        mode = getMode();
+
         List<String> resultFiles = new ArrayList<String>();
         if ( action!=null && action.equals(actions.REPLACE.toString().toLowerCase()) && target!=null && !target.isEmpty() ) {
-            // use exact result in replace
+            // use exact result in replace - replace with target = lang specific and semiautomatic modes
             resultFiles.add(target);
+            expectedFilesCount = 1;
         } else if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && source!=null && !source.isEmpty() && (target==null || !target.isEmpty()) ) {
-            // no target in extract
+            // extract should not have target
+            expectedFilesCount = sk.cw.jamlin.Files.getExpectedFilesCount(action, mode, resultFiles);
         } else {
+            // all replace actions
             resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
+            expectedFilesCount = resultFiles.size();//sk.cw.jamlin.Files.getExpectedFilesCount(action, resultFiles);
         }
+
+        System.out.println("ACTION: "+ (action==null ? "null(extract)" : action) );
+        System.out.println("MODE: "+mode);
+        System.out.println("SOURCE: "+source);
+        System.out.println("TARGET: "+target);
+        System.out.println("LANGUAGE: "+language);
+
+        System.out.println("resultFiles.size(): "+resultFiles.size());
 
         if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) {
             if (resultFiles.size()>0) {
@@ -128,19 +142,15 @@ public class Main
                                 if ( source!=null && !source.isEmpty() ) {
                                     jsonFilePath = source;
                                 } else {
-                                    System.out.println("fileNameOrig: " + fileNameOrig);
                                     String extension[] = fileNameOrig.split("\\.");
                                     if (extension.length > 0) {
                                         fileName = fileNameOrig.replace("." + extension[extension.length - 1], "");
                                     } else {
                                         fileName = null;
                                     }
-                                    System.out.println("fileName: " + fileName);
                                     if (fileName.contains("-")) {
                                         String fileNameBlocks[] = fileName.split("\\-");
-                                        System.out.println("fileNameBlocks: " + Arrays.toString(fileNameBlocks));
                                         fileNameBlocks = Arrays.copyOf(fileNameBlocks, fileNameBlocks.length - 1);
-                                        System.out.println("fileNameBlocks: " + Arrays.toString(fileNameBlocks));
                                         fileName = String.join("-", fileNameBlocks);
                                     }
                                     fileName = fileName + "-extract.json";
@@ -148,21 +158,22 @@ public class Main
 
                             }
                             // check if json exists
-                            System.out.println("fileName: "+fileName);
-                            System.out.println("(new File(jsonFilePath)).exists(): "+(new File(jsonFilePath)).exists());
-                            System.out.println("langCode: "+langCode);
                             if ( (new File(jsonFilePath)).exists() ) {
                                 if ( Language.checkLangCodeValid(langCode) ) {
                                     config.setLanguage(new Language(langCode));
                                 }
+                                System.out.println("Processing file: "+resultFiles.get(i));
                                 getFileTranslation(config, action, jsonFilePath, resultFiles.get(i));
+                            } else {
+                                expectedFilesCount--;
+                                System.out.println("Not exists: "+jsonFilePath);
                             }
                         } else {
-                            System.out.println("parentDirectory is null");
+                            System.out.println("Parent directory is null");
                         }
                     } catch (Exception e) {
                         System.out.println("Replace action file error: " + e.getMessage());
-                        System.out.print(e.getCause());
+//                        System.out.print(e.getCause());
                     }
                 }
             } else {
@@ -226,10 +237,6 @@ public class Main
             }
         }
 
-        System.out.println("ACTION: "+action);
-        System.out.println("SOURCE: "+source);
-        System.out.println("TARGET: "+target);
-
         if ( variablesPassed ) {
             if (action.equals(actions.EXTRACT.toString().toLowerCase())) {
                 String fileLangCode = Language.getLangCodeFromFilePath(source);
@@ -271,7 +278,7 @@ public class Main
 
                     TranslationReplaceResult replaceResults = translation.replaceStrings(input, targetString);
                     result = "Please, set output language for result translation";
-                    if (!language.isEmpty() && replaceResults.getLangCodes().size()>0) {
+                    if (language!=null && !language.isEmpty() && replaceResults.getLangCodes().size()>0) {
                         // if language is set, return result of that language
                         result = replaceResults.get(language);
                     } else {
@@ -298,8 +305,8 @@ public class Main
 
     /**
      *
-     * @param type
-     * @return
+     * @param type String
+     * @return boolean
      */
     private static boolean validAction(String type) {
         for (actions c : actions.values()) {
@@ -309,4 +316,27 @@ public class Main
         }
         return false;
     }
+
+
+    /**
+     *
+     * @return String
+     */
+    private static String getMode() {
+        if ( action!=null && action.equals(actions.REPLACE.toString().toLowerCase()) ) {
+            if ( source!=null && !source.isEmpty() && target!=null && !target.isEmpty() && language!=null && !language.isEmpty() ) {
+                return "specific";
+            } else if ( source!=null && !source.isEmpty() && target!=null && !target.isEmpty() ) {
+                return "semiautomatic";
+            }
+        } else { // extract
+            if ( source!=null && !source.isEmpty() && language!=null && !language.isEmpty() ) {
+                return "specific";
+            } else if ( source!=null && !source.isEmpty() ) {
+                return "semiautomatic";
+            }
+        }
+        return "automatic";
+    }
+
 }
