@@ -146,6 +146,9 @@ public class Translation {
                 }
             }
         }
+        if ( langCodes!=null ) {
+            Main.expectedFilesCount = Main.expectedFilesCount * langCodes.size();
+        }
 
         //doc = Jsoup.parse(target, "UTF-8");
         Map<String, Document> docs = new HashMap<>();

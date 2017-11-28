@@ -151,5 +151,10 @@ JaMLin does not translate data by itself. It only extracts strings according to 
 ```
 For that, you can use any editor, that can read JSON files or wait for **JaMLin Translation Editor** (in development).
 
+
+## How to use it
+
+In target directory ...
+
 ## Why is it such a mess
 It's my first tool in Java and Maven, a one man project. It will take a time to clean it up, any help is appreciated.
