@@ -154,7 +154,7 @@ For that, you can use any editor, that can read JSON files or wait for **JaMLin 
 
 ## How to use it
 
-In target directory ...
+For command line usage, in target directory you can find jamlin-jar-with-dependencies.jar - this one is latest bundled build. It can be used as described above.
 
 ## Why is it such a mess
 It's my first tool in Java and Maven, a one man project. It will take a time to clean it up, any help is appreciated.
