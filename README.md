@@ -1,4 +1,4 @@
-![Logo](./jamlin_logo.svg)
+![Logo](./jamlin_logo.svg)
 
 # JaMLin
 **Ja**va **M**arkup **L**anguage **In**ternalization is a simple command line tool for internalisation of markup files (HTML, XML). It's like **_gettext_** but for markup language files, without need of special functions and with JSON files to store your translation strings.
