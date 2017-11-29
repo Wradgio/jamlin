@@ -10,7 +10,8 @@ For projects that use static HTML or XML that need to be translated. Sometimes y
 
 ## Quick start
 1. In project root, find **jamlin_config.json** file - copy it to your destination folder and edit CSS selectors to extract what you need (seel Config section for more info).
-2. Find **jamlin-jar-with-dependencies.jar** inside **target** directory - this one is latest bundled build. It can be run as any other Java program using terminal (command line) as described in next sections using any of 6 defined modes.
+2. Find **jamlin-jar-with-dependencies.jar** inside **target** directory - this one is latest bundled build. Copy it to your destination folder, next to jamlin_config.json file. It can't run without it.
+3. Run as any other Java program using terminal (`java -jar jamlin-jar-with-dependencies.jar`) as described in next sections using any of 6 defined modes.
 
 
 ## How it works
@@ -87,7 +88,7 @@ Afte you set it up, you can define parameters - action, source, target and langu
 JaMLin by default uses "extract" action to traverse defined items and trying to extract their translations. When run with "replace" action, it tries to get new translations back to its original files.
 
 ### Parameters
-JaMLin receives 4 parameters. Examples of using Jamlin looks like this:
+JaMLin receives 4 parameters and works in 6 modes. Examples of using Jamlin looks like this:
 
 `java -jar jamlin-jar-with-dependencies.jar
 	--action "extract"
@@ -114,7 +115,7 @@ Parameters legend:
 	* for "extract" action it sets, what language version was used for extract strings,
 	* for "replace" action sets what language you want to output.
 
-According to parameters, every action can have 3 modes:
+According to parameters, **every action can have 3 modes**:
 
 * **extract**
 	1. **lang specific mode** - extract one language only. <br/>
