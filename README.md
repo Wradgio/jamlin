@@ -1,22 +1,34 @@
+![Logo](./jamlin_logo.svg)
+
 # JaMLin
-**Ja**va **M**arkup **L**anguage **In**ternalization is a simple command line tool that works in 2 modes Extract and Replace. They are used to:
+**Ja**va **M**arkup **L**anguage **In**ternalization is a simple command line tool for internalisation of markup files (HTML, XML). It's like **_gettext_** but for markup language files, without need of special functions and with JSON files to store your translation strings.
 
-1. **EXTRACT strings from original HTML or XML.** (eg. index.html)
-	* using CSS selectors.
-	* creating JSON that can be used to add translations.
-2. **REPLACE strings with localised ones.**
-	* created from JSON with translations.
-	* creating new HTML or XML files (eg. index-en.html).
-
-It's like _gettext_ but for markup language files, without need of special functions and with JSON files to store your translation strings.
 
 ## What is it good for
 For projects that use static HTML or XML that need to be translated. Sometimes you need to keep HTML in project without additional attributes or special tags, but with some internalisation tool.
+
+
+## Quick start
+1. In project root, find **jamlin_config.json** file - copy it to your destination folder and edit CSS selectors to extract what you need (seel Config section for more info).
+2. Find **jamlin-jar-with-dependencies.jar** inside **target** directory - this one is latest bundled build. It can be run as any other Java program using terminal (command line) as described in next sections using any of 6 defined modes.
+
+
+## How it works
+It works in 2 modes Extract and Replace. They are used to:
+
+1. **EXTRACT strings from original HTML or XML.** (eg. index.html)
+	* using CSS selectors from config file JSON.
+	* creating new JSON where it extracts strings defined by selectors.
+2. **REPLACE strings with localised ones.**
+	* uses created JSON with translations.
+	* creating new HTML or XML or replacing original files (eg. index-en.html).
+
 
 ## How to use it
 To run it, you need too things defined:
 1. Config file (required)
 2. Parameters (optional)
+
 
 ### Config file
 Every time you run JaMLin, it's looking for config file, named **jamlin_config.json** which defines all data needed for extraction in this structure:
@@ -151,10 +163,5 @@ JaMLin does not translate data by itself. It only extracts strings according to 
 ```
 For that, you can use any editor, that can read JSON files or wait for **JaMLin Translation Editor** (in development).
 
-
-## How to use it
-
-For command line usage, in target directory you can find jamlin-jar-with-dependencies.jar - this one is latest bundled build. It can be used as described above.
-
 ## Why is it such a mess
-It's my first tool in Java and Maven, a one man project. It will take a time to clean it up, any help is appreciated.
+It's my first tool in Java and Maven, a one man project. It will take some time to clean it up. Any help is appreciated.
