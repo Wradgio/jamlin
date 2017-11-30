@@ -5,6 +5,7 @@ import com.beust.jcommander.Parameter;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -64,7 +65,7 @@ public class Main
 
     public static Config getConfig(String configFilePath) {
         try {
-            String jsonConfig = new String ( Files.readAllBytes( Paths.get(configFilePath) ) );
+            String jsonConfig = new String ( Files.readAllBytes( Paths.get(configFilePath) ), Charset.forName("UTF-8") );
             if (language.trim().isEmpty()) {
                 return new Config("file", jsonConfig);
             } else {
@@ -256,7 +257,7 @@ public class Main
 
             String input = "";
             try {
-                input = new String(Files.readAllBytes(Paths.get(source)));
+                input = new String(Files.readAllBytes(Paths.get(source)), Charset.forName("UTF-8"));
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -271,7 +272,7 @@ public class Main
                 if (action.equals(actions.REPLACE.toString().toLowerCase())) {
                     String targetString = "";
                     try {
-                        targetString = new String(Files.readAllBytes(Paths.get(target)));
+                        targetString = new String(Files.readAllBytes(Paths.get(target)), Charset.forName("UTF-8"));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
