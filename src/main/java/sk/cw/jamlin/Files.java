@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -85,7 +86,7 @@ public class Files {
             // get old result from file
             String oldResultInput = "";
             try {
-                oldResultInput = new String(java.nio.file.Files.readAllBytes(Paths.get(oldResultFilePath)));
+                oldResultInput = new String( java.nio.file.Files.readAllBytes(Paths.get(oldResultFilePath)), Charset.forName("UTF-8") );
             } catch (IOException e) {
                 e.printStackTrace();
             }
