@@ -26,7 +26,7 @@ public class MainTest {
     @Test
     public void getFileTranslation_01_extract_specific() throws Exception {
         Main.exportedFilesCount = 0;
-        Main.workingDirectory = System.getProperty("user.dir");
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
         }
@@ -48,7 +48,7 @@ public class MainTest {
     @Test
     public void getFileTranslation_02_extract_semiautomatic() throws Exception {
         Main.exportedFilesCount = 0;
-        Main.workingDirectory = System.getProperty("user.dir");
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";;
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
         }
@@ -70,7 +70,7 @@ public class MainTest {
     @Test
     public void getFileTranslation_03_extract_automatic() throws Exception {
         Main.exportedFilesCount = 0;
-        Main.workingDirectory = System.getProperty("user.dir");
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";;
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
         }
@@ -93,7 +93,7 @@ public class MainTest {
     @Test
     public void getFileTranslation_04_replace_specific() throws Exception {
         Main.exportedFilesCount = 0;
-        Main.workingDirectory = System.getProperty("user.dir");
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";;
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
         }
@@ -116,7 +116,7 @@ public class MainTest {
     @Test
     public void getFileTranslation_05_replace_semiautomatic() throws Exception {
         Main.exportedFilesCount = 0;
-        Main.workingDirectory = System.getProperty("user.dir");
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";;
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
         }
@@ -139,7 +139,7 @@ public class MainTest {
     @Test
     public void getFileTranslation_06_replace_automatic() throws Exception {
         Main.exportedFilesCount = 0;
-        Main.workingDirectory = System.getProperty("user.dir");
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";;
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
         }
