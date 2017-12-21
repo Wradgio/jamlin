@@ -162,7 +162,7 @@ JaMLin does not translate data by itself. It only extracts strings according to 
   ]
 }
 ```
-For that, you can use any editor, that can read JSON files or wait for **JaMLin Translation Editor** (in development).
+For that, you can use any editor, that can read JSON files or try [**JaMLin Editor**](https://github.com/Wradgio/Jamlin-Editor/). Check binaries downloads in [Jamlin Editor releases](https://github.com/Wradgio/Jamlin-Editor/releases).
 
 ## Why is it such a mess
 It's my first tool in Java and Maven, a one man project. It will take some time to clean it up. Any help is appreciated.
