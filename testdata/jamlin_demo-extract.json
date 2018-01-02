@@ -21,7 +21,7 @@
           ]
         },
         {
-          "stringOrig": "Lezeck? denn?k",
+          "stringOrig": "Climber\u0027s Routes",
           "selector": "#toplink_home",
           "translations": [
             {
@@ -30,12 +30,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Lezeck? denn?k"
+              "translation": "Climber\u0027s Routes"
             }
           ]
         },
         {
-          "stringOrig": "Jazyk",
+          "stringOrig": "Language",
           "selector": "#toplink_languages",
           "translations": [
             {
@@ -44,21 +44,21 @@
             },
             {
               "langCode": "sk",
-              "translation": "Jazyk"
+              "translation": "Language"
             }
           ]
         },
         {
-          "stringOrig": "Sloven?ina",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Sloven?ina"
+              "translation": "Slovenčina"
             },
             {
               "langCode": "sk",
-              "translation": "Sloven?ina"
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "stringOrig": "H?ada?",
+          "stringOrig": "Search",
           "selector": "#toplink_climb",
           "translations": [
             {
@@ -86,12 +86,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H?ada?"
+              "translation": "Search"
             }
           ]
         },
         {
-          "stringOrig": "H?ada? verzia 2 - test",
+          "stringOrig": "Search version 2 - Test",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -100,12 +100,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H?ada? verzia 2 - test"
+              "translation": "Search version 2 - Test"
             }
           ]
         },
         {
-          "stringOrig": "H?ada? Lezcov",
+          "stringOrig": "Find Climbers",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -114,12 +114,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H?ada? Lezcov"
+              "translation": "Find Climbers"
             }
           ]
         },
         {
-          "stringOrig": "Roz??ren? Vyh?ad?vanie",
+          "stringOrig": "Advanced Search",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -128,12 +128,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Roz??ren? Vyh?ad?vanie"
+              "translation": "Advanced Search"
             }
           ]
         },
         {
-          "stringOrig": "Vyh?ad?va? Sprievodcov",
+          "stringOrig": "Search Guides",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -142,12 +142,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh?ad?va? Sprievodcov"
+              "translation": "Search Guides"
             }
           ]
         },
         {
-          "stringOrig": "Prezera? Sprievodcov",
+          "stringOrig": "Browse Guides",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -156,12 +156,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera? Sprievodcov"
+              "translation": "Browse Guides"
             }
           ]
         },
         {
-          "stringOrig": "Vyh?ad?va? Mapy Ciest",
+          "stringOrig": "Search Maps of Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a",
           "translations": [
             {
@@ -170,12 +170,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh?ad?va? Mapy Ciest"
+              "translation": "Search Maps of Routes"
             }
           ]
         },
         {
-          "stringOrig": "Prezera? Mapy Ciest",
+          "stringOrig": "Browse Maps of Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(5) \u003e a",
           "translations": [
             {
@@ -184,12 +184,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera? Mapy Ciest"
+              "translation": "Browse Maps of Routes"
             }
           ]
         },
         {
-          "stringOrig": "Vyh?ad?va? Cesty",
+          "stringOrig": "Routes Search",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(7) \u003e a",
           "translations": [
             {
@@ -198,12 +198,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh?ad?va? Cesty"
+              "translation": "Routes Search"
             }
           ]
         },
         {
-          "stringOrig": "Prezera? Cesty",
+          "stringOrig": "Browse Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(8) \u003e a",
           "translations": [
             {
@@ -212,12 +212,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera? Cesty"
+              "translation": "Browse Routes"
             }
           ]
         },
         {
-          "stringOrig": "Najnov?ie Cesty",
+          "stringOrig": "Recent Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(9) \u003e a",
           "translations": [
             {
@@ -226,12 +226,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Najnov?ie Cesty"
+              "translation": "Recent Routes"
             }
           ]
         },
         {
-          "stringOrig": "Eviduj",
+          "stringOrig": "Track",
           "selector": "#toplink_track",
           "translations": [
             {
@@ -240,12 +240,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Eviduj"
+              "translation": "Track"
             }
           ]
         },
         {
-          "stringOrig": "Moje cesty",
+          "stringOrig": "My Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -254,12 +254,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Moje cesty"
+              "translation": "My Routes"
             }
           ]
         },
         {
-          "stringOrig": "Moje Mapy ciest",
+          "stringOrig": "My Maps of Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -268,12 +268,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Moje Mapy ciest"
+              "translation": "My Maps of Routes"
             }
           ]
         },
         {
-          "stringOrig": "Publikuj",
+          "stringOrig": "Publish",
           "selector": "#toplink_share",
           "translations": [
             {
@@ -282,12 +282,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Publikuj"
+              "translation": "Publish"
             }
           ]
         },
         {
-          "stringOrig": "Moji Sprievodcovia",
+          "stringOrig": "My Guides",
           "selector": "#mmenu \u003e li.mleft:nth-child(5) \u003e ul \u003e li \u003e a",
           "translations": [
             {
@@ -296,7 +296,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Moji Sprievodcovia"
+              "translation": "My Guides"
             }
           ]
         },
@@ -315,7 +315,7 @@
           ]
         },
         {
-          "stringOrig": "Konto",
+          "stringOrig": "Account",
           "selector": "#toplink_account",
           "translations": [
             {
@@ -324,26 +324,26 @@
             },
             {
               "langCode": "sk",
-              "translation": "Konto"
+              "translation": "Account"
             }
           ]
         },
         {
-          "stringOrig": "Marcel Z?brik",
+          "stringOrig": "Marcel Zúbrik",
           "selector": "#toplink_profile",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Z?brik"
+              "translation": "Marcel Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Z?brik"
+              "translation": "Marcel Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Nastavenia",
+          "stringOrig": "Settings",
           "selector": "#toplink_settings",
           "translations": [
             {
@@ -352,12 +352,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Nastavenia"
+              "translation": "Settings"
             }
           ]
         },
         {
-          "stringOrig": "Ko??k",
+          "stringOrig": "Cart",
           "selector": "#toplink_cart",
           "translations": [
             {
@@ -366,12 +366,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Ko??k"
+              "translation": "Cart"
             }
           ]
         },
         {
-          "stringOrig": "Obsah V??ho ko??ka",
+          "stringOrig": "What\u0027s in your Cart",
           "selector": "#cart_info \u003e div:nth-child(1) \u003e strong \u003e a",
           "translations": [
             {
@@ -380,12 +380,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Obsah V??ho ko??ka"
+              "translation": "What\u0027s in your Cart"
             }
           ]
         },
         {
-          "stringOrig": "Zrealizovan? objedn?vky",
+          "stringOrig": "Your orders",
           "selector": "#mmenu \u003e li.mright.inliner \u003e ul.ap_to_right \u003e li.mright.inliner:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -394,12 +394,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zrealizovan? objedn?vky"
+              "translation": "Your orders"
             }
           ]
         },
         {
-          "stringOrig": "Online \u0026 Offline n?stroje pre Lezcov a Tvorcov Sprievodcov",
+          "stringOrig": "Online \u0026 Offline tools for Climbers and Guide Publishers",
           "selector": "#w_content \u003e div.splash_header_image \u003e div.shi_center \u003e p",
           "translations": [
             {
@@ -408,12 +408,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Online \u0026 Offline n?stroje pre Lezcov a Tvorcov Sprievodcov"
+              "translation": "Online \u0026 Offline tools for Climbers and Guide Publishers"
             }
           ]
         },
         {
-          "stringOrig": "Lez",
+          "stringOrig": "Climb",
           "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(1)",
           "translations": [
             {
@@ -422,12 +422,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Lez"
+              "translation": "Climb"
             }
           ]
         },
         {
-          "stringOrig": "Eviduj",
+          "stringOrig": "Track",
           "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(2)",
           "translations": [
             {
@@ -436,12 +436,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Eviduj"
+              "translation": "Track"
             }
           ]
         },
         {
-          "stringOrig": "Zdie?aj",
+          "stringOrig": "Publish",
           "selector": "#w_content \u003e h2.pt10.slides_pager \u003e a.slide_link:nth-child(3)",
           "translations": [
             {
@@ -450,12 +450,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie?aj"
+              "translation": "Publish"
             }
           ]
         },
         {
-          "stringOrig": "N?jdi cesty, ktor? pozn??. Objav nov? cesty, sektory, oblasti, lezcov, in?piruj sa a z?skaj nov? lezeck? sk?senosti. Pridaj sa k n?m a objav nov? mo?nosti.",
+          "stringOrig": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities.",
           "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p",
           "translations": [
             {
@@ -464,12 +464,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "N?jdi cesty, ktor? pozn??. Objav nov? cesty, sektory, oblasti, lezcov, in?piruj sa a z?skaj nov? lezeck? sk?senosti. Pridaj sa k n?m a objav nov? mo?nosti."
+              "translation": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities."
             }
           ]
         },
         {
-          "stringOrig": "Zjednodu?ujeme evidovanie ciest a s va?ou pomocou vytv?rame verejn? datab?zu lezeck?ch ciest. Od ciest, cez Mapy ciest a? po Sprievodcov.",
+          "stringOrig": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides.",
           "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p",
           "translations": [
             {
@@ -478,12 +478,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zjednodu?ujeme evidovanie ciest a s va?ou pomocou vytv?rame verejn? datab?zu lezeck?ch ciest. Od ciest, cez Mapy ciest a? po Sprievodcov."
+              "translation": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides."
             }
           ]
         },
         {
-          "stringOrig": "S na?imi n?strojmi, je ?ahk? vytv?ra? a zdie?a? svoje prelezy, cesty, Mapy ciest a Sprievodcov. V?etko m? svoju adresu, ktor? je mo?n? zdiela?. Pridaj sa k n?m.",
+          "stringOrig": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us.",
           "selector": "#slider \u003e li:nth-child(3) \u003e div.slide_description \u003e div.splash_desc \u003e p",
           "translations": [
             {
@@ -492,12 +492,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "S na?imi n?strojmi, je ?ahk? vytv?ra? a zdie?a? svoje prelezy, cesty, Mapy ciest a Sprievodcov. V?etko m? svoju adresu, ktor? je mo?n? zdiela?. Pridaj sa k n?m."
+              "translation": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us."
             }
           ]
         },
         {
-          "stringOrig": "Vyh?ada?",
+          "stringOrig": "Search",
           "selector": "#sa_search",
           "translations": [
             {
@@ -506,12 +506,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh?ada?"
+              "translation": "Search"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?",
+          "stringOrig": "Browse",
           "selector": "#sa_browse",
           "translations": [
             {
@@ -520,12 +520,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?"
+              "translation": "Browse"
             }
           ]
         },
         {
-          "stringOrig": "Najnov?ie",
+          "stringOrig": "Recent",
           "selector": "#sa_recent",
           "translations": [
             {
@@ -534,12 +534,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Najnov?ie"
+              "translation": "Recent"
             }
           ]
         },
         {
-          "stringOrig": "Mobiln? aplik?cia Climber\u0027s Routes Digit?lny lezeck? v?stroj do vrecka",
+          "stringOrig": "Climber\u0027s Routes mobile app Digital climbing in your pocket",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.mobile_app \u003e p",
           "translations": [
             {
@@ -548,7 +548,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Mobiln? aplik?cia Climber\u0027s Routes Digit?lny lezeck? v?stroj do vrecka"
+              "translation": "Climber\u0027s Routes mobile app Digital climbing in your pocket"
             }
           ]
         },
@@ -567,7 +567,7 @@
           ]
         },
         {
-          "stringOrig": "N?jde? svoju cestu a prelezie? ju. Zaregistruje? sa u n?s a zazna??? si svoj prelez, zdie?a? ho. Spozn?? ?al??ch lezcov.",
+          "stringOrig": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2)",
           "translations": [
             {
@@ -576,12 +576,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "N?jde? svoju cestu a prelezie? ju. Zaregistruje? sa u n?s a zazna??? si svoj prelez, zdie?a? ho. Spozn?? ?al??ch lezcov."
+              "translation": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers."
             }
           ]
         },
         {
-          "stringOrig": "N?jde? a na?tuduje? si nov? l?niu v Map?ch ciest. A prelezie? ju. Odfot?? ?o si preliezol a na fotke ozna??s svoju l?niu. A bude? to ty, kto ju predstav? ostatn?m ako nov? Mapu ciest.",
+          "stringOrig": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(3)",
           "translations": [
             {
@@ -590,12 +590,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "N?jde? a na?tuduje? si nov? l?niu v Map?ch ciest. A prelezie? ju. Odfot?? ?o si preliezol a na fotke ozna??s svoju l?niu. A bude? to ty, kto ju predstav? ostatn?m ako nov? Mapu ciest."
+              "translation": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes."
             }
           ]
         },
         {
-          "stringOrig": "D?? si svoje prelezy na svoj blog ?i str?nky. Sleduje? svoje ?tatistiky. Zlep?uje? sa. M?? u? to?ko M?p ciest, ?e sa rozhodne? vytvori? a pred?va? svojho lezeck?ho Sprievodcu.",
+          "stringOrig": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(4)",
           "translations": [
             {
@@ -604,12 +604,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "D?? si svoje prelezy na svoj blog ?i str?nky. Sleduje? svoje ?tatistiky. Zlep?uje? sa. M?? u? to?ko M?p ciest, ?e sa rozhodne? vytvori? a pred?va? svojho lezeck?ho Sprievodcu."
+              "translation": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide."
             }
           ]
         },
         {
-          "stringOrig": "Chceme by? webstr?nkou, kde lezci vytv?raj? prv? datab?zu lezeck?ch ciest t?m, ?e zdie?aj? svoje cesty. Pridaj sa k n?m teraz.",
+          "stringOrig": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(6)",
           "translations": [
             {
@@ -618,12 +618,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Chceme by? webstr?nkou, kde lezci vytv?raj? prv? datab?zu lezeck?ch ciest t?m, ?e zdie?aj? svoje cesty. Pridaj sa k n?m teraz."
+              "translation": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now."
             }
           ]
         },
         {
-          "stringOrig": "Pozri si Novinky pre viac info o tom, ?o sa deje. Sleduj n?s na Facebooku, Google a Twitteri. Z?skaj podporu na soci?lnych sie?ach alebo n?s kontaktuj priamo. Pom?? n?m t?m, ?e zazdie?a? linku na tento projekt.",
+          "stringOrig": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us.",
           "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8)",
           "translations": [
             {
@@ -632,12 +632,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Pozri si Novinky pre viac info o tom, ?o sa deje. Sleduj n?s na Facebooku, Google a Twitteri. Z?skaj podporu na soci?lnych sie?ach alebo n?s kontaktuj priamo. Pom?? n?m t?m, ?e zazdie?a? linku na tento projekt."
+              "translation": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us."
             }
           ]
         },
         {
-          "stringOrig": "Podmienky pou??vania",
+          "stringOrig": "Terms and Conditions",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -646,12 +646,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Podmienky pou??vania"
+              "translation": "Terms and Conditions"
             }
           ]
         },
         {
-          "stringOrig": "Kontakt",
+          "stringOrig": "Contact",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -660,12 +660,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Kontakt"
+              "translation": "Contact"
             }
           ]
         },
         {
-          "stringOrig": "Partnerstvo",
+          "stringOrig": "Partnership",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -674,12 +674,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Partnerstvo"
+              "translation": "Partnership"
             }
           ]
         },
         {
-          "stringOrig": "Vyh?ad?vac? Widget",
+          "stringOrig": "Search Widget",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -688,12 +688,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh?ad?vac? Widget"
+              "translation": "Search Widget"
             }
           ]
         },
         {
-          "stringOrig": "Wiki N?poveda",
+          "stringOrig": "Wiki",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -702,12 +702,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Wiki N?poveda"
+              "translation": "Wiki"
             }
           ]
         },
         {
-          "stringOrig": "Ozn?m chybu",
+          "stringOrig": "Report a bug",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -716,12 +716,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Ozn?m chybu"
+              "translation": "Report a bug"
             }
           ]
         },
         {
-          "stringOrig": "Novinky",
+          "stringOrig": "News",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -730,7 +730,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Novinky"
+              "translation": "News"
             }
           ]
         },
@@ -777,7 +777,7 @@
           ]
         },
         {
-          "stringOrig": "Prihl?si? sa na odber",
+          "stringOrig": "Subscribe",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -786,12 +786,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prihl?si? sa na odber"
+              "translation": "Subscribe"
             }
           ]
         },
         {
-          "stringOrig": "Odhl?si? sa z odberu",
+          "stringOrig": "Unsubscribe",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -800,40 +800,40 @@
             },
             {
               "langCode": "sk",
-              "translation": "Odhl?si? sa z odberu"
+              "translation": "Unsubscribe"
             }
           ]
         },
         {
-          "stringOrig": "Marcel Z?brik",
+          "stringOrig": "Marcel Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Z?brik"
+              "translation": "Marcel Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Z?brik"
+              "translation": "Marcel Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Tom?? Z?brik",
+          "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tom?? Z?brik"
+              "translation": "Tomáš Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Tom?? Z?brik"
+              "translation": "Tomáš Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Publik?tor",
+          "stringOrig": "Whian.net",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(4)",
           "translations": [
             {
@@ -842,12 +842,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Publik?tor"
+              "translation": "Whian.net"
             }
           ]
         },
         {
-          "stringOrig": "CC",
+          "stringOrig": "mariachily",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(5)",
           "translations": [
             {
@@ -856,12 +856,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "CC"
+              "translation": "mariachily"
             }
           ]
         },
         {
-          "stringOrig": "mariachily",
+          "stringOrig": "CC",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(6)",
           "translations": [
             {
@@ -870,12 +870,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "mariachily"
+              "translation": "CC"
             }
           ]
         },
         {
-          "stringOrig": "Pou??van?m t?chto str?nok s?hlas?te s uchov?van?m cookies vo va?om prehliada?i pre zlep?enie z??itku z ich prezerania. ??tajte viac. Jasna?ka",
+          "stringOrig": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p",
           "translations": [
             {
@@ -884,339 +884,107 @@
             },
             {
               "langCode": "sk",
-              "translation": "Pou??van?m t?chto str?nok s?hlas?te s uchov?van?m cookies vo va?om prehliada?i pre zlep?enie z??itku z ich prezerania. ??tajte viac. Jasna?ka"
+              "translation": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it"
             }
           ]
         },
         {
-          "stringOrig": "N?jdi",
-          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(1)",
+          "stringOrig": "Pridaj sa k nám",
+          "selector": "#login_registration_link",
           "translations": [
             {
               "langCode": "sk",
-              "translation": "N?jdi"
-            },
-            {
-              "langCode": "en",
-              "translation": "Find"
+              "translation": "Pridaj sa k nám"
             }
           ]
         },
         {
-          "stringOrig": "cesty",
-          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(3)",
+          "stringOrig": "Prihlás sa",
+          "selector": "#login_login_link",
           "translations": [
             {
               "langCode": "sk",
-              "translation": "cesty"
-            },
-            {
-              "langCode": "en",
-              "translation": "routes"
+              "translation": "Prihlás sa"
             }
           ]
         },
         {
-          "stringOrig": "sektory",
-          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(4)",
+          "stringOrig": "Prihlásiť sa",
+          "selector": "#login_login_menu \u003e li:nth-child(3) \u003e a.login_facebook",
           "translations": [
             {
               "langCode": "sk",
-              "translation": "sektory"
-            },
-            {
-              "langCode": "en",
-              "translation": "sectors"
+              "translation": "Prihlásiť sa"
             }
           ]
         },
         {
-          "stringOrig": "oblasti",
-          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(5)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "oblasti"
-            },
-            {
-              "langCode": "en",
-              "translation": "areas"
-            }
-          ]
-        },
-        {
-          "stringOrig": "lezcov",
-          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(6)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "lezcov"
-            },
-            {
-              "langCode": "en",
-              "translation": "climbers"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Pridaj sa k n?m",
-          "selector": "#slider \u003e li:nth-child(1) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(8)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Pridaj sa k n?m"
-            },
-            {
-              "langCode": "en",
-              "translation": "Join us"
-            }
-          ]
-        },
-        {
-          "stringOrig": "ciest",
-          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(2)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "ciest"
-            },
-            {
-              "langCode": "en",
-              "translation": "routes"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Mapy ciest",
-          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(3)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Mapy ciest"
-            },
-            {
-              "langCode": "en",
-              "translation": "Maps of routes"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Sprievodcov",
-          "selector": "#slider \u003e li:nth-child(2) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a:nth-child(4)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Sprievodcov"
-            },
-            {
-              "langCode": "en",
-              "translation": "Guides"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Pridaj sa k n?m",
-          "selector": "#slider \u003e li:nth-child(3) \u003e div.slide_description \u003e div.splash_desc \u003e p \u003e a",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Pridaj sa k n?m"
-            },
-            {
-              "langCode": "en",
-              "translation": "Join us"
-            }
-          ]
-        },
-        {
-          "stringOrig": "N?jde? svoju cestu",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(1)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "N?jde? svoju cestu"
-            },
-            {
-              "langCode": "en",
-              "translation": "Find your route"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zaregistruje? sa",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(2)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Zaregistruje? sa"
-            },
-            {
-              "langCode": "en",
-              "translation": "joining us"
-            }
-          ]
-        },
-        {
-          "stringOrig": "lezcov",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(2) \u003e a:nth-child(3)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "lezcov"
-            },
-            {
-              "langCode": "en",
-              "translation": "climbers"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Map?ch ciest",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(3) \u003e a",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Map?ch ciest"
-            },
-            {
-              "langCode": "en",
-              "translation": "Maps of routes"
-            }
-          ]
-        },
-        {
-          "stringOrig": "lezeck?ho Sprievodcu",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(4) \u003e a",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "lezeck?ho Sprievodcu"
-            },
-            {
-              "langCode": "en",
-              "translation": "climbing Guide"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Pridaj sa k n?m teraz",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(6) \u003e a",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Pridaj sa k n?m teraz"
-            },
-            {
-              "langCode": "en",
-              "translation": "Join us now"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Novinky",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(1)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Novinky"
-            },
-            {
-              "langCode": "en",
-              "translation": "News"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Facebooku",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(2)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Facebooku"
-            },
-            {
-              "langCode": "en",
-              "translation": "Facebook"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Google",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(3)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Google"
-            },
-            {
-              "langCode": "en",
-              "translation": "Google"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Twitteri",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(4)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Twitteri"
-            },
-            {
-              "langCode": "en",
-              "translation": "Twitter"
-            }
-          ]
-        },
-        {
-          "stringOrig": "n?s kontaktuj priamo",
-          "selector": "#w_content \u003e div.rounded.contentbox.in \u003e div.columns2 \u003e p:nth-child(8) \u003e a:nth-child(5)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "n?s kontaktuj priamo"
-            },
-            {
-              "langCode": "en",
-              "translation": "contact us directly"
-            }
-          ]
-        },
-        {
-          "stringOrig": "??tajte viac",
-          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a:nth-child(1)",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "??tajte viac"
-            },
-            {
-              "langCode": "en",
-              "translation": "Read more"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Jasna?ka",
-          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a.eu_cookie_confirm.rounded2",
-          "translations": [
-            {
-              "langCode": "sk",
-              "translation": "Jasna?ka"
-            },
-            {
-              "langCode": "en",
-              "translation": "OK, Got it"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Pridaj sa k n?m",
+          "stringOrig": "Pridaj sa k nám",
           "selector": "#w_content \u003e div.splash_header_image \u003e div.shi_center \u003e div.mt30 \u003e a.red_any_button.rounded2.joinus",
           "translations": [
             {
               "langCode": "sk",
-              "translation": "Pridaj sa k n?m"
+              "translation": "Pridaj sa k nám"
+            }
+          ]
+        },
+        {
+          "stringOrig": "",
+          "selector": "#w_content \u003e div.mt20 \u003e a:nth-child(1)",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "stringOrig": "Prihlásiť sa",
+          "selector": "#registration \u003e p",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": "Prihlásiť sa"
+            }
+          ]
+        },
+        {
+          "stringOrig": "Tvoja platná e-adresa na prihlásenie.",
+          "selector": "#login_email \u003e p.formnote",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": "Tvoja platná e-adresa na prihlásenie."
+            }
+          ]
+        },
+        {
+          "stringOrig": "Heslo, ktoré obsahuje viac ako 8 znakov, čísel alebo symbolov.",
+          "selector": "#login_password \u003e p.formnote",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": "Heslo, ktoré obsahuje viac ako 8 znakov, čísel alebo symbolov."
+            }
+          ]
+        },
+        {
+          "stringOrig": "Súhlasím s Podmienkami užívania tejto webstránky",
+          "selector": "#login_agree \u003e p",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": "Súhlasím s Podmienkami užívania tejto webstránky"
+            }
+          ]
+        },
+        {
+          "stringOrig": "",
+          "selector": "#w_content \u003e div.mt20 \u003e a:nth-child(3)",
+          "translations": [
+            {
+              "langCode": "sk",
+              "translation": ""
             }
           ]
         }
@@ -1229,16 +997,16 @@
       "attrName": "title",
       "translationStrings": [
         {
-          "stringOrig": "Sloven?ina",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Sloven?ina"
+              "translation": "Slovenčina"
             },
             {
               "langCode": "sk",
-              "translation": "Sloven?ina"
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -1271,16 +1039,16 @@
           ]
         },
         {
-          "stringOrig": "Tom?? Z?brik",
+          "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tom?? Z?brik"
+              "translation": "Tomáš Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Tom?? Z?brik"
+              "translation": "Tomáš Zúbrik"
             }
           ]
         }
@@ -1288,8 +1056,8 @@
     }
   ],
   "config": {
-    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin test zone/jamlin_demo-en.html",
-    "timestamp": "Nov 24, 2017 2:19:13 PM",
+    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/testdata/jamlin_demo-en.html",
+    "timestamp": "Jan 2, 2018 11:41:59 AM",
     "selectors": [
       {
         "name": "texts",

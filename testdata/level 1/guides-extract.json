@@ -21,7 +21,7 @@
           ]
         },
         {
-          "stringOrig": "Lezeck?? denn??k",
+          "stringOrig": "Lezecký denník",
           "selector": "#toplink_home",
           "translations": [
             {
@@ -30,7 +30,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Lezeck?? denn??k"
+              "translation": "Lezecký denník"
             }
           ]
         },
@@ -49,16 +49,16 @@
           ]
         },
         {
-          "stringOrig": "Sloven??ina",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             },
             {
               "langCode": "sk",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "stringOrig": "H??ada??",
+          "stringOrig": "Hľadať",
           "selector": "#toplink_climb",
           "translations": [
             {
@@ -86,12 +86,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H??ada??"
+              "translation": "Hľadať"
             }
           ]
         },
         {
-          "stringOrig": "H??ada?? verzia 2 - test",
+          "stringOrig": "Hľadať verzia 2 - test",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -100,12 +100,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H??ada?? verzia 2 - test"
+              "translation": "Hľadať verzia 2 - test"
             }
           ]
         },
         {
-          "stringOrig": "H??ada?? Lezcov",
+          "stringOrig": "Hľadať Lezcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -114,12 +114,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H??ada?? Lezcov"
+              "translation": "Hľadať Lezcov"
             }
           ]
         },
         {
-          "stringOrig": "Roz????ren?? Vyh??ad??vanie",
+          "stringOrig": "Rozšírené Vyhľadávanie",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -128,12 +128,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Roz????ren?? Vyh??ad??vanie"
+              "translation": "Rozšírené Vyhľadávanie"
             }
           ]
         },
         {
-          "stringOrig": "Vyh??ad??va?? Sprievodcov",
+          "stringOrig": "Vyhľadávať Sprievodcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -142,12 +142,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??va?? Sprievodcov"
+              "translation": "Vyhľadávať Sprievodcov"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?? Sprievodcov",
+          "stringOrig": "Prezerať Sprievodcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -156,12 +156,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?? Sprievodcov"
+              "translation": "Prezerať Sprievodcov"
             }
           ]
         },
         {
-          "stringOrig": "Vyh??ad??va?? Mapy Ciest",
+          "stringOrig": "Vyhľadávať Mapy Ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a",
           "translations": [
             {
@@ -170,12 +170,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??va?? Mapy Ciest"
+              "translation": "Vyhľadávať Mapy Ciest"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?? Mapy Ciest",
+          "stringOrig": "Prezerať Mapy Ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(5) \u003e a",
           "translations": [
             {
@@ -184,12 +184,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?? Mapy Ciest"
+              "translation": "Prezerať Mapy Ciest"
             }
           ]
         },
         {
-          "stringOrig": "Vyh??ad??va?? Cesty",
+          "stringOrig": "Vyhľadávať Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(7) \u003e a",
           "translations": [
             {
@@ -198,12 +198,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??va?? Cesty"
+              "translation": "Vyhľadávať Cesty"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?? Cesty",
+          "stringOrig": "Prezerať Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(8) \u003e a",
           "translations": [
             {
@@ -212,12 +212,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?? Cesty"
+              "translation": "Prezerať Cesty"
             }
           ]
         },
         {
-          "stringOrig": "Najnov??ie Cesty",
+          "stringOrig": "Najnovšie Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(9) \u003e a",
           "translations": [
             {
@@ -226,7 +226,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Najnov??ie Cesty"
+              "translation": "Najnovšie Cesty"
             }
           ]
         },
@@ -329,16 +329,16 @@
           ]
         },
         {
-          "stringOrig": "Marcel Z??brik",
+          "stringOrig": "Marcel Zúbrik",
           "selector": "#toplink_profile",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             }
           ]
         },
@@ -357,7 +357,7 @@
           ]
         },
         {
-          "stringOrig": "Ko????k",
+          "stringOrig": "Košík",
           "selector": "#toplink_cart",
           "translations": [
             {
@@ -366,12 +366,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Ko????k"
+              "translation": "Košík"
             }
           ]
         },
         {
-          "stringOrig": "Obsah V????ho ko????ka",
+          "stringOrig": "Obsah Vášho košíka",
           "selector": "#cart_info \u003e div:nth-child(1) \u003e strong \u003e a",
           "translations": [
             {
@@ -380,12 +380,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Obsah V????ho ko????ka"
+              "translation": "Obsah Vášho košíka"
             }
           ]
         },
         {
-          "stringOrig": "Zrealizovan?? objedn??vky",
+          "stringOrig": "Zrealizované objednávky",
           "selector": "#mmenu \u003e li.mright.inliner \u003e ul.ap_to_right \u003e li.mright.inliner:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -394,12 +394,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zrealizovan?? objedn??vky"
+              "translation": "Zrealizované objednávky"
             }
           ]
         },
         {
-          "stringOrig": "Vytvori?? Nov??ho Sprievodcu",
+          "stringOrig": "Vytvoriť Nového Sprievodcu",
           "selector": "#add_route \u003e a.rounded2.border_darkgrey",
           "translations": [
             {
@@ -408,7 +408,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vytvori?? Nov??ho Sprievodcu"
+              "translation": "Vytvoriť Nového Sprievodcu"
             }
           ]
         },
@@ -427,16 +427,16 @@
           ]
         },
         {
-          "stringOrig": "Testovac?? sprievodca",
+          "stringOrig": "Testovací sprievodca",
           "selector": "#r_40 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Testovac?? sprievodca"
+              "translation": "Testovací sprievodca"
             },
             {
               "langCode": "sk",
-              "translation": "Testovac?? sprievodca"
+              "translation": "Testovací sprievodca"
             }
           ]
         },
@@ -469,21 +469,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/guide/40/Testovaci-sprievodca",
-          "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/guide/40/Testovaci-sprievodca"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/guide/40/Testovaci-sprievodca"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj tohto Sprievodcu na svojej Facebook ??asovej osi",
+          "stringOrig": "Zdieľaj tohto Sprievodcu na svojej Facebook Časovej osi",
           "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -492,21 +478,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj tohto Sprievodcu na svojej Facebook ??asovej osi"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj tohto Sprievodcu na svojej Facebook ??asovej osi",
-          "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Guide on your Facebook Timeline"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj tohto Sprievodcu na svojej Facebook ??asovej osi"
+              "translation": "Zdieľaj tohto Sprievodcu na svojej Facebook Časovej osi"
             }
           ]
         },
@@ -525,21 +497,7 @@
           ]
         },
         {
-          "stringOrig": "FB Like for this Route Map",
-          "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "FB Like for this Route Map"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj tohto Sprievodcu na svojom Google+",
+          "stringOrig": "Zdieľaj tohto Sprievodcu na svojom Google+",
           "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -548,26 +506,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj tohto Sprievodcu na svojom Google+"
+              "translation": "Zdieľaj tohto Sprievodcu na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj tohto Sprievodcu na svojom Google+",
-          "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Guide on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj tohto Sprievodcu na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Str??nka s fotkou",
+          "stringOrig": "Stránka s fotkou",
           "selector": "#r_40 \u003e td.route_urls \u003e a.route_webmap_url.grouped_maps",
           "translations": [
             {
@@ -576,7 +520,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Str??nka s fotkou"
+              "translation": "Stránka s fotkou"
             }
           ]
         },
@@ -595,7 +539,7 @@
           ]
         },
         {
-          "stringOrig": "Zma??",
+          "stringOrig": "Zmaž",
           "selector": "#r_40 \u003e td.actions \u003e a.guide_delete",
           "translations": [
             {
@@ -604,12 +548,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zma??"
+              "translation": "Zmaž"
             }
           ]
         },
         {
-          "stringOrig": "Podmienky pou????vania",
+          "stringOrig": "Podmienky používania",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -618,7 +562,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Podmienky pou????vania"
+              "translation": "Podmienky používania"
             }
           ]
         },
@@ -651,7 +595,7 @@
           ]
         },
         {
-          "stringOrig": "Vyh??ad??vac?? Widget",
+          "stringOrig": "Vyhľadávací Widget",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -660,12 +604,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??vac?? Widget"
+              "translation": "Vyhľadávací Widget"
             }
           ]
         },
         {
-          "stringOrig": "Wiki N??poveda",
+          "stringOrig": "Wiki Nápoveda",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -674,12 +618,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Wiki N??poveda"
+              "translation": "Wiki Nápoveda"
             }
           ]
         },
         {
-          "stringOrig": "Ozn??m chybu",
+          "stringOrig": "Oznám chybu",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -688,7 +632,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Ozn??m chybu"
+              "translation": "Oznám chybu"
             }
           ]
         },
@@ -749,7 +693,7 @@
           ]
         },
         {
-          "stringOrig": "Prihl??si?? sa na odber",
+          "stringOrig": "Prihlásiť sa na odber",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -758,12 +702,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prihl??si?? sa na odber"
+              "translation": "Prihlásiť sa na odber"
             }
           ]
         },
         {
-          "stringOrig": "Odhl??si?? sa z odberu",
+          "stringOrig": "Odhlásiť sa z odberu",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -772,40 +716,40 @@
             },
             {
               "langCode": "sk",
-              "translation": "Odhl??si?? sa z odberu"
+              "translation": "Odhlásiť sa z odberu"
             }
           ]
         },
         {
-          "stringOrig": "Marcel Z??brik",
+          "stringOrig": "Marcel Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Tom???? Z??brik",
+          "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Publik??tor",
+          "stringOrig": "Publikátor",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(4)",
           "translations": [
             {
@@ -814,7 +758,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Publik??tor"
+              "translation": "Publikátor"
             }
           ]
         },
@@ -847,7 +791,7 @@
           ]
         },
         {
-          "stringOrig": "Pou????van??m t??chto str??nok s??hlas??te s uchov??van??m cookies vo va??om prehliada??i pre zlep??enie z????itku z ich prezerania. ????tajte viac. Jasna??ka",
+          "stringOrig": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p",
           "translations": [
             {
@@ -856,35 +800,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Pou????van??m t??chto str??nok s??hlas??te s uchov??van??m cookies vo va??om prehliada??i pre zlep??enie z????itku z ich prezerania. ????tajte viac. Jasna??ka"
-            }
-          ]
-        },
-        {
-          "stringOrig": "????tajte viac",
-          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a:nth-child(1)",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Read more"
-            },
-            {
-              "langCode": "sk",
-              "translation": "????tajte viac"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Jasna??ka",
-          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a.eu_cookie_confirm.rounded2",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "OK, Got it"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Jasna??ka"
+              "translation": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka"
             }
           ]
         }
@@ -897,16 +813,16 @@
       "attrName": "title",
       "translationStrings": [
         {
-          "stringOrig": "Sloven??ina",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             },
             {
               "langCode": "sk",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -925,7 +841,7 @@
           ]
         },
         {
-          "stringOrig": "Uk???? Sprievodcu #40",
+          "stringOrig": "Ukáž Sprievodcu #40",
           "selector": "#r_40 \u003e td.route_name \u003e a",
           "translations": [
             {
@@ -934,12 +850,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Uk???? Sprievodcu #40"
+              "translation": "Ukáž Sprievodcu #40"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??a?? tohto Sprievodcu",
+          "stringOrig": "Zdieľať tohto Sprievodcu",
           "selector": "#r_40 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -948,21 +864,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??a?? tohto Sprievodcu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "URL linka tohto sprievodcu",
-          "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This Guide\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL linka tohto sprievodcu"
+              "translation": "Zdieľať tohto Sprievodcu"
             }
           ]
         },
@@ -995,7 +897,7 @@
           ]
         },
         {
-          "stringOrig": "Zma?? Sprievodcu #40",
+          "stringOrig": "Zmaž Sprievodcu #40",
           "selector": "#r_40 \u003e td.actions \u003e a.guide_delete",
           "translations": [
             {
@@ -1004,7 +906,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zma?? Sprievodcu #40"
+              "translation": "Zmaž Sprievodcu #40"
             }
           ]
         },
@@ -1023,16 +925,16 @@
           ]
         },
         {
-          "stringOrig": "Tom???? Z??brik",
+          "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             }
           ]
         }
@@ -1040,8 +942,8 @@
     }
   ],
   "config": {
-    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin test zone/level 1/guides-en.html",
-    "timestamp": "Nov 23, 2017 7:15:03 PM",
+    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/testdata/level 1/guides-en.html",
+    "timestamp": "Jan 2, 2018 11:41:59 AM",
     "selectors": [
       {
         "name": "texts",
