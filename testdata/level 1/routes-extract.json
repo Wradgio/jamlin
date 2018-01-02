@@ -21,7 +21,7 @@
           ]
         },
         {
-          "stringOrig": "Lezeck?? denn??k",
+          "stringOrig": "Lezecký denník",
           "selector": "#toplink_home",
           "translations": [
             {
@@ -30,7 +30,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Lezeck?? denn??k"
+              "translation": "Lezecký denník"
             }
           ]
         },
@@ -49,16 +49,16 @@
           ]
         },
         {
-          "stringOrig": "Sloven??ina",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             },
             {
               "langCode": "sk",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "stringOrig": "H??ada??",
+          "stringOrig": "Hľadať",
           "selector": "#toplink_climb",
           "translations": [
             {
@@ -86,12 +86,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H??ada??"
+              "translation": "Hľadať"
             }
           ]
         },
         {
-          "stringOrig": "H??ada?? verzia 2 - test",
+          "stringOrig": "Hľadať verzia 2 - test",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -100,12 +100,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H??ada?? verzia 2 - test"
+              "translation": "Hľadať verzia 2 - test"
             }
           ]
         },
         {
-          "stringOrig": "H??ada?? Lezcov",
+          "stringOrig": "Hľadať Lezcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -114,12 +114,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "H??ada?? Lezcov"
+              "translation": "Hľadať Lezcov"
             }
           ]
         },
         {
-          "stringOrig": "Roz????ren?? Vyh??ad??vanie",
+          "stringOrig": "Rozšírené Vyhľadávanie",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -128,12 +128,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Roz????ren?? Vyh??ad??vanie"
+              "translation": "Rozšírené Vyhľadávanie"
             }
           ]
         },
         {
-          "stringOrig": "Vyh??ad??va?? Sprievodcov",
+          "stringOrig": "Vyhľadávať Sprievodcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -142,12 +142,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??va?? Sprievodcov"
+              "translation": "Vyhľadávať Sprievodcov"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?? Sprievodcov",
+          "stringOrig": "Prezerať Sprievodcov",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -156,12 +156,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?? Sprievodcov"
+              "translation": "Prezerať Sprievodcov"
             }
           ]
         },
         {
-          "stringOrig": "Vyh??ad??va?? Mapy Ciest",
+          "stringOrig": "Vyhľadávať Mapy Ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a",
           "translations": [
             {
@@ -170,12 +170,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??va?? Mapy Ciest"
+              "translation": "Vyhľadávať Mapy Ciest"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?? Mapy Ciest",
+          "stringOrig": "Prezerať Mapy Ciest",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(5) \u003e a",
           "translations": [
             {
@@ -184,12 +184,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?? Mapy Ciest"
+              "translation": "Prezerať Mapy Ciest"
             }
           ]
         },
         {
-          "stringOrig": "Vyh??ad??va?? Cesty",
+          "stringOrig": "Vyhľadávať Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(7) \u003e a",
           "translations": [
             {
@@ -198,12 +198,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??va?? Cesty"
+              "translation": "Vyhľadávať Cesty"
             }
           ]
         },
         {
-          "stringOrig": "Prezera?? Cesty",
+          "stringOrig": "Prezerať Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(8) \u003e a",
           "translations": [
             {
@@ -212,12 +212,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prezera?? Cesty"
+              "translation": "Prezerať Cesty"
             }
           ]
         },
         {
-          "stringOrig": "Najnov??ie Cesty",
+          "stringOrig": "Najnovšie Cesty",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(9) \u003e a",
           "translations": [
             {
@@ -226,7 +226,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Najnov??ie Cesty"
+              "translation": "Najnovšie Cesty"
             }
           ]
         },
@@ -329,16 +329,16 @@
           ]
         },
         {
-          "stringOrig": "Marcel Z??brik",
+          "stringOrig": "Marcel Zúbrik",
           "selector": "#toplink_profile",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             }
           ]
         },
@@ -357,7 +357,7 @@
           ]
         },
         {
-          "stringOrig": "Ko????k",
+          "stringOrig": "Košík",
           "selector": "#toplink_cart",
           "translations": [
             {
@@ -366,12 +366,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Ko????k"
+              "translation": "Košík"
             }
           ]
         },
         {
-          "stringOrig": "Obsah V????ho ko????ka",
+          "stringOrig": "Obsah Vášho košíka",
           "selector": "#cart_info \u003e div:nth-child(1) \u003e strong \u003e a",
           "translations": [
             {
@@ -380,12 +380,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Obsah V????ho ko????ka"
+              "translation": "Obsah Vášho košíka"
             }
           ]
         },
         {
-          "stringOrig": "Zrealizovan?? objedn??vky",
+          "stringOrig": "Zrealizované objednávky",
           "selector": "#mmenu \u003e li.mright.inliner \u003e ul.ap_to_right \u003e li.mright.inliner:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -394,12 +394,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zrealizovan?? objedn??vky"
+              "translation": "Zrealizované objednávky"
             }
           ]
         },
         {
-          "stringOrig": "Pridaj Nov?? Cestu",
+          "stringOrig": "Pridaj Novú Cestu",
           "selector": "#add_route \u003e a.rounded2.border_darkgrey",
           "translations": [
             {
@@ -408,7 +408,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Pridaj Nov?? Cestu"
+              "translation": "Pridaj Novú Cestu"
             }
           ]
         },
@@ -441,44 +441,44 @@
           ]
         },
         {
-          "stringOrig": "Veveri??ia cesta",
+          "stringOrig": "Veveričia cesta",
           "selector": "#r_1880 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Veveri??ia cesta"
+              "translation": "Veveričia cesta"
             },
             {
               "langCode": "sk",
-              "translation": "Veveri??ia cesta"
+              "translation": "Veveričia cesta"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1880 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Horn?? skaly - S",
+          "stringOrig": "Horné skaly - S",
           "selector": "#r_1880 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Horn?? skaly - S"
+              "translation": "Horné skaly - S"
             },
             {
               "langCode": "sk",
-              "translation": "Horn?? skaly - S"
+              "translation": "Horné skaly - S"
             }
           ]
         },
@@ -497,7 +497,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1880 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -506,7 +506,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -525,21 +525,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Horn%C3%A9+skaly+-+S/5/12/Veveri%C4%8Dia+cesta/",
-          "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Horn%C3%A9+skaly+-+S/5/12/Veveri%C4%8Dia+cesta/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Horn%C3%A9+skaly+-+S/5/12/Veveri%C4%8Dia+cesta/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -548,21 +534,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -581,21 +553,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -604,35 +562,21 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1880 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
@@ -693,7 +637,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1865 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -702,7 +646,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -721,21 +665,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Salamander/Salamander/5/10/Augone/",
-          "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Salamander/Salamander/5/10/Augone/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Salamander/Salamander/5/10/Augone/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -744,21 +674,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -777,21 +693,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -800,21 +702,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
@@ -833,30 +721,30 @@
           ]
         },
         {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1865 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "??ertova svadba",
+          "stringOrig": "Čertova svadba",
           "selector": "#r_1858 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "??ertova svadba"
+              "translation": "Čertova svadba"
             },
             {
               "langCode": "sk",
-              "translation": "??ertova svadba"
+              "translation": "Čertova svadba"
             }
           ]
         },
@@ -903,7 +791,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1858 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -912,7 +800,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -931,21 +819,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Salamander/Lego/5/5/%C4%8Certova+svadba/",
-          "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Salamander/Lego/5/5/%C4%8Certova+svadba/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Salamander/Lego/5/5/%C4%8Certova+svadba/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -954,21 +828,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -987,21 +847,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -1010,21 +856,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
@@ -1043,16 +875,16 @@
           ]
         },
         {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1858 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
@@ -1113,7 +945,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1861 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -1122,7 +954,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -1141,21 +973,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Salamander/Lego/5/6/Volovinka/",
-          "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Salamander/Lego/5/6/Volovinka/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Salamander/Lego/5/6/Volovinka/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -1164,21 +982,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -1197,21 +1001,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -1220,21 +1010,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
@@ -1253,58 +1029,58 @@
           ]
         },
         {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1861 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "Jednoskobov??",
+          "stringOrig": "Jednoskobová",
           "selector": "#r_1794 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Jednoskobov??"
+              "translation": "Jednoskobová"
             },
             {
               "langCode": "sk",
-              "translation": "Jednoskobov??"
+              "translation": "Jednoskobová"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1794 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Doln?? skaly - B",
+          "stringOrig": "Dolné skaly - B",
           "selector": "#r_1794 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Doln?? skaly - B"
+              "translation": "Dolné skaly - B"
             },
             {
               "langCode": "sk",
-              "translation": "Doln?? skaly - B"
+              "translation": "Dolné skaly - B"
             }
           ]
         },
@@ -1323,7 +1099,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1794 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -1332,7 +1108,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -1351,21 +1127,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+B/5/9/Jednoskobov%C3%A1/",
-          "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+B/5/9/Jednoskobov%C3%A1/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+B/5/9/Jednoskobov%C3%A1/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -1374,21 +1136,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -1407,21 +1155,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -1430,77 +1164,63 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1794 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "Ostr?? hrana",
+          "stringOrig": "Ostrá hrana",
           "selector": "#r_1795 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Ostr?? hrana"
+              "translation": "Ostrá hrana"
             },
             {
               "langCode": "sk",
-              "translation": "Ostr?? hrana"
+              "translation": "Ostrá hrana"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1795 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Doln?? skaly - C",
+          "stringOrig": "Dolné skaly - C",
           "selector": "#r_1795 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Doln?? skaly - C"
+              "translation": "Dolné skaly - C"
             },
             {
               "langCode": "sk",
-              "translation": "Doln?? skaly - C"
+              "translation": "Dolné skaly - C"
             }
           ]
         },
@@ -1519,7 +1239,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1795 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -1528,7 +1248,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -1547,21 +1267,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+C/5/5/Ostr%C3%A1+hrana/",
-          "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+C/5/5/Ostr%C3%A1+hrana/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+C/5/5/Ostr%C3%A1+hrana/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -1570,21 +1276,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -1603,21 +1295,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -1626,77 +1304,63 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1795 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "Kr????ok",
+          "stringOrig": "Krúžok",
           "selector": "#r_1796 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kr????ok"
+              "translation": "Krúžok"
             },
             {
               "langCode": "sk",
-              "translation": "Kr????ok"
+              "translation": "Krúžok"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1796 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Doln?? skaly - D",
+          "stringOrig": "Dolné skaly - D",
           "selector": "#r_1796 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Doln?? skaly - D"
+              "translation": "Dolné skaly - D"
             },
             {
               "langCode": "sk",
-              "translation": "Doln?? skaly - D"
+              "translation": "Dolné skaly - D"
             }
           ]
         },
@@ -1715,7 +1379,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1796 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -1724,7 +1388,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -1743,21 +1407,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+D/5/9/Kr%C3%BA%C5%BEok/",
-          "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+D/5/9/Kr%C3%BA%C5%BEok/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+D/5/9/Kr%C3%BA%C5%BEok/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -1766,21 +1416,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -1799,21 +1435,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -1822,77 +1444,63 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1796 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "Ha??u??a",
+          "stringOrig": "Hašuľa",
           "selector": "#r_1797 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Ha??u??a"
+              "translation": "Hašuľa"
             },
             {
               "langCode": "sk",
-              "translation": "Ha??u??a"
+              "translation": "Hašuľa"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1797 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Doln?? skaly - D",
+          "stringOrig": "Dolné skaly - D",
           "selector": "#r_1797 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Doln?? skaly - D"
+              "translation": "Dolné skaly - D"
             },
             {
               "langCode": "sk",
-              "translation": "Doln?? skaly - D"
+              "translation": "Dolné skaly - D"
             }
           ]
         },
@@ -1911,7 +1519,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1797 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -1920,7 +1528,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -1939,21 +1547,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+D/5/12/Ha%C5%A1u%C4%BEa/",
-          "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+D/5/12/Ha%C5%A1u%C4%BEa/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+D/5/12/Ha%C5%A1u%C4%BEa/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -1962,21 +1556,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -1995,21 +1575,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -2018,77 +1584,63 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1797 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "??erven?? skoby",
+          "stringOrig": "Červené skoby",
           "selector": "#r_1798 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "??erven?? skoby"
+              "translation": "Červené skoby"
             },
             {
               "langCode": "sk",
-              "translation": "??erven?? skoby"
+              "translation": "Červené skoby"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1798 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Doln?? skaly - E",
+          "stringOrig": "Dolné skaly - E",
           "selector": "#r_1798 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Doln?? skaly - E"
+              "translation": "Dolné skaly - E"
             },
             {
               "langCode": "sk",
-              "translation": "Doln?? skaly - E"
+              "translation": "Dolné skaly - E"
             }
           ]
         },
@@ -2107,7 +1659,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1798 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2116,7 +1668,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -2135,21 +1687,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+E/5/9/%C4%8Cerven%C3%A9+skoby/",
-          "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+E/5/9/%C4%8Cerven%C3%A9+skoby/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+E/5/9/%C4%8Cerven%C3%A9+skoby/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -2158,21 +1696,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -2191,21 +1715,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -2214,77 +1724,63 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1798 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "Antigravit??cia",
+          "stringOrig": "Antigravitácia",
           "selector": "#r_1799 \u003e td.route_name \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Antigravit??cia"
+              "translation": "Antigravitácia"
             },
             {
               "langCode": "sk",
-              "translation": "Antigravit??cia"
+              "translation": "Antigravitácia"
             }
           ]
         },
         {
-          "stringOrig": "Kalam??rka",
+          "stringOrig": "Kalamárka",
           "selector": "#r_1799 \u003e td.location_area \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             },
             {
               "langCode": "sk",
-              "translation": "Kalam??rka"
+              "translation": "Kalamárka"
             }
           ]
         },
         {
-          "stringOrig": "Doln?? skaly - E",
+          "stringOrig": "Dolné skaly - E",
           "selector": "#r_1799 \u003e td.location_area \u003e div.fs80 \u003e a",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Doln?? skaly - E"
+              "translation": "Dolné skaly - E"
             },
             {
               "langCode": "sk",
-              "translation": "Doln?? skaly - E"
+              "translation": "Dolné skaly - E"
             }
           ]
         },
@@ -2303,7 +1799,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj",
+          "stringOrig": "Zdieľaj",
           "selector": "#r_1799 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2312,7 +1808,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj"
+              "translation": "Zdieľaj"
             }
           ]
         },
@@ -2331,21 +1827,7 @@
           ]
         },
         {
-          "stringOrig": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+E/5/13/Antigravit%C3%A1cia/",
-          "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "https://climbersroutes.local/route/1/Slovakia/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+E/5/13/Antigravit%C3%A1cia/"
-            },
-            {
-              "langCode": "sk",
-              "translation": "https://climbersroutes.local/route/1/Slovensko/Kalam%C3%A1rka/Doln%C3%A9+skaly+-+E/5/13/Antigravit%C3%A1cia/"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
+          "stringOrig": "Zdieľaj informácie o tejto ceste",
           "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -2354,21 +1836,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj inform??cie o tejto ceste",
-          "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(4) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share information about this Route"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj inform??cie o tejto ceste"
+              "translation": "Zdieľaj informácie o tejto ceste"
             }
           ]
         },
@@ -2387,21 +1855,7 @@
           ]
         },
         {
-          "stringOrig": "Daj tejto ceste Like na Facebooku",
-          "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(5) \u003e a.facebook_link",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "FB Like for this Route Map"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Daj tejto ceste Like na Facebooku"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
+          "stringOrig": "Zdieľaj túto Mapu ciest na svojom Google+",
           "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -2410,40 +1864,26 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
+              "translation": "Zdieľaj túto Mapu ciest na svojom Google+"
             }
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to Mapu ciest na svojom Google+",
-          "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(7) \u003e a.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Share this Route on your Google+"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Zdie??aj t??to Mapu ciest na svojom Google+"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Viac???",
+          "stringOrig": "Viac▾",
           "selector": "#r_1799 \u003e td.collapsible \u003e a.more_butt.rounded3",
           "translations": [
             {
               "langCode": "en",
-              "translation": "More???"
+              "translation": "More▾"
             },
             {
               "langCode": "sk",
-              "translation": "Viac???"
+              "translation": "Viac▾"
             }
           ]
         },
         {
-          "stringOrig": "Posu??te str??nku na sam?? spodok pre nahratie ??al????ch ciest",
+          "stringOrig": "Posuňte stránku na samý spodok pre nahratie ďalších ciest",
           "selector": "#my_routes_list \u003e p",
           "translations": [
             {
@@ -2452,12 +1892,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Posu??te str??nku na sam?? spodok pre nahratie ??al????ch ciest"
+              "translation": "Posuňte stránku na samý spodok pre nahratie ďalších ciest"
             }
           ]
         },
         {
-          "stringOrig": "Podmienky pou????vania",
+          "stringOrig": "Podmienky používania",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -2466,7 +1906,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Podmienky pou????vania"
+              "translation": "Podmienky používania"
             }
           ]
         },
@@ -2499,7 +1939,7 @@
           ]
         },
         {
-          "stringOrig": "Vyh??ad??vac?? Widget",
+          "stringOrig": "Vyhľadávací Widget",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -2508,12 +1948,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Vyh??ad??vac?? Widget"
+              "translation": "Vyhľadávací Widget"
             }
           ]
         },
         {
-          "stringOrig": "Wiki N??poveda",
+          "stringOrig": "Wiki Nápoveda",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -2522,12 +1962,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Wiki N??poveda"
+              "translation": "Wiki Nápoveda"
             }
           ]
         },
         {
-          "stringOrig": "Ozn??m chybu",
+          "stringOrig": "Oznám chybu",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -2536,7 +1976,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Ozn??m chybu"
+              "translation": "Oznám chybu"
             }
           ]
         },
@@ -2597,7 +2037,7 @@
           ]
         },
         {
-          "stringOrig": "Prihl??si?? sa na odber",
+          "stringOrig": "Prihlásiť sa na odber",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -2606,12 +2046,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Prihl??si?? sa na odber"
+              "translation": "Prihlásiť sa na odber"
             }
           ]
         },
         {
-          "stringOrig": "Odhl??si?? sa z odberu",
+          "stringOrig": "Odhlásiť sa z odberu",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -2620,40 +2060,40 @@
             },
             {
               "langCode": "sk",
-              "translation": "Odhl??si?? sa z odberu"
+              "translation": "Odhlásiť sa z odberu"
             }
           ]
         },
         {
-          "stringOrig": "Marcel Z??brik",
+          "stringOrig": "Marcel Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(1)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Marcel Z??brik"
+              "translation": "Marcel Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Tom???? Z??brik",
+          "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             }
           ]
         },
         {
-          "stringOrig": "Publik??tor",
+          "stringOrig": "Publikátor",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(4)",
           "translations": [
             {
@@ -2662,7 +2102,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Publik??tor"
+              "translation": "Publikátor"
             }
           ]
         },
@@ -2695,7 +2135,7 @@
           ]
         },
         {
-          "stringOrig": "Pou????van??m t??chto str??nok s??hlas??te s uchov??van??m cookies vo va??om prehliada??i pre zlep??enie z????itku z ich prezerania. ????tajte viac. Jasna??ka",
+          "stringOrig": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p",
           "translations": [
             {
@@ -2704,35 +2144,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Pou????van??m t??chto str??nok s??hlas??te s uchov??van??m cookies vo va??om prehliada??i pre zlep??enie z????itku z ich prezerania. ????tajte viac. Jasna??ka"
-            }
-          ]
-        },
-        {
-          "stringOrig": "????tajte viac",
-          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a:nth-child(1)",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "Read more"
-            },
-            {
-              "langCode": "sk",
-              "translation": "????tajte viac"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Jasna??ka",
-          "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p \u003e a.eu_cookie_confirm.rounded2",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "OK, Got it"
-            },
-            {
-              "langCode": "sk",
-              "translation": "Jasna??ka"
+              "translation": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka"
             }
           ]
         }
@@ -2745,16 +2157,16 @@
       "attrName": "title",
       "translationStrings": [
         {
-          "stringOrig": "Sloven??ina",
+          "stringOrig": "Slovenčina",
           "selector": "#w_ilang_sk",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             },
             {
               "langCode": "sk",
-              "translation": "Sloven??ina"
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -2773,7 +2185,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1880 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2782,26 +2194,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
         {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1880 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1865 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2810,21 +2208,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1865 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
@@ -2843,7 +2227,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1858 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2852,21 +2236,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1858 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
@@ -2885,7 +2255,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1861 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2894,21 +2264,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1861 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
@@ -2927,7 +2283,7 @@
           ]
         },
         {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1794 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2936,26 +2292,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
         {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1794 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1795 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2964,26 +2306,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
         {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1795 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1796 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -2992,26 +2320,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
         {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1796 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1797 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -3020,26 +2334,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
         {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1797 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1798 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -3048,26 +2348,12 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
         {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1798 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "Zdie??aj t??to cestu",
+          "stringOrig": "Zdieľaj túto cestu",
           "selector": "#r_1799 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -3076,21 +2362,7 @@
             },
             {
               "langCode": "sk",
-              "translation": "Zdie??aj t??to cestu"
-            }
-          ]
-        },
-        {
-          "stringOrig": "URL odkaz na t??to cestu",
-          "selector": "#share_route_links_1799 \u003e div \u003e p:nth-child(2) \u003e a.route_url_long.red",
-          "translations": [
-            {
-              "langCode": "en",
-              "translation": "This route\u0027s URL link"
-            },
-            {
-              "langCode": "sk",
-              "translation": "URL odkaz na t??to cestu"
+              "translation": "Zdieľaj túto cestu"
             }
           ]
         },
@@ -3109,16 +2381,16 @@
           ]
         },
         {
-          "stringOrig": "Tom???? Z??brik",
+          "stringOrig": "Tomáš Zúbrik",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(2)",
           "translations": [
             {
               "langCode": "en",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             },
             {
               "langCode": "sk",
-              "translation": "Tom???? Z??brik"
+              "translation": "Tomáš Zúbrik"
             }
           ]
         }
@@ -3126,8 +2398,8 @@
     }
   ],
   "config": {
-    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin test zone/level 1/routes-en.html",
-    "timestamp": "Nov 23, 2017 7:15:03 PM",
+    "source": "/Users/marthol/IdeaProjects/MavenBased/jamlin/testdata/level 1/routes-en.html",
+    "timestamp": "Jan 2, 2018 11:41:59 AM",
     "selectors": [
       {
         "name": "texts",
