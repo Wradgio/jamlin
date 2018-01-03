@@ -164,5 +164,12 @@ JaMLin does not translate data by itself. It only extracts strings according to 
 ```
 For that, you can use any editor, that can read JSON files or try [**JaMLin Editor**](https://github.com/Wradgio/Jamlin-Editor/). Check binaries downloads in [Jamlin Editor releases](https://github.com/Wradgio/Jamlin-Editor/releases) - https://github.com/Wradgio/Jamlin-Editor/releases.
 
+## Command line shortcut
+If you want to have Jamlin available everywhere without need to write whole "java -jar /whole/path/to/jamlin.jar", you can create shortcut into **~/.profile** (or ~/.bash_profile) in your home folder - just add this line in it:
+
+`alias jamlin="java -jar /home/batman/apps/jamlin.jar"`
+
+It should work on terminal windows opened after you saved that.
+
 ## Why is it such a mess
 It's my first tool in Java and Maven, a one man project. It will take some time to clean it up. Any help is appreciated.
