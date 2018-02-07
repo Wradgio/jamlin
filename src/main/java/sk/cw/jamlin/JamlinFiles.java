@@ -120,7 +120,7 @@ public class JamlinFiles {
 
         // save history
         if ( Main.config.getTarget().getSaveHistory() ) {
-            JamlinFiles.makeHistory(new Date(), source);
+            JamlinFiles.makeHistory(Main.startupTimestamp, source);
         }
 
         writeResultFile(source.getParentFile(), fileName, input);
@@ -134,7 +134,6 @@ public class JamlinFiles {
      */
     static void outputReplaceResultFiles(TranslationReplaceResult results, String destination) {
         Map<String, String> resultFileNames = new HashMap<>();
-        Date historyDate = new Date();
 
         resultFileNames = getReplaceOutputFileName(results, destination);
 
@@ -148,7 +147,7 @@ public class JamlinFiles {
                 String langCode = results.getLangCodes().get(j);
                 // save history
                 if ( Main.config.getTarget().getSaveHistory() ) {
-                    JamlinFiles.makeHistory(historyDate, new File(destinationDirectory +File.separator+ resultFileNames.get(langCode)) );
+                    JamlinFiles.makeHistory(Main.startupTimestamp, new File(destinationDirectory +File.separator+ resultFileNames.get(langCode)) );
                 }
                 writeResultFile(destinationDirectory, resultFileNames.get(langCode), results.get(langCode));
             }

@@ -1,7 +1,8 @@
 ![Logo](./jamlin_logo.svg)
 
 # JaMLin
-**Ja**va **M**arkup **L**anguage **In**ternalization is command line tool for internalisation of markup files (HTML, XML). It's like **_gettext_** but without need make makup dirty with anything special (like _() functions or lang attributes). It uses JSON files to store your strings - send these files to your translators with link to [**JaMLin Editor**](https://github.com/Wradgio/Jamlin-Editor/) app.
+**Ja**va **M**arkup **L**anguage **In**ternalisation is command line tool for internalisation of markup files (HTML, XML), that keeps markup clean as it was meant to be.
+It's like **_gettext_** but without need to make markup dirty with anything special (like _() functions or custom attributes). It uses JSON files to store your strings. Send these files to your translators with link to [**JaMLin Editor**](https://github.com/Wradgio/Jamlin-Editor/) app.
 
 
 ## What is it good for
@@ -9,7 +10,7 @@ For projects that use static HTML or XML that need to be translated and keep unt
 
 
 ## Quick start
-1. In project root, find **jamlin_config.json** file - copy it to your destination folder and edit CSS selectors to extract what you need (seel Config section for more info).
+1. In project root, find **jamlin_config.json** file - copy it to your destination folder and edit CSS selectors to extract what you need (see Config section for more info).
 2. Find **jamlin-jar-with-dependencies.jar** inside **target** directory - this one is latest bundled build. Copy it to your destination folder, next to jamlin_config.json file. It can't run without it.
 3. Run as any other Java program using terminal (`java -jar jamlin-jar-with-dependencies.jar`) as described in next sections using any of 6 defined modes.
 
@@ -72,7 +73,7 @@ Every time you run JaMLin, it's looking for config file, named **jamlin_config.j
 		]
 	},
 	"target": {
-		"replace_file": true,
+		"save_history": true,
 		"replace_pattern": "*-$lang.*"
 	}
 }
@@ -83,7 +84,7 @@ It defines sources and targets:
 
 You will probably need separate config for every project.
 
-Afte you set it up, you can define parameters - action, source, target and language.
+After you set it up, you can define parameters - action, source, target and language.
 
 JaMLin by default uses "extract" action to traverse defined items and trying to extract their translations. When run with "replace" action, it tries to get new translations back to its original files.
 

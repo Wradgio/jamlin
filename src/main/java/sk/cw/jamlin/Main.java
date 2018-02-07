@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,7 +30,8 @@ public class Main
 
     public static int expectedFilesCount = 0;
     public static int exportedFilesCount = 0;
-    public static String mode = "";
+    private static String mode = "";
+    public static Date startupTimestamp = null;
 
     static String workingDirectory = "";
     public static Config config;
@@ -47,6 +49,7 @@ public class Main
         main.run();
 
         config = getConfig(workingDirectory+File.separator+"jamlin_config.json");
+        System.out.println(startupTimestamp.toString());
 
         if (config!=null) {
             //getFileTranslation(config, action, source, target);
@@ -110,6 +113,9 @@ public class Main
             expectedFilesCount = resultFiles.size();//sk.cw.jamlin.JamlinFiles.getExpectedFilesCount(action, resultFiles);
         }
 
+        startupTimestamp = new Date();
+
+        System.out.println("started: "+ startupTimestamp.toString() );
         System.out.println("ACTION: "+ (action==null ? "null(extract)" : action) );
         System.out.println("MODE: "+mode);
         System.out.println("SOURCE: "+source);
