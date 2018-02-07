@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
@@ -15,12 +17,14 @@ import java.util.*;
 /**
  * Created by Marcel Zúbrik on 29.10.2017.
  */
-public class Files {
+public class JamlinFiles {
+
     // browse files
     static List<String> listValidFiles(File dir, List<String> extensions) {
         List<String> resultFiles = new ArrayList<String>();
         return listValidFiles(dir, 0, extensions, resultFiles);
     }
+
     private static List<String> listValidFiles(File dir, int level, List<String> extensions, List<String> resultFiles) { //
         if (dir.isDirectory()) {
             String[] children = dir.list();
@@ -114,6 +118,11 @@ public class Files {
             }
         }
 
+        // save history
+        if ( Main.config.getTarget().getSaveHistory() ) {
+            JamlinFiles.makeHistory(new Date(), source);
+        }
+
         writeResultFile(source.getParentFile(), fileName, input);
     }
 
@@ -125,6 +134,7 @@ public class Files {
      */
     static void outputReplaceResultFiles(TranslationReplaceResult results, String destination) {
         Map<String, String> resultFileNames = new HashMap<>();
+        Date historyDate = new Date();
 
         resultFileNames = getReplaceOutputFileName(results, destination);
 
@@ -136,6 +146,10 @@ public class Files {
         if (results.getLangCodes().size()>0) {
             for (int j=0; j<results.getLangCodes().size(); j++) {
                 String langCode = results.getLangCodes().get(j);
+                // save history
+                if ( Main.config.getTarget().getSaveHistory() ) {
+                    JamlinFiles.makeHistory(historyDate, new File(destinationDirectory +File.separator+ resultFileNames.get(langCode)) );
+                }
                 writeResultFile(destinationDirectory, resultFileNames.get(langCode), results.get(langCode));
             }
         }
@@ -272,7 +286,14 @@ public class Files {
     }
 
 
-    public static int getExpectedFilesCount(String action, String mode, List<String> resultFiles) {
+    /**
+     *
+     * @param action String
+     * @param mode String
+     * @param resultFiles List<String>
+     * @return int
+     */
+    static int getExpectedFilesCount(String action, String mode, List<String> resultFiles) {
         List<String> usedNames = new ArrayList<String>();
 
         if (resultFiles!=null && resultFiles.size()>0) {
@@ -290,5 +311,53 @@ public class Files {
             }
         }
         return 0;
+    }
+
+
+    /**
+     *
+     * @param startTimestamp Date
+     * @param origFile File
+     * @return File
+     */
+    static File makeHistory(Date startTimestamp, File origFile) {
+        if ( startTimestamp!=null && origFile!=null ) {
+            File baseDirectory = origFile.getParentFile();
+            SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+            String formatedDateString = dateFormater.format(startTimestamp);
+            String[] dateStrings = null;
+            if ( formatedDateString.contains(" ") ) {
+                dateStrings = formatedDateString.split("\\s+");
+            }
+            if (dateStrings!=null && dateStrings.length>=2) {
+                File destinationHistoryFolder = new File(origFile.getParent().toString()+ File.separator+ ".jamlin_history" +File.separator+ dateStrings[0]
+                        +File.separator+ dateStrings[1]);
+                if ( !destinationHistoryFolder.exists() ) {
+                    try {
+                        java.nio.file.Files.createDirectories(destinationHistoryFolder.toPath());
+                    } catch (IOException exception) {
+                        System.out.println("Cannot create directories: "+exception.getMessage());
+                    }
+                } else {
+                    System.out.println("Folder "+destinationHistoryFolder.toString()+" doesn't exist.");
+                }
+
+                if ( destinationHistoryFolder.exists() ) {
+                    File destinationFile = new File(destinationHistoryFolder.toString() +File.separator+ origFile.getName());
+                    System.out.println(destinationFile.toString());
+                    try {
+                        java.nio.file.Files.copy(origFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                    } catch (IOException exception) {
+                        System.out.println("Cannot copy file: "+exception.getMessage());
+                    }
+                }
+            } else {
+                System.out.println("No datestrings");
+            }
+
+        } else {
+            System.out.println("Missing parameters.");
+        }
+        return null;
     }
 }

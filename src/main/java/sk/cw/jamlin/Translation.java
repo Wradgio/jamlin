@@ -198,7 +198,7 @@ public class Translation {
         // prepare file replace pattern as set by config
         TranslationReplaceResult result = null;
         result = new TranslationReplaceResult(docs, langCodes);
-        if ( this.config.getTarget().getReplaceFile() ) {
+        if ( this.config.getTarget().getSaveHistory() ) {
             result.setTargetPattern(this.config.getTarget().getReplacePattern());
         }
 

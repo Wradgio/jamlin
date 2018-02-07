@@ -1076,7 +1076,7 @@
       "lang": "en"
     },
     "target": {
-      "replaceFile": true,
+      "saveHistory": true,
       "replacePattern": "*-$lang.*"
     }
   }

@@ -154,8 +154,7 @@ public class TranslationExtractResult {
      * @param block TranslationBlock
      * @return boolean
      */
-    public boolean checkIfBlockExists(TranslationBlock block) {
-        boolean blockExists = false;
+    private boolean checkIfBlockExists(TranslationBlock block) {
         if ( getTranslationBlocks().size()>0 ) {
             for (int i=0; i<getTranslationBlocks().size(); i++) {
                 if ( getTranslationBlocks().get(i).equals(block) ) {
@@ -163,7 +162,7 @@ public class TranslationExtractResult {
                 }
             }
         }
-        return blockExists;
+        return false;
     }
 
 

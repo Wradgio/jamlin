@@ -1,11 +1,11 @@
 ![Logo](./jamlin_logo.svg)
 
 # JaMLin
-**Ja**va **M**arkup **L**anguage **In**ternalization is a simple command line tool for internalisation of markup files (HTML, XML). It's like **_gettext_** but for markup language files, without need of special functions and with JSON files to store your translation strings.
+**Ja**va **M**arkup **L**anguage **In**ternalization is command line tool for internalisation of markup files (HTML, XML). It's like **_gettext_** but without need make makup dirty with anything special (like _() functions or lang attributes). It uses JSON files to store your strings - send these files to your translators with link to [**JaMLin Editor**](https://github.com/Wradgio/Jamlin-Editor/) app.
 
 
 ## What is it good for
-For projects that use static HTML or XML that need to be translated. Sometimes you need to keep HTML in project without additional attributes or special tags, but with some internalisation tool.
+For projects that use static HTML or XML that need to be translated and keep untouched otherwise. Sometimes you need to keep HTML pure in project without additional attributes, special tags or other languages involved, but with some internalisation tool.
 
 
 ## Quick start

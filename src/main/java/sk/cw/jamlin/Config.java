@@ -39,9 +39,9 @@ public class Config {
         Object document = Configuration.defaultConfiguration().jsonProvider().parse(this.input);
 
         // target
-        Boolean targetReplaceFile = JsonPath.read(document, "$.target.replace_file");
+        Boolean saveHistory = JsonPath.read(document, "$.target.save_history");
         String targetReplacePattern = JsonPath.read(document, "$.target.replace_pattern");
-        this.target = new ConfigTarget(targetReplaceFile, targetReplacePattern);
+        this.target = new ConfigTarget(saveHistory, targetReplacePattern);
 
         // source Dirs
         int sourceDirectoriesCount = JsonPath.read(document, "$.sources.directories.length()");
@@ -58,7 +58,7 @@ public class Config {
                 }
             }
         }
-        // source Files
+        // source JamlinFiles
         int sourceFilesCount = JsonPath.read(document, "$.sources.files.length()");
         for (int i=0; i<sourceFilesCount; i++) {
             String filePath = JsonPath.read(document, "$.sources.files["+i+"].path");

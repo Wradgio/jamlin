@@ -103,11 +103,11 @@ public class Main
             expectedFilesCount = 1;
         } else if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && source!=null && !source.isEmpty() && (target==null || !target.isEmpty()) ) {
             // extract should not have target
-            expectedFilesCount = sk.cw.jamlin.Files.getExpectedFilesCount(action, mode, resultFiles);
+            expectedFilesCount = JamlinFiles.getExpectedFilesCount(action, mode, resultFiles);
         } else {
             // all replace actions
-            resultFiles = sk.cw.jamlin.Files.listValidFiles(new File(workingDirectory), extensions);
-            expectedFilesCount = resultFiles.size();//sk.cw.jamlin.Files.getExpectedFilesCount(action, resultFiles);
+            resultFiles = JamlinFiles.listValidFiles(new File(workingDirectory), extensions);
+            expectedFilesCount = resultFiles.size();//sk.cw.jamlin.JamlinFiles.getExpectedFilesCount(action, resultFiles);
         }
 
         System.out.println("ACTION: "+ (action==null ? "null(extract)" : action) );
@@ -286,13 +286,13 @@ public class Main
                         // else if any results, output files and return first
                         result = replaceResults.get(replaceResults.getLangCodes().get(0));
                     }
-                    sk.cw.jamlin.Files.outputReplaceResultFiles(replaceResults, target);
+                    JamlinFiles.outputReplaceResultFiles(replaceResults, target);
 
                 } else { // extract
                     result = translation.extractStrings(input);
                     File sourceFile = new File(source);
                     // write result
-                    sk.cw.jamlin.Files.outputExtractResultFile(result, sourceFile, translation);
+                    JamlinFiles.outputExtractResultFile(result, sourceFile, translation);
                 }
             }
         } else {
