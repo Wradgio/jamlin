@@ -1,6 +1,7 @@
 package sk.cw.jamlin;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -19,22 +20,28 @@ import java.util.*;
  */
 public class JamlinFiles {
 
+    protected static int extractedFilesCount = 0;
+
     // browse files
     static List<String> listValidFiles(File dir, List<String> extensions) {
-        List<String> resultFiles = new ArrayList<String>();
+        List<String> resultFiles = new ArrayList<>();
         return listValidFiles(dir, 0, extensions, resultFiles);
     }
 
     private static List<String> listValidFiles(File dir, int level, List<String> extensions, List<String> resultFiles) { //
         if (dir.isDirectory()) {
             String[] children = dir.list();
-            for (int i=0; i<children.length; i++) {
-                String fileExtension = getFileExtension(children[i]);
-                File item = new File(dir, children[i]);
-                if ( item.isDirectory() ) {
-                    listValidFiles(item, level, extensions, resultFiles);
-                } else if ( extensions.contains(fileExtension) ) {
-                    resultFiles.add(item.toString());
+            if (children!=null) {
+                for (int i = 0; i < children.length; i++) {
+                    if (!children[i].contains(".jamlin_history")) { // don't list history
+                        String fileExtension = getFileExtension(children[i]);
+                        File item = new File(dir, children[i]);
+                        if (item.isDirectory()) {
+                            listValidFiles(item, level, extensions, resultFiles);
+                        } else if (extensions.contains(fileExtension)) {
+                            resultFiles.add(item.toString());
+                        }
+                    }
                 }
             }
             return resultFiles;
@@ -47,11 +54,11 @@ public class JamlinFiles {
 
     /**
      *
-     * @param input String
+     * @param input TranslationExtractResult
      * @param source File
      * @param translation Translation
      */
-    static void outputExtractResultFile(String input, File source, Translation translation) {
+    static void outputExtractResultFile(TranslationExtractResult input, File source, Translation translation) {
         String fileName = "";
         String fileExtension = "";
 
@@ -82,10 +89,11 @@ public class JamlinFiles {
             fileName = fileName+".json";
         }
 
+        TranslationExtractResult extractResult = input;
 
+        // merge two results and create new result
         String oldResultFilePath = source.getParentFile().toString()+ File.separator +fileName;
         if ( (new File(oldResultFilePath)).exists() ) {
-            // merge two results and create new result
 
             // get old result from file
             String oldResultInput = "";
@@ -105,16 +113,8 @@ public class JamlinFiles {
             }
 
             // get new result from input
-            Gson gsonNew = new Gson();
-            TranslationExtractResult newResult = null;
-            try {
-                newResult = gsonNew.fromJson(input, TranslationExtractResult.class);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-
-            if (oldResult!=null && newResult!=null) {
-                input = TranslationExtractResult.mergeTwoResults(oldResult, newResult);
+            if (oldResult!=null && extractResult!=null) {
+                extractResult = TranslationExtractResult.mergeTwoResults(oldResult, extractResult);
             }
         }
 
@@ -123,7 +123,11 @@ public class JamlinFiles {
             JamlinFiles.makeHistory(Main.startupTimestamp, source);
         }
 
-        writeResultFile(source.getParentFile(), fileName, input);
+        if (Main.action.equals(Main.actions.EXTRACT.toString().toLowerCase()) && Main.dictionary && Main.extractDictionary!=null) {
+            Main.extractDictionary.addRecords(translation.getLanguage(), source.getPath(), extractResult);
+        }
+
+        writeResultFile(source.getParentFile(), fileName, extractResult.resultToJson());
     }
 
 
@@ -304,8 +308,6 @@ public class JamlinFiles {
 
                         }*/
                     }
-                } else {
-
                 }
             }
         }
@@ -320,16 +322,19 @@ public class JamlinFiles {
      * @return File
      */
     static File makeHistory(Date startTimestamp, File origFile) {
-        if ( startTimestamp!=null && origFile!=null ) {
+        if ( startTimestamp!=null && origFile!=null && !origFile.getName().equals(".jamlin_history") && !origFile.toPath().toString().contains(".jamlin_history") ) {
             File baseDirectory = origFile.getParentFile();
             SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
             String formatedDateString = dateFormater.format(startTimestamp);
             String[] dateStrings = null;
+
             if ( formatedDateString.contains(" ") ) {
                 dateStrings = formatedDateString.split("\\s+");
             }
+
             if (dateStrings!=null && dateStrings.length>=2) {
-                File destinationHistoryFolder = new File(origFile.getParent().toString()+ File.separator+ ".jamlin_history" +File.separator+ dateStrings[0]
+                // parent location + / + .jamlin_history + / + yyyy-MM-dd + / + HH-mm-ss
+                File destinationHistoryFolder = new File(origFile.getParent()+ File.separator+ ".jamlin_history" +File.separator+ dateStrings[0]
                         +File.separator+ dateStrings[1]);
                 if ( !destinationHistoryFolder.exists() ) {
                     try {
@@ -337,14 +342,13 @@ public class JamlinFiles {
                     } catch (IOException exception) {
                         System.out.println("Cannot create directories: "+exception.getMessage());
                     }
-                } else {
-                    System.out.println("Folder "+destinationHistoryFolder.toString()+" doesn't exist.");
                 }
 
                 if ( destinationHistoryFolder.exists() ) {
                     File destinationFile = new File(destinationHistoryFolder.toString() +File.separator+ origFile.getName());
                     System.out.println(destinationFile.toString());
                     try {
+                        System.out.println("Copy of: " +origFile.toPath()+ " into: " +destinationFile.toPath());
                         java.nio.file.Files.copy(origFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
                     } catch (IOException exception) {
                         System.out.println("Cannot copy file: "+exception.getMessage());
@@ -359,4 +363,46 @@ public class JamlinFiles {
         }
         return null;
     }
+
+
+    /**
+     *
+     * @param extractDictionary TranslationExtractDictionary
+     */
+    static void writeExtractDictionary( TranslationExtractDictionary extractDictionary ) {
+        // get path of extractDictionary file
+        File target = new File(Main.workingDirectory + File.separator + "project_dictionary.json");
+        if ( target.exists() ) {
+            target.delete();
+        }
+        // if not created, create it and write start
+        if ( !target.exists() ) {
+            FileWriter locFile = null;
+            try {
+                locFile = new FileWriter(target.getPath());
+                Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                locFile.write("{\"path\":\"" +Main.workingDirectory+ "\",\"dictionary\":" +gson.toJson(Main.extractDictionary)+ "");
+            } catch(IOException e) {
+                System.out.println("Write error for project_dictionary.json intro");
+                e.printStackTrace();
+            } finally {
+                try {
+                    if(locFile != null) {
+                        locFile.close();
+                    }
+                    extractedFilesCount++;
+                    System.out.println("Extracted #"+ extractedFilesCount+ ": "+ target.toString());
+                } catch(IOException e) {
+                    System.out.println("Close error for project_dictionary.json");
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        // append records
+        //appendToFile(target, concatExtractRecord);
+
+        // if last, write end
+    }
+
 }

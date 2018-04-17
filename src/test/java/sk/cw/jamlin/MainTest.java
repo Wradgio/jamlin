@@ -154,4 +154,29 @@ public class MainTest {
         assertEquals("Replace automatic - Expected to export " +Main.expectedFilesCount+ " files, exported " +Main.exportedFilesCount, Main.expectedFilesCount, Main.exportedFilesCount);
     }
 
+
+
+
+    /*
+     * Extract automatic - equivalent to
+     * java -jar jamlin-jar-with-dependencies.jar --dictionary true
+     */
+    @Test
+    public void getProjectTranslation_01_extract_automatic() throws Exception {
+        Main.exportedFilesCount = 0;
+        Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";;
+        if (Main.config==null) {
+            Main.config = Main.getConfig(Main.workingDirectory + File.separator + "jamlin_config.json");
+        }
+        Main.action = null;
+        Main.source = null;
+        Main.language = null;
+        Main.config.setLanguage(null);
+        Main.dictionary = true;
+        if (Main.config!=null) {
+            Main.handleFileTranslations();
+        }
+        assertEquals("Project Extract automatic - Expected to export " +Main.expectedFilesCount+ " +1 files, exported " +Main.exportedFilesCount, Main.expectedFilesCount, Main.exportedFilesCount);
+    }
+
 }

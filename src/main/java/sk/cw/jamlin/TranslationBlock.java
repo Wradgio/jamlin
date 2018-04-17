@@ -15,7 +15,7 @@ public class TranslationBlock {
     }
     private String type = "text";
     private String attrName = "";
-    private List<TranslationString> translationStrings = new ArrayList<TranslationString>();
+    private List<TranslationString> translationStrings = new ArrayList<>();
 
     TranslationBlock(String name, String cssSelector, String type) {
         this(name, cssSelector, type, "");

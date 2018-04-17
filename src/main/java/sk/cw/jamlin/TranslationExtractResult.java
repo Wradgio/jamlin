@@ -73,10 +73,18 @@ public class TranslationExtractResult {
     }
 
 
+    /**
+     *
+     * @return String
+     */
     String resultToJson() {
-        //Gson gson = new Gson();
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        return gson.toJson(this);
+        try {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            return gson.toJson(this);
+        } catch (NullPointerException e) {
+            System.out.println("NullPointerException for resultToJson: "+e.getMessage());
+        }
+        return "";
     }
 
 
@@ -84,9 +92,9 @@ public class TranslationExtractResult {
      * Loop translations of new file and add, update blocks and translations with languages to old result
      * @param oldResult TranslationExtractResult
      * @param newResult TranslationExtractResult
-     * @return String
+     * @return TranslationExtractResult
      */
-    static String mergeTwoResults(TranslationExtractResult oldResult, TranslationExtractResult newResult) {
+    static TranslationExtractResult mergeTwoResults(TranslationExtractResult oldResult, TranslationExtractResult newResult) {
         //ArrayList<String> oldLanguages = oldResult.getExtractResultLanguages();
         if (newResult.getTranslationBlocks().size()>0) {
             for (int i=0; i<newResult.getTranslationBlocks().size(); i++) {
@@ -145,7 +153,7 @@ public class TranslationExtractResult {
             }
         }
 
-        return oldResult.resultToJson();
+        return oldResult;
     }
 
 

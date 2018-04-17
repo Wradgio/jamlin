@@ -21,7 +21,7 @@
   <link rel="icon" href="resources/style/default/pictures/cr2.ico" type="image/x-icon"> 
   <link rel="shortcut icon" href="resources/style/default/pictures/cr2.ico" type="image/x-icon"> 
   <link rel="stylesheet" href="resources/style/default/css/css_page.css?v=16" media="all" type="text/css"> 
-  <script type="text/javascript" src="resources/js/visitor.js?v=23"></script> 
+  <script type="text/javascript" src="resources/js/visitor.js?v=25"></script> 
   <script type="text/javascript">
 			var to_url_root = '';
 		</script> 
@@ -40,9 +40,9 @@
       <ul id="mmenu"> 
        <li class="mleft"><a class="active" id="toplink_home" href="./">Climber's Routes</a></li> 
        <li class="mleft" id="toplink_langli"><a href="#" id="toplink_languages" onclick="return false;">Language</a> 
-        <ul id="lang_interface_long"> 
-         <li><a class="active" id="w_ilang_sk" title="Slovenčina" href="?lang=sk">Slovenčina</a></li> 
-         <li><a class="inactive" id="w_ilang_en" title="English">English</a></li> 
+        <ul id="lang_interface_long">
+         <li><a class="active" id="w_ilang_sk" title="Slovenčina" href="?lang=sk">Slovenčina</a></li>
+         <li><a class="inactive" id="w_ilang_en" title="English">English</a></li>
         </ul> </li> 
        <li class="mleft"><a class="active" id="toplink_climb" href="./search/">Search</a> 
         <ul> 
@@ -52,28 +52,17 @@
           <ul> 
            <li><a href="search-guides/">Search Guides</a></li> 
            <li><a href="browse-guides/">Browse Guides</a></li> 
-           <li class="separator"> 
+           <li class="separator">
             <hr class="menuseparator"></li> 
            <li><a href="search-maps-of-routes/">Search Maps of Routes</a></li> 
            <li><a href="browse-maps-of-routes/">Browse Maps of Routes</a></li> 
-           <li class="separator"> 
+           <li class="separator">
             <hr class="menuseparator"></li> 
            <li><a href="search/">Routes Search</a></li> 
            <li><a href="browse/">Browse Routes</a></li> 
            <li><a href="recent/">Recent Routes</a></li> 
           </ul> </li> 
         </ul> </li> 
-       <!-- CR_SWITCH_usermenu //--> 
-       <li class="mleft"><a class="active" id="toplink_track" href="./routes/">Track</a> 
-        <ul> 
-         <li><a href="routes/">My Routes</a></li> 
-         <li><a href="maps-of-routes/">My Maps of Routes</a></li> 
-        </ul> </li> 
-       <li class="mleft"><a class="active" id="toplink_share" href="./guides/">Publish</a> 
-        <ul> 
-         <li><a href="guides/">My Guides</a><sup class="red">BETA</sup></li> 
-        </ul> </li> 
-       <!-- CR_SWITCH_usermenu //--> 
        <li class="mleft"> 
         <div id="search_inputs"> 
          <form action="search2/" style="margin:0;"> 
@@ -82,32 +71,28 @@
          </form> 
          <a href="#" id="search_clear"></a> 
         </div> </li> 
-       <li class="mright inliner"> <a href="#account" id="toplink_account">Account</a> 
-        <ul class="ap_to_right"> 
-         <li class="mright inliner"> <span id="tl_loggedlabel">Logged as:</span> <a id="toplink_profile" href="./profile/1/Marcel-Zubrik">Marcel Zúbrik</a> </li> 
-         <li class="mright inliner"> <a id="toplink_settings" href="./settings/">Settings</a> </li> 
-         <li class="mright inliner"> <a id="toplink_cart" href="./shop/cart/">Cart</a> 
-          <ul> 
-           <li> 
-            <div id="cart_info" class="in"> 
-             <div> 
-              <strong><a href="shop/cart/">What's in your Cart</a></strong> 
-             </div> 
-             <div> 
-              <!-- W_CART_TOTAL_ALLTOGETHER_FORMATED //--> 
-             </div> 
-             <div class="cartlines" id="w_cartlines"> 
-              <div> 
-              </div> 
-             </div> 
-            </div> </li> 
-           <li> <a href="./shop/orders/">Your orders</a> </li> 
-          </ul> </li> 
-         <li class="mright inliner"> 
-          <form name="loginform" id="loginform" method="post" action="" class="inliner"> 
-           <input name="whian_form_logout" type="hidden" value="logout"> 
-           <input type="submit" id="login_login_butt" name="logme" value="Logout" class="rounded2 smaller"> 
+       <li class="mright inliner"> 
+        <!-- divider //--> <a id="login_registration_link" href="#registration">Join Us</a> 
+        <!-- divider //--> </li> 
+       <li class="mright inliner"> <a id="login_login_link" href="#login">Log in</a> 
+        <ul id="login_login_menu"> 
+         <li> 
+          <form name="loginform" id="loginform" method="post" action="https://climbersroutes.com/"> 
+           <div class="inputblock nastred"> 
+            <label for="whian_form_name">E-mail:</label> 
+            <input id="whian_form_name" name="whian_form_name" type="text" size="10" maxlength="30" class="rounded3"> 
+           </div> 
+           <div class="inputblock nastred"> 
+            <label for="whian_form_password">Password:</label> 
+            <input id="whian_form_password" name="whian_form_password" type="password" size="10" class="rounded3"> 
+           </div> 
+           <div class="inputblock nastred"> 
+            <input type="submit" id="login_login_butt" name="logme" value="Sign in" class="rounded2"> 
+           </div> 
           </form> </li> 
+         <li> 
+          <hr class="menuseparator"> </li> 
+         <li> <a href="/login/facebook" class="login_facebook">Sign in</a> </li> 
         </ul> </li> 
       </ul> 
      </nav> 
@@ -123,12 +108,17 @@
       <div id="w_definition"></div> 
       <div class="splash_header_image"> 
        <div class="shi_right"> 
-        <iframe class="splash_video" width="183" height="325" src="https://www.youtube.com/embed/EGFffB2rOSI?autoplay=0" frameborder="0" allowfullscreen></iframe> 
+        <iframe class="splash_video" width="183" height="325" src="https://www.youtube-nocookie.com/embed/EGFffB2rOSI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
        </div> 
        <div class="shi_center"> 
         <h1>Climber's Routes</h1> 
         <h2>Digital climbing gear</h2> 
         <p>Online &amp; Offline tools for Climbers and Guide Publishers</p> 
+        <!-- CR_SWITCH_logged_user //--> 
+        <div class="mt30"> 
+         <a href="#registration" class="red_any_button rounded2 joinus">Join Us</a> 
+        </div> 
+        <!-- CR_SWITCH_logged_user //--> 
        </div> 
       </div> 
       <h2 class="pt10 slides_pager"><a href="#1" class="slide_link">Climb</a> <a href="#2" class="slide_link">Track</a> <a href="#3" class="slide_link">Publish</a></h2> 
@@ -189,6 +179,49 @@
        </div> 
        <br class="clear"> 
       </div> 
+      <!-- CR_SWITCH_logged_user //--> 
+      <div class="mt20"> 
+       <a name="registration"></a> 
+       <div id="registration" class="contentbox"> 
+        <h2>Join us - Sign in</h2> 
+        <p>Sign in</p> 
+        <hr> 
+        <form action="" method="post" name="form_settings" onsubmit="if ( $('#c_slogin').val().indexOf('@') == -1 || $('#c_slogin').val().indexOf('.') == -1) { alert('Please use valid format of email'); $('#c_slogin').focus(); sendform=false; } if ( !$('#c_agreement').is(':checked') ) { alert('Sorry, but you have to agree with our Terms and Conditions to join us'); sendform=false; } if (!sendform) { return false; }"> 
+         <div id="login_email" class="settitem"> 
+          <label for="c_slogin">Login (email):</label> 
+          <input id="c_slogin" name="c_slogin" class="rounded3 border_darkgrey" type="text"> 
+          <p class="formnote">Your valid email address as login.</p> 
+         </div> 
+         <div id="login_password" class="settitem"> 
+          <label for="c_spassword">Password:</label> 
+          <input id="c_spassword" name="c_spassword" class="rounded3 border_darkgrey" type="password"> 
+          <p class="formnote">Password with more than 8 characters, numbers or symbols.</p> 
+         </div> 
+         <br class="clear"> 
+         <div id="login_agree"> 
+          <p>I confirm that I agree with the Terms and Conditions of this website</p> 
+         </div> 
+         <div class="form_buttons"> 
+          <input type="submit" name="send_registration" class="rounded2" value="Send Registration" onclick="sendform=true; if ( $('#c_spassword').val().length<9 ) { alert('Password need to have more than 8 characters, numbers or symbols'); $('#c_spassword').focus(); return false; }"> 
+         </div> 
+        </form> 
+       </div> 
+       <a name="forgotpassword"></a> 
+       <div id="forgotpassword" class="contentbox"> 
+        <hr> 
+        <h2>Forgot password?</h2> 
+        <form action="" method="post" name="form_settings" onsubmit="if ( $('#cfp_slogin').val().indexOf('@') == -1 || $('#cfp_slogin').val().indexOf('.') == -1) { alert('Please use valid format of email'); $('#cfp_slogin').focus(); sendform=false; } if (!sendform) { return false; }"> 
+         <div id="login_email" class="settitem"> 
+          <label for="cfp_slogin">Login (email):</label> 
+          <input id="cfp_slogin" name="cfp_slogin" class="rounded3 border_darkgrey" type="text"> 
+         </div> 
+         <div class="form_buttons"> 
+          <input type="submit" name="send_password" class="rounded2" value="Send Me New Password"> 
+         </div> 
+        </form> 
+       </div> 
+      </div> 
+      <!-- CR_SWITCH_logged_user //--> 
      </div> 
      <!-- content end //--> 
     </div> 
@@ -225,9 +258,9 @@
      </ul> </li> 
    </ul> 
    <div class="paticka">
-     All rights reserved © 2011-2017 
+     All rights reserved © 2011-2018 
     <a href="http://www.cw.sk" title="MacO's creative workshop" target="_blank">Marcel Zúbrik</a> (code) &amp; 
-    <a href="http://www.tomweb.sk/" title="Tomáš Zúbrik" tarket="_blank">Tomáš Zúbrik</a> (design) 
+    <a href="http://www.tomweb.sk/" title="Tomáš Zúbrik" tarket="_blank">Tomáš Zúbrik</a> (design)
     <br> Based on 
     <a href="http://www.whian.net/" target="_blank">Whian.net</a> core, logo based on 
     <a href="http://www.flickr.com/photos/mariachily/3383625172/in/photostream">mariachily</a> 
@@ -247,6 +280,6 @@
   <!-- footer end //--> 
   <div class="eu_cookie_info"> 
    <p>Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it</p> 
-  </div>  
+  </div>   
  </body>
 </html>

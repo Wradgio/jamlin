@@ -27,11 +27,14 @@ public class Main
     public static String target;
     @Parameter(names={"--language", "-l"})
     public static String language = "";
+    @Parameter(names={"--dictionary", "-d"})
+    public static boolean dictionary = true;
 
     public static int expectedFilesCount = 0;
     public static int exportedFilesCount = 0;
     private static String mode = "";
     public static Date startupTimestamp = null;
+    static TranslationExtractDictionary extractDictionary;
 
     static String workingDirectory = "";
     public static Config config;
@@ -124,6 +127,11 @@ public class Main
 
         System.out.println("resultFiles.size(): "+resultFiles.size());
 
+        // if extracting whole project translations
+        if (action.equals(actions.EXTRACT.toString().toLowerCase()) && dictionary) {
+            extractDictionary = new TranslationExtractDictionary(new ArrayList<>());
+        }
+
         if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) {
             if (resultFiles.size()>0) {
                 for (int i = 0; i < resultFiles.size(); i++) {
@@ -189,16 +197,21 @@ public class Main
         } else {
             // extract action
             if (resultFiles.size()>0) {
-                for (int i = 0; i < resultFiles.size(); i++) {
+                for (String resultFile: resultFiles) {
                     System.out.println(" -------------------------------------------- ");
-                    System.out.println(resultFiles.get(i));
+                    System.out.println(resultFile);
                     System.out.println(" -------------------------------------------- ");
-                    getFileTranslation(config, action, resultFiles.get(i), null);
+                    getFileTranslation(config, action, resultFile, null);
                 }
             } else {
                 // extract specific
                 getFileTranslation(config, action, source, null);
             }
+        }
+
+        // if extracting whole project translations
+        if (action.equals(actions.EXTRACT.toString().toLowerCase()) && dictionary) {
+            JamlinFiles.writeExtractDictionary(extractDictionary);
         }
     }
 
@@ -210,7 +223,7 @@ public class Main
      * @param source String
      * @param target String
      */
-    public static void getFileTranslation(Config config, String action, String source, String target) {
+    private static void getFileTranslation(Config config, String action, String source, String target) {
         boolean variablesPassed = true;
 
         // get action
@@ -252,8 +265,8 @@ public class Main
                 }
             } else if (action.equals(actions.REPLACE.toString().toLowerCase())) {
                 if ( source!=null && !source.trim().isEmpty() && target!=null && !target.trim().isEmpty() ) {
-                    // nothing
-                } else {
+                    System.out.println("REPLACE - Have source string, have target string - continue");
+                } else if (target!=null) {
                     String fileLangCode = Language.getLangCodeFromFilePath(target);
                     if (!fileLangCode.isEmpty() && Language.checkLangCodeValid(fileLangCode)) {
                         config.setLanguage(new Language(fileLangCode));
@@ -271,14 +284,17 @@ public class Main
             TranslationConfig translationConfig = config.makeTranslationConfig(source, target);
 
             Translation translation = new Translation(translationConfig);
-            //System.out.println("LANG CODE: "+translation.getLanguage().getCode());
             String result = "";
 
             if (translation.validAction(action)) {
                 if (action.equals(actions.REPLACE.toString().toLowerCase())) {
                     String targetString = "";
                     try {
-                        targetString = new String(Files.readAllBytes(Paths.get(target)), Charset.forName("UTF-8"));
+                        if (target!=null) {
+                            targetString = new String(Files.readAllBytes(Paths.get(target)), Charset.forName("UTF-8"));
+                        } else {
+                            System.out.println("Target is NULL");
+                        }
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -295,10 +311,10 @@ public class Main
                     JamlinFiles.outputReplaceResultFiles(replaceResults, target);
 
                 } else { // extract
-                    result = translation.extractStrings(input);
+                    TranslationExtractResult resultObject = translation.extractStrings(input);
                     File sourceFile = new File(source);
                     // write result
-                    JamlinFiles.outputExtractResultFile(result, sourceFile, translation);
+                    JamlinFiles.outputExtractResultFile(resultObject, sourceFile, translation);
                 }
             }
         } else {

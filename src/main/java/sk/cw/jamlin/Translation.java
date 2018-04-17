@@ -49,13 +49,15 @@ public class Translation {
     /**
      * Extract strings from
      * @param source String
-     * @return String
+     * @return TranslationExtractResult
      */
-    public String extractStrings(String source) {
+    public TranslationExtractResult extractStrings(String source) {
         this.translateAction = translateActions.EXTRACT.toString().toLowerCase();
 
+        TranslationExtractResult translationExtractResult = new TranslationExtractResult(config);
+
         Map<String, String> results = new HashMap<>();
-        Document doc = null;
+        Document doc;
         try {
             doc = Jsoup.parse(source);
 
@@ -65,8 +67,6 @@ public class Translation {
                 setLanguage( (new Language(extractedLangCode)) );
             }
 
-            TranslationExtractResult translationExtractResult = new TranslationExtractResult(config);
-
             for (int i=0; i<config.getSelectors().size(); i++) {
                 String selector = config.getSelectors().get(i).getSelector();
                 String selectorName = config.getSelectors().get(i).getName();
@@ -74,7 +74,7 @@ public class Translation {
                 String selectorAttrName = config.getSelectors().get(i).getAttrName();
                 Elements selectorResult = doc.select(selector);
 
-                TranslationBlock translationBlock = null;
+                TranslationBlock translationBlock;
                 if (selectorType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase()) && !selectorAttrName.trim().equals("")) {
                     translationBlock = new TranslationBlock(selectorName, selector, selectorType, selectorAttrName);
                 } else {
@@ -101,13 +101,13 @@ public class Translation {
 
             // now we have result with all translates - time to export them to json output
 
-            return translationExtractResult.resultToJson();
+            return translationExtractResult;//.resultToJson();
         } catch (Exception $e) {
             System.out.println($e.getMessage());
             $e.printStackTrace();
         }
 
-        return "{}";
+        return translationExtractResult;
     }
 
 
