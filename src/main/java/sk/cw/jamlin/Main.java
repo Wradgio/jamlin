@@ -89,6 +89,13 @@ public class Main
 
 
     public static void handleFileTranslations() {
+        // get action
+        if ( action!=null && !action.isEmpty() && validAction(action) ) {
+            action = action.trim().toLowerCase();
+        } else {
+            action = "extract";// extract | replace;
+        }
+
         // get all files (their paths) that match config options
         List<String> extensions = new ArrayList<String>();
         for (int i=0; i<config.getSources().getDirectories().size(); i++) {
@@ -128,7 +135,8 @@ public class Main
         System.out.println("resultFiles.size(): "+resultFiles.size());
 
         // if extracting whole project translations
-        if (action.equals(actions.EXTRACT.toString().toLowerCase()) && dictionary) {
+
+        if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && dictionary ) {
             extractDictionary = new TranslationExtractDictionary(new ArrayList<>());
         }
 
@@ -225,13 +233,6 @@ public class Main
      */
     private static void getFileTranslation(Config config, String action, String source, String target) {
         boolean variablesPassed = true;
-
-        // get action
-        if ( action!=null && !action.isEmpty() && validAction(action) ) {
-            action = action.trim().toLowerCase();
-        } else {
-            action = "extract";// extract | replace;
-        }
 
         // get source - use relative path if no separator
         if ( source!=null && !source.trim().isEmpty() ) { // no source

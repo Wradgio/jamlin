@@ -381,6 +381,7 @@ public class JamlinFiles {
             try {
                 locFile = new FileWriter(target.getPath());
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                TranslationExtractDictionaryFileWrap fileWrap = new TranslationExtractDictionaryFileWrap(Main.workingDirectory, Main.extractDictionary);
                 locFile.write("{\"path\":\"" +Main.workingDirectory+ "\",\"dictionary\":" +gson.toJson(Main.extractDictionary)+ "");
             } catch(IOException e) {
                 System.out.println("Write error for project_dictionary.json intro");

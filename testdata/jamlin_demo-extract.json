@@ -17,6 +17,10 @@
             {
               "langCode": "sk",
               "translation": "Menu"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Menu"
             }
           ]
         },
@@ -30,6 +34,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Climber\u0027s Routes"
+            },
+            {
+              "langCode": "xx",
               "translation": "Climber\u0027s Routes"
             }
           ]
@@ -45,6 +53,10 @@
             {
               "langCode": "sk",
               "translation": "Language"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Language"
             }
           ]
         },
@@ -58,6 +70,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Slovenčina"
+            },
+            {
+              "langCode": "xx",
               "translation": "Slovenčina"
             }
           ]
@@ -73,6 +89,10 @@
             {
               "langCode": "sk",
               "translation": "English"
+            },
+            {
+              "langCode": "xx",
+              "translation": "English"
             }
           ]
         },
@@ -86,6 +106,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Search"
+            },
+            {
+              "langCode": "xx",
               "translation": "Search"
             }
           ]
@@ -101,6 +125,10 @@
             {
               "langCode": "sk",
               "translation": "Search version 2 - Test"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Search version 2 - Test"
             }
           ]
         },
@@ -114,6 +142,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Find Climbers"
+            },
+            {
+              "langCode": "xx",
               "translation": "Find Climbers"
             }
           ]
@@ -129,6 +161,10 @@
             {
               "langCode": "sk",
               "translation": "Advanced Search"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Advanced Search"
             }
           ]
         },
@@ -142,6 +178,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Search Guides"
+            },
+            {
+              "langCode": "xx",
               "translation": "Search Guides"
             }
           ]
@@ -157,6 +197,10 @@
             {
               "langCode": "sk",
               "translation": "Browse Guides"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Browse Guides"
             }
           ]
         },
@@ -170,6 +214,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Search Maps of Routes"
+            },
+            {
+              "langCode": "xx",
               "translation": "Search Maps of Routes"
             }
           ]
@@ -185,6 +233,10 @@
             {
               "langCode": "sk",
               "translation": "Browse Maps of Routes"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Browse Maps of Routes"
             }
           ]
         },
@@ -198,6 +250,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Routes Search"
+            },
+            {
+              "langCode": "xx",
               "translation": "Routes Search"
             }
           ]
@@ -213,6 +269,10 @@
             {
               "langCode": "sk",
               "translation": "Browse Routes"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Browse Routes"
             }
           ]
         },
@@ -226,6 +286,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Recent Routes"
+            },
+            {
+              "langCode": "xx",
               "translation": "Recent Routes"
             }
           ]
@@ -241,6 +305,10 @@
             {
               "langCode": "sk",
               "translation": "Track"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Track"
             }
           ]
         },
@@ -254,6 +322,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "My Routes"
+            },
+            {
+              "langCode": "xx",
               "translation": "My Routes"
             }
           ]
@@ -269,6 +341,10 @@
             {
               "langCode": "sk",
               "translation": "My Maps of Routes"
+            },
+            {
+              "langCode": "xx",
+              "translation": "My Maps of Routes"
             }
           ]
         },
@@ -282,6 +358,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Publish"
+            },
+            {
+              "langCode": "xx",
               "translation": "Publish"
             }
           ]
@@ -297,6 +377,10 @@
             {
               "langCode": "sk",
               "translation": "My Guides"
+            },
+            {
+              "langCode": "xx",
+              "translation": "My Guides"
             }
           ]
         },
@@ -310,6 +394,10 @@
             },
             {
               "langCode": "sk",
+              "translation": ""
+            },
+            {
+              "langCode": "xx",
               "translation": ""
             }
           ]
@@ -325,6 +413,10 @@
             {
               "langCode": "sk",
               "translation": "Account"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Account"
             }
           ]
         },
@@ -338,6 +430,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Marcel Zúbrik"
+            },
+            {
+              "langCode": "xx",
               "translation": "Marcel Zúbrik"
             }
           ]
@@ -353,6 +449,10 @@
             {
               "langCode": "sk",
               "translation": "Settings"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Settings"
             }
           ]
         },
@@ -366,6 +466,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Cart"
+            },
+            {
+              "langCode": "xx",
               "translation": "Cart"
             }
           ]
@@ -381,6 +485,10 @@
             {
               "langCode": "sk",
               "translation": "What\u0027s in your Cart"
+            },
+            {
+              "langCode": "xx",
+              "translation": "What\u0027s in your Cart"
             }
           ]
         },
@@ -394,6 +502,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Your orders"
+            },
+            {
+              "langCode": "xx",
               "translation": "Your orders"
             }
           ]
@@ -409,6 +521,10 @@
             {
               "langCode": "sk",
               "translation": "Online \u0026 Offline tools for Climbers and Guide Publishers"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Online \u0026 Offline tools for Climbers and Guide Publishers"
             }
           ]
         },
@@ -422,6 +538,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Climb"
+            },
+            {
+              "langCode": "xx",
               "translation": "Climb"
             }
           ]
@@ -437,6 +557,10 @@
             {
               "langCode": "sk",
               "translation": "Track"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Track"
             }
           ]
         },
@@ -450,6 +574,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Publish"
+            },
+            {
+              "langCode": "xx",
               "translation": "Publish"
             }
           ]
@@ -465,6 +593,10 @@
             {
               "langCode": "sk",
               "translation": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities."
+            },
+            {
+              "langCode": "xx",
+              "translation": "Find unknown routes. Discover new routes, sectors, areas, climbers, get inspired and meet new climbing experience. Join us and find new possibilities."
             }
           ]
         },
@@ -478,6 +610,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides."
+            },
+            {
+              "langCode": "xx",
               "translation": "We simplify climb tracking and with your help we create public database of climbing routes. For routes, Maps of routes and Guides."
             }
           ]
@@ -493,6 +629,10 @@
             {
               "langCode": "sk",
               "translation": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us."
+            },
+            {
+              "langCode": "xx",
+              "translation": "With our tools, it\u0027s easy to create \u0026 share your routes, Maps of routes and Guides. Everything has address, that can be shared. Join us."
             }
           ]
         },
@@ -506,6 +646,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Search"
+            },
+            {
+              "langCode": "xx",
               "translation": "Search"
             }
           ]
@@ -521,6 +665,10 @@
             {
               "langCode": "sk",
               "translation": "Browse"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Browse"
             }
           ]
         },
@@ -534,6 +682,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Recent"
+            },
+            {
+              "langCode": "xx",
               "translation": "Recent"
             }
           ]
@@ -549,6 +701,10 @@
             {
               "langCode": "sk",
               "translation": "Climber\u0027s Routes mobile app Digital climbing in your pocket"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Climber\u0027s Routes mobile app Digital climbing in your pocket"
             }
           ]
         },
@@ -562,6 +718,10 @@
             },
             {
               "langCode": "sk",
+              "translation": ""
+            },
+            {
+              "langCode": "xx",
               "translation": ""
             }
           ]
@@ -577,6 +737,10 @@
             {
               "langCode": "sk",
               "translation": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers."
+            },
+            {
+              "langCode": "xx",
+              "translation": "Find your route and climb it. After joining us you track your climb and share it. Find new climbers."
             }
           ]
         },
@@ -590,6 +754,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes."
+            },
+            {
+              "langCode": "xx",
               "translation": "Find and study new line in Maps of routes. And climb it. Take a picture of what you climbed and mark your line on it. And it would be you who introduces to the world in new Map of routes."
             }
           ]
@@ -605,6 +773,10 @@
             {
               "langCode": "sk",
               "translation": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide."
+            },
+            {
+              "langCode": "xx",
+              "translation": "Put your climbs on your blog or page. Monitor your stats. Improve. You have so many Maps of routes, that you decide to create and sell your climbing Guide."
             }
           ]
         },
@@ -618,6 +790,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now."
+            },
+            {
+              "langCode": "xx",
               "translation": "We want to be site where climbers build open database of climbing routes by sharing routes they climbed. Join us now."
             }
           ]
@@ -633,6 +809,10 @@
             {
               "langCode": "sk",
               "translation": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us."
+            },
+            {
+              "langCode": "xx",
+              "translation": "See our News to see what\u0027s new. Follow us on Facebook, Google and Twitter. Get support on social networks or contact us directly. Share link to this project to help us."
             }
           ]
         },
@@ -646,6 +826,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Terms and Conditions"
+            },
+            {
+              "langCode": "xx",
               "translation": "Terms and Conditions"
             }
           ]
@@ -661,6 +845,10 @@
             {
               "langCode": "sk",
               "translation": "Contact"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Contact"
             }
           ]
         },
@@ -674,6 +862,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Partnership"
+            },
+            {
+              "langCode": "xx",
               "translation": "Partnership"
             }
           ]
@@ -689,6 +881,10 @@
             {
               "langCode": "sk",
               "translation": "Search Widget"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Search Widget"
             }
           ]
         },
@@ -702,6 +898,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Wiki"
+            },
+            {
+              "langCode": "xx",
               "translation": "Wiki"
             }
           ]
@@ -717,6 +917,10 @@
             {
               "langCode": "sk",
               "translation": "Report a bug"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Report a bug"
             }
           ]
         },
@@ -730,6 +934,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "News"
+            },
+            {
+              "langCode": "xx",
               "translation": "News"
             }
           ]
@@ -745,6 +953,10 @@
             {
               "langCode": "sk",
               "translation": "Facebook"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Facebook"
             }
           ]
         },
@@ -758,6 +970,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Google+"
+            },
+            {
+              "langCode": "xx",
               "translation": "Google+"
             }
           ]
@@ -773,6 +989,10 @@
             {
               "langCode": "sk",
               "translation": "Twitter"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Twitter"
             }
           ]
         },
@@ -786,6 +1006,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Subscribe"
+            },
+            {
+              "langCode": "xx",
               "translation": "Subscribe"
             }
           ]
@@ -801,6 +1025,10 @@
             {
               "langCode": "sk",
               "translation": "Unsubscribe"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Unsubscribe"
             }
           ]
         },
@@ -814,6 +1042,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Marcel Zúbrik"
+            },
+            {
+              "langCode": "xx",
               "translation": "Marcel Zúbrik"
             }
           ]
@@ -829,6 +1061,10 @@
             {
               "langCode": "sk",
               "translation": "Tomáš Zúbrik"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Tomáš Zúbrik"
             }
           ]
         },
@@ -842,6 +1078,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Whian.net"
+            },
+            {
+              "langCode": "xx",
               "translation": "Whian.net"
             }
           ]
@@ -857,6 +1097,10 @@
             {
               "langCode": "sk",
               "translation": "mariachily"
+            },
+            {
+              "langCode": "xx",
+              "translation": "mariachily"
             }
           ]
         },
@@ -871,6 +1115,10 @@
             {
               "langCode": "sk",
               "translation": "CC"
+            },
+            {
+              "langCode": "xx",
+              "translation": "CC"
             }
           ]
         },
@@ -884,6 +1132,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it"
+            },
+            {
+              "langCode": "xx",
               "translation": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it"
             }
           ]
@@ -1397,6 +1649,10 @@
             {
               "langCode": "sk",
               "translation": "Slovenčina"
+            },
+            {
+              "langCode": "xx",
+              "translation": "Slovenčina"
             }
           ]
         },
@@ -1410,6 +1666,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "English"
+            },
+            {
+              "langCode": "xx",
               "translation": "English"
             }
           ]
@@ -1425,6 +1685,10 @@
             {
               "langCode": "sk",
               "translation": "MacO\u0027s creative workshop"
+            },
+            {
+              "langCode": "xx",
+              "translation": "MacO\u0027s creative workshop"
             }
           ]
         },
@@ -1438,6 +1702,10 @@
             },
             {
               "langCode": "sk",
+              "translation": "Tomáš Zúbrik"
+            },
+            {
+              "langCode": "xx",
               "translation": "Tomáš Zúbrik"
             }
           ]
