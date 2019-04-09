@@ -8,13 +8,14 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
 /**
- * Hello world!
+ * Main class for command line
  *
  */
 public class Main
@@ -29,6 +30,10 @@ public class Main
     public static String language = "";
     @Parameter(names={"--dictionary", "-d"})
     public static boolean dictionary = true;
+    @Parameter(names={"--workingdir", "-w"})
+    public static String wd;
+    @Parameter(names={"--config", "-c"})
+    public static String configString;
 
     public static int expectedFilesCount = 0;
     public static int exportedFilesCount = 0;
@@ -42,18 +47,38 @@ public class Main
         EXTRACT, REPLACE
     }
 
+    /**
+     * main function for command line - it all starts here
+     * @param argv arguments from command line
+     */
     public static void main(String ... argv)
     {
-        workingDirectory = System.getProperty("user.dir");
+        if ( wd!=null && !wd.isEmpty() ) {
+            workingDirectory = wd;
+        } else {
+            workingDirectory = System.getProperty("user.dir");
+        }
 
+        // build command line params
         Main main = new Main();
         JCommander.Builder builder = new JCommander.Builder();
         builder.addObject(main).build().parse(argv);
         main.run();
 
-        config = getConfig(workingDirectory+File.separator+"jamlin_config.json");
-        System.out.println(startupTimestamp.toString());
+        startupTimestamp = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
+        // check if config exists and fill its object
+        if ( configString!=null && !configString.isEmpty() ) {
+            config = getConfig(configString);
+        } else {
+            File configFile = new File(workingDirectory + File.separator + "jamlin_config.json");
+            if (configFile.exists()) {
+                config = getConfig(workingDirectory + File.separator + "jamlin_config.json");
+            }
+        }
+
+        // if config exists, get into translating
         if (config!=null) {
             //getFileTranslation(config, action, source, target);
             handleFileTranslations();
@@ -69,7 +94,12 @@ public class Main
     }
 
 
-    public static Config getConfig(String configFilePath) {
+    /**
+     * Get config object from file path
+     * @param configFilePath String
+     * @return Config
+     */
+    static Config getConfig(String configFilePath) {
         try {
             String jsonConfig = new String ( Files.readAllBytes( Paths.get(configFilePath) ), Charset.forName("UTF-8") );
             if (language.trim().isEmpty()) {
@@ -87,8 +117,12 @@ public class Main
     }
 
 
-
-    public static void handleFileTranslations() {
+    /**
+     * List all files and then do the active translation action with them:
+     * - if extract, get strings according to config and create *-extract.json file
+     * - if replace, look for related *-extract.json file and replace strings
+     */
+    static void handleFileTranslations() {
         // get action
         if ( action!=null && !action.isEmpty() && validAction(action) ) {
             action = action.trim().toLowerCase();
@@ -98,8 +132,16 @@ public class Main
 
         // get all files (their paths) that match config options
         List<String> extensions = new ArrayList<String>();
+        List<String> dirs = new ArrayList<String>();
         for (int i=0; i<config.getSources().getDirectories().size(); i++) {
+            // action EXTRACT specific - if config sets that only specific directories should be extracted
             ConfigSourceFilterDirectory dir = (ConfigSourceFilterDirectory) config.getSources().getDirectories().get(i);
+            String path = dir.getPath();
+            // there are paths, add to directories to list
+            if (!path.trim().isEmpty()) {
+                dirs.add(path);
+            }
+            // list all extension
             for (int j=0; j<((ConfigSourceFilterDirectory) config.getSources().getDirectories().get(i)).getExtensions().size(); j++) {
                 String extension = ((ConfigSourceFilterDirectory) config.getSources().getDirectories().get(i)).getExtensions().get(j);
                 extensions.add( extension );
@@ -109,18 +151,34 @@ public class Main
         // get mode accoding to settings
         mode = getMode();
 
+        // get result files
         List<String> resultFiles = new ArrayList<String>();
+
+        // action EXTRACT, defined dirs - do not extract from all files
+        List<String> sourceExtractFiles = new ArrayList<String>();
+        if (dirs.size()>0) {
+            for (int i = 0; i < dirs.size(); i++) { // TODO - how to replace for foreach if inside lambda function it's hard to refer outside
+                List<String> listedValidFiles = JamlinFiles.listValidFiles(new File(workingDirectory+File.separator+dirs.get(i)), extensions);
+                sourceExtractFiles.addAll(listedValidFiles);
+            }
+        } else {
+            List<String> listedValidFiles = JamlinFiles.listValidFiles(new File(workingDirectory), extensions);
+            sourceExtractFiles.addAll(listedValidFiles);
+        }
+
+        // if REPLACE action without target
         if ( action!=null && action.equals(actions.REPLACE.toString().toLowerCase()) && target!=null && !target.isEmpty() ) {
             // use exact result in replace - replace with target = lang specific and semiautomatic modes
             resultFiles.add(target);
             expectedFilesCount = 1;
+        // if EXTRACT action
         } else if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && source!=null && !source.isEmpty() && (target==null || !target.isEmpty()) ) {
             // extract should not have target
-            expectedFilesCount = JamlinFiles.getExpectedFilesCount(action, mode, resultFiles);
+            expectedFilesCount = sourceExtractFiles.size();//TODO - fix to work with - JamlinFiles.getExpectedFilesCount(action, mode, resultFiles);
         } else {
-            // all replace actions
+            // all REPLACE actions
             resultFiles = JamlinFiles.listValidFiles(new File(workingDirectory), extensions);
-            expectedFilesCount = resultFiles.size();//sk.cw.jamlin.JamlinFiles.getExpectedFilesCount(action, resultFiles);
+            expectedFilesCount = resultFiles.size();//TODO - fix to work with - sk.cw.jamlin.JamlinFiles.getExpectedFilesCount(action, resultFiles);
         }
 
         startupTimestamp = new Date();
@@ -131,15 +189,16 @@ public class Main
         System.out.println("SOURCE: "+source);
         System.out.println("TARGET: "+target);
         System.out.println("LANGUAGE: "+language);
+        System.out.println("WORKING DIR: "+workingDirectory);
 
         System.out.println("resultFiles.size(): "+resultFiles.size());
 
         // if extracting whole project translations
-
         if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && dictionary ) {
             extractDictionary = new TranslationExtractDictionary(new ArrayList<>());
         }
 
+        // main event - finally running getFileTranslation()
         if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) {
             if (resultFiles.size()>0) {
                 for (int i = 0; i < resultFiles.size(); i++) {
@@ -203,13 +262,15 @@ public class Main
                 System.out.println("No result files for replace");
             }
         } else {
-            // extract action
-            if (resultFiles.size()>0) {
-                for (String resultFile: resultFiles) {
+            // action EXTRACT
+            // if any source extract files defined from directories
+            if (sourceExtractFiles.size()>0) {
+                for (String sourceExtractFile: sourceExtractFiles) {
                     System.out.println(" -------------------------------------------- ");
-                    System.out.println(resultFile);
+                    System.out.println(sourceExtractFile);
                     System.out.println(" -------------------------------------------- ");
-                    getFileTranslation(config, action, resultFile, null);
+                    // using sourceExtractFiles as source
+                    getFileTranslation(config, action, sourceExtractFile, null);
                 }
             } else {
                 // extract specific
@@ -279,6 +340,8 @@ public class Main
             try {
                 input = new String(Files.readAllBytes(Paths.get(source)), Charset.forName("UTF-8"));
             } catch (IOException e) {
+                System.out.println("Main.getFileTranslation() - getting input from source:");
+                System.out.println(source);
                 e.printStackTrace();
             }
 

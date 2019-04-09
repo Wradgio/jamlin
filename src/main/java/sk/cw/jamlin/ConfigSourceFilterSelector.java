@@ -7,19 +7,28 @@ public class ConfigSourceFilterSelector {
     private String name;
     private String selector;
     private String type;
-    private String attrName;
+    private String attrName = "";
+    private String filter = "";
 
-    public ConfigSourceFilterSelector(String name, String selector, String type) {
+    ConfigSourceFilterSelector(String name, String selector, String type) {
         this.name = name;
         this.selector = selector;
         this.type = type;
     }
 
-    public ConfigSourceFilterSelector(String name, String selector, String type, String attrName) {
+    ConfigSourceFilterSelector(String name, String selector, String type, String attrName) {
         this.name = name;
         this.selector = selector;
         this.type = type;
         this.attrName = attrName;
+    }
+
+    ConfigSourceFilterSelector(String name, String selector, String type, String attrName, String filter) {
+        this.name = name;
+        this.selector = selector;
+        this.type = type;
+        this.attrName = attrName;
+        this.filter = filter;
     }
 
     public String getName() {
@@ -36,5 +45,9 @@ public class ConfigSourceFilterSelector {
 
     public String getAttrName() {
         return attrName;
+    }
+
+    public String getFilter() {
+        return filter;
     }
 }

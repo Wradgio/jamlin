@@ -69,6 +69,7 @@ public class JamlinFiles {
                 fileName = fileName.substring(0, fileName.lastIndexOf('.'));
             }
         } catch (Exception e) {
+            System.out.println("outputExtractResultFile fileName: ");
             System.out.println(e.getMessage());
         }
 
@@ -108,6 +109,7 @@ public class JamlinFiles {
                 try {
                     oldResult = gsonOld.fromJson(oldResultInput, TranslationExtractResult.class);
                 } catch (Exception e) {
+                    System.out.println("outputExtractResultFile oldResult: ");
                     System.out.println(e.getMessage());
                 }
             }
@@ -182,6 +184,7 @@ public class JamlinFiles {
                     fileName = fileName.substring(0, fileName.lastIndexOf('.'));
                 }
             } catch (Exception e) {
+                System.out.println("getReplaceOutputFileName: ");
                 System.out.println(e.getMessage());
             }
         }
@@ -311,7 +314,7 @@ public class JamlinFiles {
                 }
             }
         }
-        return 0;
+        return 1;
     }
 
 

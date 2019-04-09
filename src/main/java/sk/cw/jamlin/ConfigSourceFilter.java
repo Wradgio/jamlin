@@ -7,25 +7,29 @@ import java.util.List;
  * Created by marthol on 11.10.17.
  */
 public abstract class ConfigSourceFilter implements IConfigSourceFilter {
-    String path = "";
-    List<ConfigSourceFilterSelector> selectors = new ArrayList<ConfigSourceFilterSelector>();
+    String path;
+    private List<ConfigSourceFilterSelector> selectors = new ArrayList<ConfigSourceFilterSelector>();
 
-    public ConfigSourceFilter(String path, List<ConfigSourceFilterSelector> selectors) {
+
+    ConfigSourceFilter(String path, List<ConfigSourceFilterSelector> selectors) {
         this.path = path;
         this.selectors = selectors;
     }
 
-    public ConfigSourceFilter(String path) {
+    ConfigSourceFilter(String path) {
         this.path = path;
     }
 
     /**
-     * @param name
-     * @param selector
-     * @param type
-     * @return
+     * @param name String
+     * @param selector String
+     * @param type String
+     * @return Boolean
      */
     public Boolean addSelector(String name, String selector, String type) {
+        if (selectors==null) {
+            selectors = new ArrayList<ConfigSourceFilterSelector>();
+        }
         if (selectors.size() > 0) {
             for (int i = 0; i < selectors.size(); i++) {
                 if (selectors.get(i).getName().equals(name)) {
@@ -39,11 +43,11 @@ public abstract class ConfigSourceFilter implements IConfigSourceFilter {
     }
 
     /**
-     * @param name
-     * @param selector
-     * @param type
-     * @param attrName
-     * @return
+     * @param name String
+     * @param selector String
+     * @param type String
+     * @param attrName String
+     * @return Boolean
      */
     public Boolean addSelector(String name, String selector, String type, String attrName) {
         if (selectors.size() > 0) {
@@ -54,6 +58,27 @@ public abstract class ConfigSourceFilter implements IConfigSourceFilter {
             }
         }
         selectors.add(new ConfigSourceFilterSelector(name, selector, type, attrName));
+
+        return true;
+    }
+
+    /**
+     * @param name String
+     * @param selector String
+     * @param type String
+     * @param attrName String
+     * @param filter String
+     * @return Boolean
+     */
+    public Boolean addSelector(String name, String selector, String type, String attrName, String filter) {
+        if (selectors.size() > 0) {
+            for (int i = 0; i < selectors.size(); i++) {
+                if (selectors.get(i).getName().equals(name)) {
+                    return false;
+                }
+            }
+        }
+        selectors.add(new ConfigSourceFilterSelector(name, selector, type, attrName, filter));
 
         return true;
     }

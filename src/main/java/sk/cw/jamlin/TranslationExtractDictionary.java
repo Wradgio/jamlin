@@ -9,10 +9,7 @@ public class TranslationExtractDictionary {
 
     private ArrayList<TranslationExtractDictionaryRecord> records;
 
-    public TranslationExtractDictionary() {
-    }
-
-    public TranslationExtractDictionary(ArrayList<TranslationExtractDictionaryRecord> records) {
+    TranslationExtractDictionary(ArrayList<TranslationExtractDictionaryRecord> records) {
         this.records = records;
     }
 
@@ -23,14 +20,14 @@ public class TranslationExtractDictionary {
      * @param phrase String
      * @return ArrayList<TranslationExtractDictionaryRecord>
      */
-    public ArrayList<Integer> findRecordByPhrase(String phrase, Language language) {
+    private ArrayList<Integer> findRecordByPhrase(String phrase, Language language) {
         ArrayList<Integer> found = new ArrayList<>();
 
-        if (records!=null) {
-            for (int i = 0; i < records.size(); i++) {
-                if (records.get(i).getPhrase().equals(phrase) && records.get(i).getLanguage().equals(language)) {
-                    found.add(i);
-                }
+        for (int i = 0; i < records.size(); i++) {
+            if (records.get(i)!=null && records.get(i).getPhrase()!=null &&
+                    records.get(i).getPhrase().equals(phrase) && records.get(i).getLanguage()!=null &&
+                    records.get(i).getLanguage().equals(language)) {
+                found.add(i);
             }
         }
 
@@ -76,7 +73,7 @@ public class TranslationExtractDictionary {
     }
 
 
-    public void addRecords(Language language, String path, TranslationExtractResult extractResult) {
+    void addRecords(Language language, String path, TranslationExtractResult extractResult) {
         //Loop translation blocks from result, get its data and translation strings array, put in into TranslationExtractDictionaryOccurence
         if (extractResult.getTranslationBlocks().size()>0) {
             for (TranslationBlock block: extractResult.getTranslationBlocks()) {

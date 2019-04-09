@@ -67,15 +67,20 @@ public class Translation {
                 setLanguage( (new Language(extractedLangCode)) );
             }
 
+            // loop selectors and get the most important results of all
             for (int i=0; i<config.getSelectors().size(); i++) {
                 String selector = config.getSelectors().get(i).getSelector();
                 String selectorName = config.getSelectors().get(i).getName();
                 String selectorType = config.getSelectors().get(i).getType();
                 String selectorAttrName = config.getSelectors().get(i).getAttrName();
+                String filter = config.getSelectors().get(i).getFilter();
                 Elements selectorResult = doc.select(selector);
 
                 TranslationBlock translationBlock;
-                if (selectorType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase()) && !selectorAttrName.trim().equals("")) {
+                if (filter.trim().equals("")) {
+                    // ToDo - check if after regEx filter applied, string is not empty
+                    translationBlock = new TranslationBlock(selectorName, selector, selectorType, selectorAttrName);
+                } else if (selectorType.equals(TranslationBlock.types.ATTRIBUTE.toString().toLowerCase()) && !selectorAttrName.trim().equals("")) {
                     translationBlock = new TranslationBlock(selectorName, selector, selectorType, selectorAttrName);
                 } else {
                     translationBlock = new TranslationBlock(selectorName, selector, selectorType);
@@ -103,6 +108,7 @@ public class Translation {
 
             return translationExtractResult;//.resultToJson();
         } catch (Exception $e) {
+            System.out.println("extractStrings: ");
             System.out.println($e.getMessage());
             $e.printStackTrace();
         }
@@ -125,6 +131,7 @@ public class Translation {
         try {
             extractResult = gson.fromJson(extractedJson, TranslationExtractResult.class);
         } catch (Exception e) {
+            System.out.println("replaceStrings: ");
             System.out.println(e.getMessage());
         }
 
