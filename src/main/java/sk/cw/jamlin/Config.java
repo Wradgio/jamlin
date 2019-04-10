@@ -62,11 +62,11 @@ public class Config {
                 // get selectors
                 int sourceDirSelectorsCount = JsonPath.read(document, "$.sources.directories[" + i + "].selectors.length()");
                 if (sourceDirSelectorsCount > 0) {
-                    Map<String, String> selectors = JsonPath.read(document, "$.sources.files[" + i + "].selectors");
+                    Map<String, String> selectors = JsonPath.read(document, "$.sources.directories[" + i + "].selectors");
                     for (Map.Entry<String, String> entry : selectors.entrySet()) {
                         String key = entry.getKey();
                         System.out.println(entry.getKey());
-                        Map<String, String> selectorData = JsonPath.read(document, "$.sources.files[" + i + "].selectors." + entry.getKey());
+                        Map<String, String> selectorData = JsonPath.read(document, "$.sources.directories[" + i + "].selectors." + entry.getKey());
                         String type = "";
                         String selector = "";
                         String attrName = "";
