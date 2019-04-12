@@ -125,6 +125,7 @@ public class JamlinFiles {
             JamlinFiles.makeHistory(Main.startupTimestamp, source);
         }
 
+        // add record, extractDictionary is cleared later in JamlinFiles.writeExtractDictionary()
         if (Main.action.equals(Main.actions.EXTRACT.toString().toLowerCase()) && Main.dictionary && Main.extractDictionary!=null) {
             Main.extractDictionary.addRecords(translation.getLanguage(), source.getPath(), extractResult);
         }
@@ -385,7 +386,7 @@ public class JamlinFiles {
                 locFile = new FileWriter(target.getPath());
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
                 TranslationExtractDictionaryFileWrap fileWrap = new TranslationExtractDictionaryFileWrap(Main.workingDirectory, Main.extractDictionary);
-                locFile.write("{\"path\":\"" +Main.workingDirectory+ "\",\"dictionary\":" +gson.toJson(Main.extractDictionary)+ "");
+                locFile.write("{\"path\":\"" +Main.workingDirectory+ "\",\"dictionary\":" +gson.toJson(Main.extractDictionary)+ "}");
             } catch(IOException e) {
                 System.out.println("Write error for project_dictionary.json intro");
                 e.printStackTrace();

@@ -9,6 +9,7 @@ public class TranslationExtractDictionaryRecord {
 
     private String phrase;
     private Language language;
+    private ArrayList<TranslationValue> translates = new ArrayList<>();
     private ArrayList<TranslationExtractDictionaryOccurrence> occurrences;
 
     public TranslationExtractDictionaryRecord(Language language, String phrase, ArrayList<TranslationExtractDictionaryOccurrence> occurrences) {
@@ -62,7 +63,7 @@ public class TranslationExtractDictionaryRecord {
      * @param occurrence TranslationExtractDictionaryOccurrence
      * @return boolean
      */
-    public boolean addOccurrence(TranslationExtractDictionaryOccurrence occurrence) {
+    boolean addOccurrence(TranslationExtractDictionaryOccurrence occurrence) {
         // find if any occurrence for this path, selector and and language exists
         ArrayList<Integer> foundOccurrences = findOccurrences(occurrence);
 
