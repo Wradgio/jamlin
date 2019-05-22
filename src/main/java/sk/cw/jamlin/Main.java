@@ -31,14 +31,14 @@ public class Main
     @Parameter(names={"--dictionary", "-d"})
     public static boolean dictionary = true;
     @Parameter(names={"--workingdir", "-w"})
-    public static String wd;
+    private static String wd;
     @Parameter(names={"--config", "-c"})
-    public static String configString;
+    private static String configString;
 
-    public static int expectedFilesCount = 0;
-    public static int exportedFilesCount = 0;
+    static int expectedFilesCount = 0;
+    static int exportedFilesCount = 0;
     private static String mode = "";
-    public static Date startupTimestamp = null;
+    static Date startupTimestamp = null;
     static TranslationExtractDictionary extractDictionary;
 
     static String workingDirectory = "";
@@ -174,11 +174,21 @@ public class Main
         // if EXTRACT action
         } else if ( action!=null && action.equals(actions.EXTRACT.toString().toLowerCase()) && source!=null && !source.isEmpty() && (target==null || !target.isEmpty()) ) {
             // extract should not have target
-            expectedFilesCount = sourceExtractFiles.size();//TODO - fix to work with - JamlinFiles.getExpectedFilesCount(action, mode, resultFiles);
+            if (dictionary) {
+                // set only one expected file for dictionary
+                expectedFilesCount = 1;
+            } else {
+                expectedFilesCount = sourceExtractFiles.size();//TODO - fix to work with - JamlinFiles.getExpectedFilesCount(action, mode, resultFiles);
+            }
         } else {
-            // all REPLACE actions
+            // all other EXTRACT & REPLACE actions
             resultFiles = JamlinFiles.listValidFiles(new File(workingDirectory), extensions);
-            expectedFilesCount = resultFiles.size();//TODO - fix to work with - sk.cw.jamlin.JamlinFiles.getExpectedFilesCount(action, resultFiles);
+            if (dictionary && action!=null && action.equals(actions.EXTRACT.toString().toLowerCase())) {
+                // set only one expected file for dictionary
+                expectedFilesCount = 1;
+            } else {
+                expectedFilesCount = resultFiles.size();//TODO - fix to work with - sk.cw.jamlin.JamlinFiles.getExpectedFilesCount(action, resultFiles);
+            }
         }
 
         startupTimestamp = new Date();
@@ -199,7 +209,7 @@ public class Main
         }
 
         // main event - finally running getFileTranslation()
-        if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) {
+        if (action!=null && action.equals(actions.REPLACE.toString().toLowerCase())) { // REPLACE action
             if (resultFiles.size()>0) {
                 for (int i = 0; i < resultFiles.size(); i++) {
                     try {
@@ -220,7 +230,7 @@ public class Main
                                 }
                                 parentDirectory = parentDirectory.getParentFile();
                                 jsonFilePath = parentDirectory.getPath() + File.separator + fileName;
-                            } else {
+                            } else { // not valid language code
                                 if ( source!=null && !source.isEmpty() ) {
                                     jsonFilePath = source;
                                 } else {
@@ -236,6 +246,8 @@ public class Main
                                         fileName = String.join("-", fileNameBlocks);
                                     }
                                     fileName = fileName + "-extract.json";
+                                    parentDirectory = parentDirectory.getParentFile();
+                                    jsonFilePath = parentDirectory.getPath() + File.separator + fileName;
                                 }
 
                             }

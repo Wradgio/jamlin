@@ -128,9 +128,9 @@ public class JamlinFiles {
         // add record, extractDictionary is cleared later in JamlinFiles.writeExtractDictionary()
         if (Main.action.equals(Main.actions.EXTRACT.toString().toLowerCase()) && Main.dictionary && Main.extractDictionary!=null) {
             Main.extractDictionary.addRecords(translation.getLanguage(), source.getPath(), extractResult);
+        } else {
+            writeResultFile(source.getParentFile(), fileName, extractResult.resultToJson());
         }
-
-        writeResultFile(source.getParentFile(), fileName, extractResult.resultToJson());
     }
 
 
