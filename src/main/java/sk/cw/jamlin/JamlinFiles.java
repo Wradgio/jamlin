@@ -62,6 +62,7 @@ public class JamlinFiles {
         String fileName = "";
         String fileExtension = "";
 
+        // get filename from source file name
         try {
             fileName = source.getName();
             // get name before extension
@@ -73,6 +74,7 @@ public class JamlinFiles {
             System.out.println(e.getMessage());
         }
 
+        // set language code from translation
         String langCode = null;
         if ( translation.getLanguage()!=null && !translation.getLanguage().toString().isEmpty() ) {
             langCode = translation.getLanguage().getCode();
@@ -85,6 +87,7 @@ public class JamlinFiles {
             fileName = fileName.replace("-"+langCode, "");
         }
 
+        // create filename for extract file
         fileName = fileName+"-extract";
         if ( !fileName.contains(".json") ) {
             fileName = fileName+".json";
@@ -125,10 +128,11 @@ public class JamlinFiles {
             JamlinFiles.makeHistory(Main.startupTimestamp, source);
         }
 
-        // add record, extractDictionary is cleared later in JamlinFiles.writeExtractDictionary()
+        // if Dictionary, add record - extractDictionary is cleared later in JamlinFiles.writeExtractDictionary()
         if (Main.action.equals(Main.actions.EXTRACT.toString().toLowerCase()) && Main.dictionary && Main.extractDictionary!=null) {
             Main.extractDictionary.addRecords(translation.getLanguage(), source.getPath(), extractResult);
         } else {
+            // if -extract.json file, write it
             writeResultFile(source.getParentFile(), fileName, extractResult.resultToJson());
         }
     }
@@ -377,6 +381,8 @@ public class JamlinFiles {
         // get path of extractDictionary file
         File target = new File(Main.workingDirectory + File.separator + "project_dictionary.json");
         if ( target.exists() ) {
+            // before delete, merge translations from old dictionary with latest
+            extractDictionary = mergeDictionaryVersions(extractDictionary, target);
             target.delete();
         }
         // if not created, create it and write start
@@ -385,8 +391,9 @@ public class JamlinFiles {
             try {
                 locFile = new FileWriter(target.getPath());
                 Gson gson = new GsonBuilder().setPrettyPrinting().create();
-                TranslationExtractDictionaryFileWrap fileWrap = new TranslationExtractDictionaryFileWrap(Main.workingDirectory, Main.extractDictionary);
-                locFile.write("{\"path\":\"" +Main.workingDirectory+ "\",\"dictionary\":" +gson.toJson(Main.extractDictionary)+ "}");
+                TranslationExtractDictionaryFileWrap fileWrap = new TranslationExtractDictionaryFileWrap(Main.workingDirectory, extractDictionary);
+//                locFile.write("{\"path\":\"" +Main.workingDirectory+ "\",\"dictionary\":" +gson.toJson(Main.extractDictionary)+ "}");
+                locFile.write( gson.toJson(fileWrap) );
             } catch(IOException e) {
                 System.out.println("Write error for project_dictionary.json intro");
                 e.printStackTrace();
@@ -408,6 +415,34 @@ public class JamlinFiles {
         //appendToFile(target, concatExtractRecord);
 
         // if last, write end
+    }
+
+
+    static TranslationExtractDictionary mergeDictionaryVersions( TranslationExtractDictionary extractDictionary, File target ) {
+        // try to extract old Dictionary
+        String oldResultInput = "";
+        TranslationExtractDictionary oldDictionary = null;
+        // first read JSON file into string
+        try {
+            oldResultInput = new String( java.nio.file.Files.readAllBytes(Paths.get(target.getPath())), Charset.forName("UTF-8") );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // then try to convert JSON into dictionary wrap object
+        try {
+            Gson gsonOld = new Gson();
+            oldDictionary = gsonOld.fromJson(oldResultInput, TranslationExtractDictionary.class);
+        } catch (Exception e) {
+            System.out.println("replaceStrings: ");
+            System.out.println(e.getMessage());
+        }
+
+        // if old dictionary exists, merge it with new one
+        if ( oldDictionary!=null ) {
+            extractDictionary = extractDictionary.mergeOldDictionary(oldDictionary);
+        }
+
+        return extractDictionary;
     }
 
 }

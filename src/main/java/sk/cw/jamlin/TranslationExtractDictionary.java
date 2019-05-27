@@ -84,10 +84,21 @@ public class TranslationExtractDictionary {
         }
     }
 
+    /**
+     *
+     * @param oldDictionary TranslationExtractDictionary
+     * @return TranslationExtractDictionary
+     */
+    public TranslationExtractDictionary mergeOldDictionary(TranslationExtractDictionary oldDictionary) {
+        // TODO - merge loop logic
+        return this;
+    }
+
 
     // GETTERS & SETTERS
 
     public ArrayList<TranslationExtractDictionaryRecord> getRecords() { return records; }
 
     public void setRecords(ArrayList<TranslationExtractDictionaryRecord> records) { this.records = records; }
+
 }
