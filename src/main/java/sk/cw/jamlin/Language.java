@@ -80,7 +80,7 @@ public class Language {
      * @param filePath
      * @return
      */
-    public static String getLangCodeFromFilePath(String filePath) {
+    static String getLangCodeFromFilePath(String filePath) {
         String fileNameLang = "";
         String pathSplit[] = filePath.split("-");
         if ( pathSplit.length>0 ) {
@@ -92,6 +92,17 @@ public class Language {
 
         return fileNameLang;
     }
+
+
+    /**
+     *
+     * @param secondLanguage Language
+     * @return boolean
+     */
+    boolean equalsInValues(Language secondLanguage) {
+        return (this.getCode().equals(secondLanguage.getCode()) && this.getLang().equals(secondLanguage.getLang()) );
+    }
+
 
 
     public String getCode() {

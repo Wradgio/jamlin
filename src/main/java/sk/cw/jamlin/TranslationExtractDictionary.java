@@ -23,11 +23,13 @@ public class TranslationExtractDictionary {
     private ArrayList<Integer> findRecordByPhrase(String phrase, Language language) {
         ArrayList<Integer> found = new ArrayList<>();
 
-        for (int i = 0; i < records.size(); i++) {
-            if (records.get(i)!=null && records.get(i).getPhrase()!=null &&
-                    records.get(i).getPhrase().equals(phrase) && records.get(i).getLanguage()!=null &&
-                    records.get(i).getLanguage().equals(language)) {
-                found.add(i);
+        if (records!=null) {
+            for (int i = 0; i < records.size(); i++) {
+                if (records.get(i) != null && records.get(i).getPhrase() != null &&
+                        records.get(i).getPhrase().equals(phrase) && records.get(i).getLanguage() != null &&
+                        records.get(i).getLanguage().equalsInValues(language)) {
+                    found.add(i);
+                }
             }
         }
 
@@ -90,7 +92,27 @@ public class TranslationExtractDictionary {
      * @return TranslationExtractDictionary
      */
     public TranslationExtractDictionary mergeOldDictionary(TranslationExtractDictionary oldDictionary) {
-        // TODO - merge loop logic
+        // loop new record to update its records - old records that don't match are not merged and will be removed
+        for (int i = 0; i < this.getRecords().size(); i++) {
+            String phrase = this.getRecords().get(i).getPhrase();
+            Language language = this.getRecords().get(i).getLanguage();
+            // get old records with same phrase as new one
+            ArrayList<Integer> oldRecordsMatchIndexes = oldDictionary.findRecordByPhrase(phrase, language);
+            if ( oldRecordsMatchIndexes.size()>0 ) {
+                // loop old records and add their translates to new translates
+                for (Integer j: oldRecordsMatchIndexes) {
+                    ArrayList<TranslationValue> translates = oldDictionary.getRecords().get(j).getTranslates();
+                    if ( translates.size()>0 ) {
+                        for (TranslationValue translate: translates) {
+                            // adding translates
+                            this.getRecords().get(i).addTranslate(translate);
+                        }
+                    }
+
+                }
+            }
+        }
+
         return this;
     }
 

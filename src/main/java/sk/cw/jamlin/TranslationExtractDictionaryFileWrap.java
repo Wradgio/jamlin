@@ -11,4 +11,9 @@ public class TranslationExtractDictionaryFileWrap {
         this.path = path;
         this.dictionary = dictionary;
     }
+
+    // GETTERS
+    public TranslationExtractDictionary getDictionary() {
+        return dictionary;
+    }
 }

@@ -418,10 +418,10 @@ public class JamlinFiles {
     }
 
 
-    static TranslationExtractDictionary mergeDictionaryVersions( TranslationExtractDictionary extractDictionary, File target ) {
+    private static TranslationExtractDictionary mergeDictionaryVersions( TranslationExtractDictionary extractDictionary, File target ) {
         // try to extract old Dictionary
         String oldResultInput = "";
-        TranslationExtractDictionary oldDictionary = null;
+        TranslationExtractDictionaryFileWrap oldDictionary = null;
         // first read JSON file into string
         try {
             oldResultInput = new String( java.nio.file.Files.readAllBytes(Paths.get(target.getPath())), Charset.forName("UTF-8") );
@@ -431,7 +431,7 @@ public class JamlinFiles {
         // then try to convert JSON into dictionary wrap object
         try {
             Gson gsonOld = new Gson();
-            oldDictionary = gsonOld.fromJson(oldResultInput, TranslationExtractDictionary.class);
+            oldDictionary = gsonOld.fromJson(oldResultInput, TranslationExtractDictionaryFileWrap.class);
         } catch (Exception e) {
             System.out.println("replaceStrings: ");
             System.out.println(e.getMessage());
@@ -439,7 +439,7 @@ public class JamlinFiles {
 
         // if old dictionary exists, merge it with new one
         if ( oldDictionary!=null ) {
-            extractDictionary = extractDictionary.mergeOldDictionary(oldDictionary);
+            extractDictionary = extractDictionary.mergeOldDictionary(oldDictionary.getDictionary());
         }
 
         return extractDictionary;

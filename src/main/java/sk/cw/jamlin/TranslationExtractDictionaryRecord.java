@@ -77,6 +77,48 @@ public class TranslationExtractDictionaryRecord {
     }
 
 
+    /**
+     *
+     * @param translate TranslationValue
+     * @return int
+     */
+    public ArrayList<Integer> findTranslates(TranslationValue translate) {
+        ArrayList<Integer> foundTranslates = new ArrayList<>();
+
+        if (translates.size()>0) {
+            for (int i = 0; i < translates.size(); i++) {
+                if ( translates.get(i).getLangCode().equals(translate.getLangCode()) &&
+                    translates.get(i).getTranslation().equals(translate.getTranslation()) ) {
+                    foundTranslates.add(i);
+                }
+            }
+        }
+
+        return foundTranslates;
+    }
+
+
+    /**
+     *
+     * @param translate TranslationValue
+     * @return boolean
+     */
+    boolean addTranslate(TranslationValue translate) {
+        // find if any occurrence for this path, selector and and language exists
+        ArrayList<Integer> foundTranslates = findTranslates(translate);
+
+        // if not, add this
+        if (foundTranslates.size()<=0) {
+            this.translates.add(translate);
+            return true;
+        }
+
+        return false;
+    }
+
+
+
+
 
     public String getPhrase() {
         return phrase;
@@ -85,6 +127,8 @@ public class TranslationExtractDictionaryRecord {
     public ArrayList<TranslationExtractDictionaryOccurrence> getOccurrences() {
         return occurrences;
     }
+
+    public ArrayList<TranslationValue> getTranslates() { return translates; }
 
     public Language getLanguage() {
         return language;
