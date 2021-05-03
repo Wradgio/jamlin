@@ -76,11 +76,11 @@ public class TranslationExtractDictionary {
 
 
     void addRecords(Language language, String path, TranslationExtractResult extractResult) {
-        //Loop translation blocks from result, get its data and translation strings array, put in into TranslationExtractDictionaryOccurence
+        //Loop translation blocks from result, get its data and translation strings array, put in into TranslationExtractDictionaryOccurrence
         if (extractResult.getTranslationBlocks().size()>0) {
             for (TranslationBlock block: extractResult.getTranslationBlocks()) {
                 for (TranslationString phrase: block.getTranslationStrings()) {
-                    boolean addRecordResult = this.addRecord(phrase.getStringOrig(), phrase.getSelector(), language, path, block);
+                    this.addRecord(phrase.getStringOrig(), phrase.getSelector(), language, path, block);
                 }
             }
         }
@@ -91,7 +91,7 @@ public class TranslationExtractDictionary {
      * @param oldDictionary TranslationExtractDictionary
      * @return TranslationExtractDictionary
      */
-    public TranslationExtractDictionary mergeOldDictionary(TranslationExtractDictionary oldDictionary) {
+    TranslationExtractDictionary mergeOldDictionary(TranslationExtractDictionary oldDictionary) {
         // loop new record to update its records - old records that don't match are not merged and will be removed
         for (int i = 0; i < this.getRecords().size(); i++) {
             String phrase = this.getRecords().get(i).getPhrase();

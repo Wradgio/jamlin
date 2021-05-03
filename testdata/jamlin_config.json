@@ -1,42 +1,42 @@
 {
-	"sources": {
-		"directories": [
-			{
-				"path": "templates/", 
-				"extensions": [ "html" ],
-				"traverse": false, 
-				"selectors": {
-					"texts": { 
-						"type": "text", 
-						"selector": "p, a"
-					}, 
-					"params": { 
-						"type": "attribute", 
-						"selector": "a[title], img[title]", 
-						"attrName": "title"
-					}
-				}
-			}
-		], 
-		"files": [
-			{
-				"path": "test-*.html",
-				"selectors": {
-					"texts": { 
-						"type": "text", 
-						"selector": "p, a"
-					}, 
-					"params": { 
-						"type": "attribute", 
-						"selector": "a[title], img[title]", 
-						"attrName": "title"
-					}
-				}
-			}
-		]
-	},	
-	"target": {
-		"save_history": true,
-		"replace_pattern": "*-$lang.*"
-	}
+  "sources": {
+    "directories": [
+      {
+        "path": "",
+        "extensions": [ "html" ],
+        "traverse": false,
+        "selectors": {
+          "texts": {
+            "type": "text",
+            "selector": "p, a"
+          },
+          "params": {
+            "type": "attribute",
+            "selector": "a[title], img[title]",
+            "attrName": "title"
+          }
+        }
+      }
+    ],
+    "files": [
+      {
+        "path": "test-*.html",
+        "selectors": {
+          "texts": {
+            "type": "text",
+            "selector": "p, a"
+          },
+          "params": {
+            "type": "attribute",
+            "selector": "a[title], img[title]",
+            "attrName": "title"
+          }
+        }
+      }
+    ]
+  },
+  "target": {
+    "save_history": false,
+    "replace_pattern": "*-$lang.*"
+  }
 }

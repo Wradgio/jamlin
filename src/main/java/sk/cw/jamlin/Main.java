@@ -193,7 +193,7 @@ public class Main
 
         startupTimestamp = new Date();
 
-        System.out.println("started: "+ startupTimestamp.toString() );
+        System.out.println("Started JaMLin: "+ startupTimestamp.toString() );
         System.out.println("ACTION: "+ (action==null ? "null(extract)" : action) );
         System.out.println("MODE: "+mode);
         System.out.println("SOURCE: "+source);

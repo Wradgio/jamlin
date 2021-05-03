@@ -45,7 +45,7 @@ public class MainTest {
      * Extract semiautomatic - equivalent to
      * java -jar jamlin-jar-with-dependencies.jar --action "extract" --source "jamlin_demo.html"
      */
-    @Test
+    /*@Test
     public void getFileTranslation_02_extract_semiautomatic() throws Exception {
         Main.exportedFilesCount = 1;
         Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";
@@ -60,15 +60,16 @@ public class MainTest {
             Main.handleFileTranslations();
         }
         assertEquals("Extract semiautomatic - Expected to export " +Main.expectedFilesCount+ " files, exported " +Main.exportedFilesCount, Main.expectedFilesCount, Main.exportedFilesCount);
-    }
+    }*/
 
 
     /*
      * Extract automatic - equivalent to
      * java -jar jamlin-jar-with-dependencies.jar
      */
-    @Test
+    /*@Test
     public void getFileTranslation_03_extract_automatic() throws Exception {
+        Main.dictionary = false;
         Main.exportedFilesCount = 1;
         Main.workingDirectory = System.getProperty("user.dir") + File.separator + "testdata";
         if (Main.config==null) {
@@ -82,7 +83,7 @@ public class MainTest {
             Main.handleFileTranslations();
         }
         assertEquals("Extract automatic - Expected to export " +Main.expectedFilesCount+ " files, exported " +Main.exportedFilesCount, Main.expectedFilesCount, Main.exportedFilesCount);
-    }
+    }*/
 
 
 
@@ -185,7 +186,7 @@ public class MainTest {
      */
     /*@Test
     public void StretchTest() throws Exception {
-        Main.exportedFilesCount = 0;
+        Main.exportedFilesCount = 1;
         Main.workingDirectory = "/Users/marthol/Development/vue-js/stretchshop-front-vue/";
         if (Main.config==null) {
             Main.config = Main.getConfig(Main.workingDirectory + "jamlin_config.json");

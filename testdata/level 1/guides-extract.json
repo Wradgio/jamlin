@@ -21,7 +21,7 @@
           ]
         },
         {
-          "stringOrig": "Lezecký denník",
+          "stringOrig": "Climber\u0027s Routes",
           "selector": "#toplink_home",
           "translations": [
             {
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "stringOrig": "Jazyk",
+          "stringOrig": "Language",
           "selector": "#toplink_languages",
           "translations": [
             {
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "stringOrig": "Hľadať",
+          "stringOrig": "Search",
           "selector": "#toplink_climb",
           "translations": [
             {
@@ -91,7 +91,7 @@
           ]
         },
         {
-          "stringOrig": "Hľadať verzia 2 - test",
+          "stringOrig": "Search version 2 - Test",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -105,7 +105,7 @@
           ]
         },
         {
-          "stringOrig": "Hľadať Lezcov",
+          "stringOrig": "Find Climbers",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -119,7 +119,7 @@
           ]
         },
         {
-          "stringOrig": "Rozšírené Vyhľadávanie",
+          "stringOrig": "Advanced Search",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -133,7 +133,7 @@
           ]
         },
         {
-          "stringOrig": "Vyhľadávať Sprievodcov",
+          "stringOrig": "Search Guides",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -147,7 +147,7 @@
           ]
         },
         {
-          "stringOrig": "Prezerať Sprievodcov",
+          "stringOrig": "Browse Guides",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -161,7 +161,7 @@
           ]
         },
         {
-          "stringOrig": "Vyhľadávať Mapy Ciest",
+          "stringOrig": "Search Maps of Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(4) \u003e a",
           "translations": [
             {
@@ -175,7 +175,7 @@
           ]
         },
         {
-          "stringOrig": "Prezerať Mapy Ciest",
+          "stringOrig": "Browse Maps of Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(5) \u003e a",
           "translations": [
             {
@@ -189,7 +189,7 @@
           ]
         },
         {
-          "stringOrig": "Vyhľadávať Cesty",
+          "stringOrig": "Routes Search",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(7) \u003e a",
           "translations": [
             {
@@ -203,7 +203,7 @@
           ]
         },
         {
-          "stringOrig": "Prezerať Cesty",
+          "stringOrig": "Browse Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(8) \u003e a",
           "translations": [
             {
@@ -217,7 +217,7 @@
           ]
         },
         {
-          "stringOrig": "Najnovšie Cesty",
+          "stringOrig": "Recent Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(3) \u003e ul \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(9) \u003e a",
           "translations": [
             {
@@ -231,7 +231,7 @@
           ]
         },
         {
-          "stringOrig": "Eviduj",
+          "stringOrig": "Track",
           "selector": "#toplink_track",
           "translations": [
             {
@@ -245,7 +245,7 @@
           ]
         },
         {
-          "stringOrig": "Moje cesty",
+          "stringOrig": "My Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -259,7 +259,7 @@
           ]
         },
         {
-          "stringOrig": "Moje Mapy ciest",
+          "stringOrig": "My Maps of Routes",
           "selector": "#mmenu \u003e li.mleft:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -273,7 +273,7 @@
           ]
         },
         {
-          "stringOrig": "Publikuj",
+          "stringOrig": "Publish",
           "selector": "#toplink_share",
           "translations": [
             {
@@ -287,7 +287,7 @@
           ]
         },
         {
-          "stringOrig": "Moji Sprievodcovia",
+          "stringOrig": "My Guides",
           "selector": "#mmenu \u003e li.mleft:nth-child(5) \u003e ul \u003e li \u003e a",
           "translations": [
             {
@@ -315,7 +315,7 @@
           ]
         },
         {
-          "stringOrig": "Konto",
+          "stringOrig": "Account",
           "selector": "#toplink_account",
           "translations": [
             {
@@ -343,7 +343,7 @@
           ]
         },
         {
-          "stringOrig": "Nastavenia",
+          "stringOrig": "Settings",
           "selector": "#toplink_settings",
           "translations": [
             {
@@ -357,7 +357,7 @@
           ]
         },
         {
-          "stringOrig": "Košík",
+          "stringOrig": "Cart",
           "selector": "#toplink_cart",
           "translations": [
             {
@@ -371,7 +371,7 @@
           ]
         },
         {
-          "stringOrig": "Obsah Vášho košíka",
+          "stringOrig": "What\u0027s in your Cart",
           "selector": "#cart_info \u003e div:nth-child(1) \u003e strong \u003e a",
           "translations": [
             {
@@ -385,7 +385,7 @@
           ]
         },
         {
-          "stringOrig": "Zrealizované objednávky",
+          "stringOrig": "Your orders",
           "selector": "#mmenu \u003e li.mright.inliner \u003e ul.ap_to_right \u003e li.mright.inliner:nth-child(3) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -399,7 +399,7 @@
           ]
         },
         {
-          "stringOrig": "Vytvoriť Nového Sprievodcu",
+          "stringOrig": "Create New Guide",
           "selector": "#add_route \u003e a.rounded2.border_darkgrey",
           "translations": [
             {
@@ -413,7 +413,7 @@
           ]
         },
         {
-          "stringOrig": "Moje Cesty",
+          "stringOrig": "My Routes",
           "selector": "#splash_actions \u003e span \u003e a",
           "translations": [
             {
@@ -469,7 +469,7 @@
           ]
         },
         {
-          "stringOrig": "Zdieľaj tohto Sprievodcu na svojej Facebook Časovej osi",
+          "stringOrig": "Share this Guide on your Facebook Timeline",
           "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(4)",
           "translations": [
             {
@@ -497,7 +497,7 @@
           ]
         },
         {
-          "stringOrig": "Zdieľaj tohto Sprievodcu na svojom Google+",
+          "stringOrig": "Share this Guide on your Google+",
           "selector": "#share_route_links_40 \u003e div \u003e p:nth-child(7)",
           "translations": [
             {
@@ -511,7 +511,7 @@
           ]
         },
         {
-          "stringOrig": "Stránka s fotkou",
+          "stringOrig": "Map Photo",
           "selector": "#r_40 \u003e td.route_urls \u003e a.route_webmap_url.grouped_maps",
           "translations": [
             {
@@ -525,7 +525,7 @@
           ]
         },
         {
-          "stringOrig": "Uprav",
+          "stringOrig": "Edit",
           "selector": "#r_40 \u003e td.actions \u003e a:nth-child(1)",
           "translations": [
             {
@@ -539,7 +539,7 @@
           ]
         },
         {
-          "stringOrig": "Zmaž",
+          "stringOrig": "Delete",
           "selector": "#r_40 \u003e td.actions \u003e a.guide_delete",
           "translations": [
             {
@@ -553,7 +553,7 @@
           ]
         },
         {
-          "stringOrig": "Podmienky používania",
+          "stringOrig": "Terms and Conditions",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -567,7 +567,7 @@
           ]
         },
         {
-          "stringOrig": "Kontakt",
+          "stringOrig": "Contact",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -581,7 +581,7 @@
           ]
         },
         {
-          "stringOrig": "Partnerstvo",
+          "stringOrig": "Partnership",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(1) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -595,7 +595,7 @@
           ]
         },
         {
-          "stringOrig": "Vyhľadávací Widget",
+          "stringOrig": "Search Widget",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -609,7 +609,7 @@
           ]
         },
         {
-          "stringOrig": "Wiki Nápoveda",
+          "stringOrig": "Wiki",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -623,7 +623,7 @@
           ]
         },
         {
-          "stringOrig": "Oznám chybu",
+          "stringOrig": "Report a bug",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(2) \u003e ul \u003e li:nth-child(3) \u003e a",
           "translations": [
             {
@@ -637,7 +637,7 @@
           ]
         },
         {
-          "stringOrig": "Novinky",
+          "stringOrig": "News",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(3) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -693,7 +693,7 @@
           ]
         },
         {
-          "stringOrig": "Prihlásiť sa na odber",
+          "stringOrig": "Subscribe",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(1) \u003e a",
           "translations": [
             {
@@ -707,7 +707,7 @@
           ]
         },
         {
-          "stringOrig": "Odhlásiť sa z odberu",
+          "stringOrig": "Unsubscribe",
           "selector": "#w_footer \u003e ul.paticka \u003e li:nth-child(4) \u003e ul \u003e li:nth-child(2) \u003e a",
           "translations": [
             {
@@ -749,7 +749,7 @@
           ]
         },
         {
-          "stringOrig": "Publikátor",
+          "stringOrig": "Whian.net",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(4)",
           "translations": [
             {
@@ -763,7 +763,7 @@
           ]
         },
         {
-          "stringOrig": "CC",
+          "stringOrig": "mariachily",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(5)",
           "translations": [
             {
@@ -777,7 +777,7 @@
           ]
         },
         {
-          "stringOrig": "mariachily",
+          "stringOrig": "CC",
           "selector": "#w_footer \u003e div.paticka \u003e a:nth-child(6)",
           "translations": [
             {
@@ -791,7 +791,7 @@
           ]
         },
         {
-          "stringOrig": "Používaním týchto stránok súhlasíte s uchovávaním cookies vo vašom prehliadači pre zlepšenie zážitku z ich prezerania. Čítajte viac. Jasnačka",
+          "stringOrig": "Using this website you agree we can store cookies in your browser to improve your user experience. Read more. OK, Got it",
           "selector": "html \u003e body \u003e div.eu_cookie_info \u003e p",
           "translations": [
             {
@@ -841,7 +841,7 @@
           ]
         },
         {
-          "stringOrig": "Ukáž Sprievodcu #40",
+          "stringOrig": "Show Guide #40",
           "selector": "#r_40 \u003e td.route_name \u003e a",
           "translations": [
             {
@@ -855,7 +855,7 @@
           ]
         },
         {
-          "stringOrig": "Zdieľať tohto Sprievodcu",
+          "stringOrig": "Share this Guide",
           "selector": "#r_40 \u003e td.route_urls \u003e a.route_url.urls_fancy",
           "translations": [
             {
@@ -869,7 +869,7 @@
           ]
         },
         {
-          "stringOrig": "URL Fotky s Mapou sprievodcu",
+          "stringOrig": "Guide\u0027s Map Photo Url",
           "selector": "#r_40 \u003e td.route_urls \u003e a.route_webmap_url.grouped_maps",
           "translations": [
             {
@@ -883,7 +883,7 @@
           ]
         },
         {
-          "stringOrig": "Uprav Sprievodcu #40",
+          "stringOrig": "Edit Guide #40",
           "selector": "#r_40 \u003e td.actions \u003e a:nth-child(1)",
           "translations": [
             {
@@ -897,7 +897,7 @@
           ]
         },
         {
-          "stringOrig": "Zmaž Sprievodcu #40",
+          "stringOrig": "Delete Guide #40",
           "selector": "#r_40 \u003e td.actions \u003e a.guide_delete",
           "translations": [
             {

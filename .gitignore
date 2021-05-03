@@ -1,3 +1,7 @@
 target/
 jamlin.iml
 .jamlin_history/
+.settings
+bin
+.classpath
+.project
